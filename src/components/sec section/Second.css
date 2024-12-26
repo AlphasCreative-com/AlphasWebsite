@@ -1,0 +1,76 @@
+
+/* Animation Section */
+
+.anime{
+    transform:translateY(100px) ;
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform;
+}
+
+
+.anime.visible{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* animation Section end */
+
+
+.sebody{
+    display: flex ;
+    padding: 88px 300px 88px 300px ;
+    justify-content: space-evenly;
+}
+
+
+
+
+h6{
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    margin: 0;
+}
+
+
+.sub{
+    position: absolute;
+    margin: 0;
+    font-size: 20px;
+
+}
+
+h5{
+    font-size: 32px;
+}
+
+
+.hd{
+    padding-top: 32px;
+    font-size: 36px;
+    margin: 0;
+    width: 400px;
+    text-align: left;
+
+   
+}
+
+.headersec{
+    
+    margin: 0;
+    padding-right: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 22px;
+}
+
+
+img{
+    border-radius: 12px;
+}
+
+.Secontent{
+    text-align: left;
+}

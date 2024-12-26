@@ -1,0 +1,61 @@
+
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 300px 10px 300px ;
+    align-items: center;
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.Logo img{
+    width: 100px;
+    height: 30px;
+}
+
+
+.Items ul{
+    display: flex;
+    gap: 60px;
+    font-size: 20px;
+    list-style-type: none;
+    height: 50px;
+  
+    justify-content: space-between;
+    margin: 0;
+
+    
+}
+
+
+
+.Items ul li a {
+    text-decoration: none;
+    color: var(--Maincolor);
+    margin: auto;
+  
+
+}
+
+
+.Items ul li{
+    width: 80px;
+    margin: auto;
+}
+
+
+
+.Items ul li a:hover{
+    font-size: 20px;
+    color: var(--Secondarycolor);
+    
+    font-weight: 500;
+}
+
+.login{
+    width: 200px;
+}

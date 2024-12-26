@@ -1,0 +1,17 @@
+.btn{
+    font-size: 20px;
+    background-color: var(--Maincolor);
+    color: white;
+    padding: 12px 32px 12px 32px;
+    border: none;
+    border-radius: 16px;
+    margin: auto;
+}
+
+
+.btn:hover{
+    background-color: var(--Secondarycolor);
+    transition: 0.6s;
+    font-size: 22px;
+    padding: 16px 40px 16px 40px;
+}
