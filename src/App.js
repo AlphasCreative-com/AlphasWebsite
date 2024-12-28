@@ -1,24 +1,20 @@
-
-import './App.css';
-import Navbar from './components/Navbar/Navbar';
-import Hero from './components/Herosection/Hero';
-import Second from './components/sec section/Second';
-import Third from './components/thirdsec/Third';
-
-
+import "./App.css";
+import Navbar from "./components/Navbar/Navbar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomePage from "./pages/homePage/HomePage";
+import AboutPage from "./pages/aboutPage/AboutPage";
+import ContactPage from "./pages/contactPage/ContactPage";
 
 function App() {
   return (
-    <div className="App">
-     
+    <BrowserRouter>
       <Navbar />
-      <Hero />
-      <Second />
-      <Third />
-      
-     
-      
-    </div>
+      <Routes>
+        <Route index element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -1,6 +1,6 @@
-import React from 'react'
-import Sbutton from '../Utilize/Secbutton/Sbutton'
-import  image  from "../../Assests/Images/logooursite.png";
+import React from "react";
+import Sbutton from "../Utilize/Secbutton/Sbutton";
+import image from "../../Assests/Images/logooursite.png";
 import "./Navbar.css";
 
 function Navbar() {
@@ -29,7 +29,7 @@ function Navbar() {
         <Sbutton text="Login" />
       </div>
     </div>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
