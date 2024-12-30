@@ -1,66 +1,150 @@
-
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Unbounded:wght@200..900&display=swap');
-
-
-.body {
-    
-    justify-content: center;
-    padding: 88px 300px 88px 300px ;
-   
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 32px;
-
+.hero {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  align-items: center;
+  padding: 3rem 1rem 3rem 1rem;
+  width: 100%;
+  gap: 2rem;
 }
 
-
-.hdtitle{
-    gap: 32px;
-    
-    
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
-
-
-h3{
-    font-size: 24px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 300;
-    margin: 0;
-   
+.hero-text h3 {
+  font-size: 1.5rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 630;
+  margin: 0;
 }
 
-h1{
-    font-size: 88px;
-    font-family: "Unbounded", sans-serif;
-    margin: 0;
-    
+.hero-text h1 {
+  font-size: 2.9rem;
+  text-align: center;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 500;
+  margin: 0;
 }
 
-
-h4{
-    font-size: 28px;
-    font-weight: 300;
-    margin: 0;
+.hero-text h4 {
+  max-width: 40rem;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 0;
 }
 
+.hero-btn {
+  display: flex;
+  gap: 1.5rem;
+}
 
-.btnsec{
-    display: flex;
-    align-items: center;
-    text-align: center;
-    gap: 24px;
-   margin: 0;
-   padding: 32px 0px 32px 0px;
-   width: 100%;
-   justify-content: center;
-  
-   
-   
+@media (min-width: 640px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    padding: 5rem 1rem 5rem 1rem;
+    gap: 3rem;
+  }
+
+  .hero-text h1 {
+    font-size: 5rem;
+  }
+
+  .hero-btn button {
+    height: 3.5rem;
+    width: 10rem;
+  }
+
+  .hero-btn span {
+    font-size: medium;
+    height: 3.5rem;
+    width: 10rem;
+  }
+
+  .hero-btn span {
+    font-size: medium;
+    height: 3.5rem;
+    width: 10rem;
+  }
+
+  .hero-btn .secondary-text {
+    top: 3rem;
+  }
+
+  .hero-btn .btn01:hover .primary-text {
+    top: -3rem;
+  }
+
+  .hero-btn .btn02:hover .primary-text {
+    top: -3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-text h1 {
+    font-size: 7.5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+}
+
+@media (min-width: 1786px) {
+  .hero {
+    padding: 8rem 1rem 8rem 1rem;
+    gap: 5rem;
+  }
+
+  .hero-text {
+    gap: 2rem;
+  }
+
+  .hero-text h1 {
+    font-size: 9rem;
+  }
+
+  .hero-text h3 {
+    font-size: 2rem;
+  }
+
+  .hero-text h4 {
+    max-width: 55rem;
+    font-size: 1.8rem;
+  }
+
+  .hero-btn {
+    gap: 3rem;
+  }
+
+  .hero-btn button {
+    height: 4rem;
+    width: 12rem;
+  }
+
+  .hero-btn span {
+    font-size: medium;
+    height: 4rem;
+    width: 12rem;
+  }
+
+  .hero-btn .secondary-text {
+    top: 3rem;
+  }
+
+  .hero-btn .btn01:hover .primary-text {
+    top: -3rem;
+  }
+
+  .hero-btn .btn02:hover .primary-text {
+    top: -3rem;
+  }
 }
