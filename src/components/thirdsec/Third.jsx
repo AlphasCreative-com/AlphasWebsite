@@ -1,55 +1,51 @@
-import React from 'react'
-import  './Third.css';
-import Card from '../Card/Card';
-import { useState, useEffect, useRef } from "react";
+import React, { useRef } from "react";
+import "./Third.css";
+import Sbutton from "../Utilize/Secbutton/Sbutton";
+import SpecializeCard from "../specializeCard/SpecializeCard";
+import { GrReactjs } from "react-icons/gr";
+import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
 function Third() {
+  const ref = useRef();
+  useIntersectionObserver(ref);
 
-
-  const [isVisible, setIsVisible] = useState(false);
-  const componentRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true); // Trigger animation
-        }
-      },
-      { threshold: 0.6 } // Trigger when 10% of the component is visible
-    );
-
-    if (componentRef.current) {
-      observer.observe(componentRef.current);
-    }
-
-    return () => {
-      if (componentRef.current) {
-        observer.unobserve(componentRef.current);
-      }
-   };
-  }, []);
-
-
-
-
+  const cards = [
+    {
+      icon: <GrReactjs />,
+      title: "Web Developments",
+      description:
+        "Our expert team of web developers, designers, and strategists are dedicated to crafting cutting-edge websites.",
+    },
+    {
+      icon: <GrReactjs />,
+      title: "UI/UX Design",
+      description:
+        "Our expert team of web developers, designers, and strategists are dedicated to crafting cutting-edge websites.",
+    },
+    {
+      icon: <GrReactjs />,
+      title: "Digital Marketing",
+      description:
+        "Our expert team of web developers, designers, and strategists are dedicated to crafting cutting-edge websites.",
+    },
+  ];
 
   return (
-
-
-<div className= {`anime ${isVisible && 'visible'}`} ref={componentRef}>
-  <div className='thirdbg'>
-        <div className='thirdtitle'> <h5>What we do</h5></div>
-        <div className='cardset'>
-            <Card/>
-            <Card/>
-            <Card/>
+    <section className="specialize-sec">
+      <div className="specialize-head">
+        <h3>OUR SPECIALIZE</h3>
+        <div ref={ref} className="specialize-title">
+          <h2>Our core services</h2>
+          <Sbutton text="See Services" />
         </div>
-
-    </div></div>
-
-    
-  )
+      </div>
+      <div className="specialize-cards">
+        {cards.map((card, index) => (
+          <SpecializeCard card={card} />
+        ))}
+      </div>
+    </section>
+  );
 }
 
-export default Third
+export default Third;
