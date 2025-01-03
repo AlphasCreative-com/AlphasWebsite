@@ -1,4 +1,10 @@
 .abtbg{
     width: screen;
-    height: 2000px;
+    height: 1300px;
+    
+}
+
+.acontent{
+    display: flex;
+    flex-direction: row;
 }

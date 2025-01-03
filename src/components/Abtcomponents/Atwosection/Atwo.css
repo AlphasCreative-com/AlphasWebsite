@@ -1,0 +1,31 @@
+.Atwobg{
+    width: screen;
+    height: 1500px;
+    display: flex;
+    box-sizing: border-box;
+    padding: 64px 90px 64px 90px;
+    justify-content: space-evenly;
+    gap: 32px;
+}
+
+.logosec {
+    width: 40%;
+    height: 100%;
+}
+
+.Atwtitle{
+    width: 100%;
+    
+}
+
+.logosec img{
+    width: 100%;
+    height: auto;
+}
+
+
+.imagelogo{
+    width: 24px;
+    height: 24px;
+}
+
