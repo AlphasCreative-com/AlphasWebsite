@@ -19,6 +19,9 @@ body {
   --Maincolor: #1a1a1a;
   --Secondarycolor: #836fff;
   --bg-drak-blue: #0c1923;
+  --bg-light-gray: #ddd;
+  --color-light-black: #555567;
+  --color-primary-blue: #836fff;
 
   /* fonts */
 
@@ -28,5 +31,3 @@ body {
     "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-
-
