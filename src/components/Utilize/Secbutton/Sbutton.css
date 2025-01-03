@@ -49,6 +49,24 @@
 }
 
 @media (min-width: 1024px) {
+  .btn2 {
+    height: 3.5rem;
+    width: 10rem;
+  }
+
+  .btn2 span {
+    font-size: medium;
+    height: 3.5rem;
+    width: 10rem;
+  }
+
+  .secondary-text {
+    top: 3rem;
+  }
+
+  .btn2:hover .primary-text {
+    top: -3rem;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -59,18 +77,22 @@
 
 @media (min-width: 1786px) {
   .btn2 {
-    width: 8rem;
     height: 4rem;
+    width: 12rem;
   }
 
   .btn2 span {
-    font-size: large;
-    width: 8rem;
+    font-size: medium;
     height: 4rem;
+    width: 12rem;
   }
 
   .secondary-text {
     top: 3rem;
+  }
+
+  .btn2:hover .primary-text {
+    top: -3rem;
   }
 
   .btn2:hover .primary-text {
