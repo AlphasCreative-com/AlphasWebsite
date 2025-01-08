@@ -1,0 +1,58 @@
+.bar {
+  opacity: 0;
+  transform: translate(0px, 100px);
+}
+
+.bar.animate {
+  animation: slideBackFromDown 2s ease-out forwards;
+}
+
+.bar-txt {
+  display: flex;
+  min-width: fit-content;
+  justify-content: space-between;
+}
+
+.bar.animate .bar-txt {
+  animation: progress 2s ease-in-out;
+}
+
+.bar-txt p {
+  font-weight: 500;
+  font-family: var(--bs-font-sans-serif);
+}
+
+.bar-tab {
+  height: 0.5rem;
+  width: 100%;
+  background-color: var(--bg-light-gray);
+}
+
+.bar-tab-inner {
+  height: 100%;
+  background-color: black;
+}
+
+.bar.animate .bar-tab-inner {
+  animation: progress 2s ease-in-out;
+}
+
+@keyframes progress {
+  0% {
+    max-width: 0%;
+  }
+  100% {
+    max-width: 100%;
+  }
+}
+
+@keyframes slideBackFromDown {
+  0% {
+    opacity: 0;
+    transform: translate(0px, 100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
