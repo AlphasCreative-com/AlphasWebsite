@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Sbutton from "../Utilize/Secbutton/Sbutton";
-import image from "../../Assests/Images/logooursite.png";
+import image from "../../Assests/Images/Logo.webp";
 import "./Navbar.css";
 import { NavLink, useLocation } from "react-router-dom";
 
@@ -38,6 +38,16 @@ function Navbar() {
             </NavLink>
           </li>
           <li>
+            <NavLink className="nav-link" to="/">
+             Service
+            </NavLink>
+          </li>
+          <li>
+            <NavLink className="nav-link" to="/">
+            Product
+            </NavLink>
+          </li>
+          <li>
             <NavLink className="nav-link" to="/about">
               About
             </NavLink>
@@ -48,15 +58,18 @@ function Navbar() {
             </NavLink>
           </li>
           <li>
+            <NavLink className="nav-link" to="/blog">
+             Career
+            </NavLink>
+          </li>
+          <li>
             <NavLink className="nav-link" to="/contact">
               Contact
             </NavLink>
           </li>
         </ul>
 
-        <div className="navbar-btn">
-          <Sbutton text="Login" />
-        </div>
+       
       </div>
     </div>
   );

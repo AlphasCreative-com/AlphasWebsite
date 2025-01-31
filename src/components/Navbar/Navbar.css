@@ -41,7 +41,7 @@
 
 .navbar-links li {
   display: flex;
-  justify-content: center;
+  justify-content:end;
 }
 
 .nav-link {
