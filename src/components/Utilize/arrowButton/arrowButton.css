@@ -14,16 +14,13 @@
   font-weight: 600;
 }
 
-.arrow-btn div {
-  display: flex;
-  justify-items: center;
-  background-color: white;
-  border: 1px solid black;
-  padding: 0.5rem;
-  border-radius: 100%;
+.arrow-btn:hover {
+  background-color: var(--color-primary-blue);
+  border: 1px solid var(--color-primary-blue);
+  transition: all 0.5s ease;
 }
 
-.arrow-btn:hover {
+.arrow-btn.hover {
   background-color: var(--color-primary-blue);
   border: 1px solid var(--color-primary-blue);
   transition: all 0.5s ease;
@@ -34,7 +31,17 @@
   transition: all 0.5s ease;
 }
 
+.arrow-btn.hover span {
+  color: white;
+  transition: all 0.5s ease;
+}
+
 .arrow-btn:hover div {
+  border: 1px solid var(--color-primary-blue);
+  transition: all 0.5s ease;
+}
+
+.arrow-btn.hover div {
   border: 1px solid var(--color-primary-blue);
   transition: all 0.5s ease;
 }
@@ -87,7 +94,6 @@
 }
 
 @media (min-width: 1786px) {
-
   .arrow-btn {
     padding: 0.6rem 0.6rem 0.6rem 1.8rem;
   }
@@ -110,7 +116,7 @@
   .arrow-btn div svg:nth-child(1) {
     transform: translate(-2rem, 2rem);
   }
-  
+
   .arrow-btn:hover div svg:nth-child(2) {
     transform: translate(2rem, -2rem);
   }

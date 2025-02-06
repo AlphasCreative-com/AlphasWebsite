@@ -1,0 +1,270 @@
+.ourProject-sec {
+  box-sizing: border-box;
+  padding: 3rem 1rem 3rem 1rem;
+}
+
+.ourProject-head h3 {
+  font-family: var(--bs-font-sans-serif);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 0;
+  text-align: center;
+}
+
+.ourProject-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.ourProject-title h2 {
+  font-family: var(--bs-font-unbounded);
+  font-size: 2.1rem;
+  font-weight: 500;
+  margin-top: 0;
+  text-align: center;
+}
+
+.ourProject-title button {
+  margin: 0;
+}
+
+/* Animation trigger when the class is added */
+.ourProject-title.animate h2 {
+  animation: rollBack 2s ease-out forwards;
+}
+
+/* Animation trigger when the class is added */
+.ourProject-title.animate button {
+  animation: slidefromtop 2s ease-in-out;
+}
+
+.ourProject-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ourProject-content-img {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  position: absolute;
+  transform: scale(1.1, 1.1);
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
+}
+
+.active-project-img{
+  transform: scale(1);
+  opacity: 1;
+}
+
+.ourProject-content-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ourProject-content-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border: 0.5px solid #ddd;
+  padding: 2rem 1rem 2rem 1rem;
+  border-radius: 13px;
+}
+
+.current {
+  border: none;
+}
+
+.ourProject-content-card-info {
+  text-align: center;
+}
+
+.ourProject-content-card p {
+  color: var(--color-light-black);
+}
+
+.ourProject-content-card h3 {
+  font-family: var(--bs-font-unbounded);
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Animation keyframes */
+@keyframes rollBack {
+  0% {
+    transform-origin: 50% 0%;
+    transform: translate3d(0px, 49.2404px, -41.3176px) rotateX(-80deg);
+    opacity: 0;
+  }
+  100% {
+    transform-origin: 348px 22.225px;
+    transform: translate3d(0px, 0px, 0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slidefromtop {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  20% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(0px);
+  }
+  80% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 420px) {
+  .ourProject-content-img {
+    aspect-ratio: 4/3;
+  }
+}
+
+@media (min-width: 640px) {
+  .ourProject-content-img {
+    aspect-ratio: 5/3;
+  }
+}
+
+@media (min-width: 768px) {
+  .ourProject-content-img {
+    aspect-ratio: 6/3;
+  }
+}
+
+@media (min-width: 1024px) {
+  .ourProject-sec {
+    padding: 5rem 3rem 5rem 3rem;
+  }
+
+  .ourProject-head h3 {
+    text-align: start;
+  }
+
+  .ourProject-title {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .ourProject-title h2 {
+    text-align: start;
+    font-size: 2.2rem;
+  }
+
+  .ourProject-content {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .ourProject-content-img {
+    display: flex;
+    width: 37%;
+  }
+
+  .ourProject-content-cards {
+    width: 60%;
+  }
+
+  .ourProject-content-card {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5rem;
+    box-sizing: border-box;
+  }
+
+  .ourProject-content-card-info {
+    text-align: start;
+  }
+
+  .ourProject-content-card-info h3 {
+    text-align: start;
+    margin-bottom: 0;
+  }
+
+  .ourProject-content-card-btn {
+    display: flex;
+    justify-content: end;
+    width: 190px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .ourProject-title h2 {
+    font-size: 2.5rem;
+  }
+
+  .ourProject-content-card {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .ourProject-sec {
+    padding: 5rem 6rem 5rem 6rem;
+  }
+
+  .ourProject-title h2 {
+    font-size: 2.7rem;
+  }
+}
+
+@media (min-width: 1786px) {
+  .ourProject-sec {
+    padding: 8rem;
+  }
+
+  .ourProject-head h3 {
+    font-size: 1.5rem;
+  }
+
+  .ourProject-title h2 {
+    font-size: 3.3rem;
+  }
+
+  .ourProject-content-card {
+    padding: 2.4rem;
+  }
+
+  .ourProject-content-card-btn {
+    width: 200px;
+  }
+
+  .ourProject-content-card p {
+    font-size: 1.3rem;
+  }
+
+  .ourProject-content-card h3 {
+    font-size: 2rem;
+  }
+}
