@@ -1,0 +1,121 @@
+.workpro-crd {
+  padding: 1.8rem;
+  border: 1px solid var(--bg-light-gray);
+  border-radius: 15px;
+  transition: 0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+
+.workpro-crd:hover {
+  border: 1px solid var(--color-primary-blue);
+  transform: translateX(0) translateY(-5px) !important;
+}
+
+.workpro-crd-id {
+  width: fit-content;
+  padding: 0.2rem 0.8rem;
+  border-radius: 15px;
+  border: 1px solid var(--bg-light-gray);
+  margin-left: auto;
+}
+
+.workpro-crd-id p {
+  font-size: 2.5rem;
+  color: white;
+  -webkit-text-stroke: 1px black;
+  margin: 0;
+}
+
+.workpro-crd-icn {
+  font-size: 4rem;
+}
+
+.workpro-crd-title {
+  font-family: var(--bs-font-unbounded);
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.workpro-crd-disc {
+  color: var(--color-light-black);
+}
+
+.workpro-crd:hover .workpro-crd-id {
+  border: 1px solid var(--color-primary-blue);
+}
+
+.workpro-crd:hover .workpro-crd-id p {
+  color: var(--color-primary-blue);
+  -webkit-text-stroke: 1px var(--color-primary-blue);
+}
+
+.workpro-crd-box {
+  opacity: 0;
+}
+
+.workpro-crd-box.animate {
+  animation: slideBack 2s ease-out forwards;
+}
+
+@keyframes slideBack {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@media (min-width: 640px) {
+}
+
+@media (min-width: 768px) {
+  .workpro-crd-box {
+    min-width: 17.1rem;
+    flex: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .workpro-crd-box {
+    min-width: 0;
+    flex: 1;
+  }
+}
+
+@media (min-width: 1280px) {
+  .workpro-crd-icn {
+    font-size: 6rem;
+    margin: 1rem 0 1rem 0;
+  }
+
+  .workpro-crd-title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 1536px) {
+}
+
+@media (min-width: 1786px) {
+  .workpro-crd {
+    padding: 3rem;
+    border-radius: 2rem;
+  }
+
+  .workpro-crd-icn {
+    font-size: 8rem;
+    margin: 2rem 0 2rem 0;
+  }
+
+  .workpro-crd-title {
+    font-size: 1.8rem;
+    margin: 2rem 0 2rem 0;
+  }
+
+  .workpro-crd-disc {
+    font-size: 1.4rem;
+  }
+}

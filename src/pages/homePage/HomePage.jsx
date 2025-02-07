@@ -4,6 +4,7 @@ import Second from "../../components/sec section/Second";
 import Third from "../../components/thirdsec/Third";
 import Fourth from "../../components/fourthsection/Fourth";
 import OurProjecSec from "../../components/ourProjecSec/OurProjecSec";
+import WorkProcessSec from "../../components/workProcessSec/WorkProcessSec";
 
 function HomePage() {
   return (
@@ -13,6 +14,7 @@ function HomePage() {
       <Third />
       <Fourth />
       <OurProjecSec />
+      <WorkProcessSec />
     </div>
   );
 }
