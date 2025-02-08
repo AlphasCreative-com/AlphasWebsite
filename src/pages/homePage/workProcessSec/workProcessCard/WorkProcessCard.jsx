@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import "./WorkProcessCard.css";
-import useIntersectionObserver from "../../../hooks/useIntersectionObserver";
+import useIntersectionObserver from "../../../../hooks/useIntersectionObserver";
 
 function WorkProcessCard({ card }) {
   const ref = useRef();

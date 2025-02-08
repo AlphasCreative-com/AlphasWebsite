@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
-import SKILL from "../../Assests/Images/skill.png";
+import SKILL from "../../../Assests/Images/skill.png";
 import "./Fourth.css";
-import BarChart from "../barChart/BarChart";
-import useIntersectionObserver from "../../hooks/useIntersectionObserver";
+import BarChart from "../../../components/barChart/BarChart";
+import useIntersectionObserver from "../../../hooks/useIntersectionObserver";
 
 function Fourth() {
   const ref = useRef(null);

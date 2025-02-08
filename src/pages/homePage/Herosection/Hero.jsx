@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "../Utilize/Button/Button";
-import Sbutton from "../Utilize/Secbutton/Sbutton";
+import Button from "../../../components/Utilize/Button/Button";
+import Sbutton from "../../../components/Utilize/Secbutton/Sbutton";
 import "./Hero.css";
 
 function Hero() {

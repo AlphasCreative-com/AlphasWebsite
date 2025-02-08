@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
 import "./ourProjectSec.css";
-import Sbutton from "../Utilize/Secbutton/Sbutton";
-import useIntersectionObserver from "../../hooks/useIntersectionObserver";
-import ArrowButton from "../Utilize/arrowButton/ArrowButton";
+import Sbutton from "../../../components/Utilize/Secbutton/Sbutton";
+import useIntersectionObserver from "../../../hooks/useIntersectionObserver";
+import ArrowButton from "../../../components/Utilize/arrowButton/ArrowButton";
 
 const OurProjecSec = () => {
   const ref = useRef();
