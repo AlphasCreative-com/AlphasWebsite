@@ -1,10 +1,11 @@
 import React from "react";
-import Hero from "../../components/Herosection/Hero";
-import Second from "../../components/sec section/Second";
-import Third from "../../components/thirdsec/Third";
-import Fourth from "../../components/fourthsection/Fourth";
-import OurProjecSec from "../../components/ourProjecSec/OurProjecSec";
-import WorkProcessSec from "../../components/workProcessSec/WorkProcessSec";
+import Hero from "./Herosection/Hero";
+import Second from "./sec section/Second";
+import Third from "./thirdsec/Third";
+import Fourth from "./fourthsection/Fourth";
+import OurProjecSec from "./ourProjecSec/OurProjecSec";
+import WorkProcessSec from "./workProcessSec/WorkProcessSec";
+import TestimonialsSec from "./testimonialsSec/TestimonialsSec";
 
 function HomePage() {
   return (
@@ -15,6 +16,7 @@ function HomePage() {
       <Fourth />
       <OurProjecSec />
       <WorkProcessSec />
+      <TestimonialsSec />
     </div>
   );
 }

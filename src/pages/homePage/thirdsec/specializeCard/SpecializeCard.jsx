@@ -1,7 +1,7 @@
 import React from "react";
 import "./specializeCard.css";
-import ArrowButton from "../Utilize/arrowButton/ArrowButton";
-import useIntersectionObserver from "../../hooks/useIntersectionObserver";
+import useIntersectionObserver from "../../../../hooks/useIntersectionObserver";
+import ArrowButton from "../../../../components/Utilize/arrowButton/ArrowButton";
 
 function SpecializeCard({ card }) {
   useIntersectionObserver(".specialize-card");

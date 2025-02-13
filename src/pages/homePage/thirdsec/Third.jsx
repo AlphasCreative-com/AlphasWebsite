@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
 import "./Third.css";
-import Sbutton from "../Utilize/Secbutton/Sbutton";
-import SpecializeCard from "../specializeCard/SpecializeCard";
+import Sbutton from "../../../components/Utilize/Secbutton/Sbutton";
 import { GrReactjs } from "react-icons/gr";
-import useIntersectionObserver from "../../hooks/useIntersectionObserver";
+import useIntersectionObserver from "../../../hooks/useIntersectionObserver";
+import SpecializeCard from "./specializeCard/SpecializeCard";
 
 function Third() {
   const ref = useRef();
