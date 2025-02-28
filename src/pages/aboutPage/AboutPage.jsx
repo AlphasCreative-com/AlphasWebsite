@@ -4,19 +4,18 @@ import team1 from "../../Assests/Images/skill.png";
 import team2 from "../../Assests/Images/skill.png";
 import team3 from "../../Assests/Images/skill.png";
 import "./About.css";
+import Hero from "../../components/Abouthero/Hero";
 
 function AboutPage() {
   return (
-    <div className="about-container">
-      {/* Hero Section */}
-      <section className="about-hero">
-        <div className="hero-content">
-          <h1>About CXOLE</h1>
-          <p>Driving innovation through technology and expertise</p>
-        </div>
-      </section>
+    <div>
+    {/* Hero Section */}
+    <Hero/>
 
-      {/* Mission Statement */}
+    {/* Mission Statement */}
+   
+   
+      
       <section className="mission-section">
         <div className="mission-content">
           <h2>Our Mission</h2>
@@ -28,7 +27,7 @@ function AboutPage() {
           <Sbutton text="Learn More" />
         </div>
       </section>
-
+      <div className="about-container">
       {/* Company History */}
       <section className="history-section">
         <div className="history-timeline">
@@ -72,6 +71,7 @@ function AboutPage() {
           </div>
         </div>
       </section>
+      </div>
 
       {/* Values Section */}
       <section className="values-section">
@@ -100,6 +100,7 @@ function AboutPage() {
         <h2>Ready to Transform Your Business?</h2>
         <Sbutton text="Get Started" />
       </section>
+  
     </div>
   );
 }
