@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import "./testimonialsSec.css";
 import useIntersectionObserver from "../../../hooks/useIntersectionObserver";
-import { MdDescription } from "react-icons/md";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 function TestimonialsSec() {
