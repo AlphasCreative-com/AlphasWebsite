@@ -53,12 +53,12 @@ function Navbar() {
             </NavLink>
           </li>
           <li>
-            <NavLink className="nav-link" to="/blog">
+            <NavLink className="nav-link" to="/blogs">
               Blog
             </NavLink>
           </li>
           <li>
-            <NavLink className="nav-link" to="/blog">
+            <NavLink className="nav-link" to="/career">
              Career
             </NavLink>
           </li>
