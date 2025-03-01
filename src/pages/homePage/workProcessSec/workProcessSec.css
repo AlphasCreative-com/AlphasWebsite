@@ -36,13 +36,8 @@
 }
 
 /* Animation trigger when the class is added */
-.workprocess-title.animate h2 {
+.workprocess-sec.animate .workprocess-title h2 {
   animation: rollBack 2s ease-out forwards;
-}
-
-/* Animation trigger when the class is added */
-.workprocess-title.animate button {
-  animation: slidefromtop 2s ease-in-out;
 }
 
 /* Animation keyframes */
@@ -56,29 +51,6 @@
     transform-origin: 348px 22.225px;
     transform: translate3d(0px, 0px, 0px);
     opacity: 1;
-  }
-}
-
-@keyframes slidefromtop {
-  0% {
-    transform: translateY(-100px);
-    opacity: 0;
-  }
-  20% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-  40% {
-    transform: translateY(-20px);
-  }
-  60% {
-    transform: translateY(0px);
-  }
-  80% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(0);
   }
 }
 

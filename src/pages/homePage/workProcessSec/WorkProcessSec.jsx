@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./workProcessSec.css";
 import {
   MdOutlineDraw,
@@ -6,8 +6,12 @@ import {
   MdSupportAgent,
 } from "react-icons/md";
 import WorkProcessCard from "./workProcessCard/WorkProcessCard";
+import useIntersectionObserver from "../../../hooks/useIntersectionObserver";
 
 const WorkProcessSec = () => {
+  const ref = useRef(null);
+  useIntersectionObserver(ref);
+
   const cards = [
     {
       id: "01",
@@ -33,7 +37,7 @@ const WorkProcessSec = () => {
   ];
 
   return (
-    <section className="workprocess-sec">
+    <section ref={ref} className="workprocess-sec">
       <div className="workprocess-head">
         <h3>WORK PROCESS</h3>
         <div className="workprocess-title">
