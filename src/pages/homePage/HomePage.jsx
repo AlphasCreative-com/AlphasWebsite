@@ -6,6 +6,7 @@ import Fourth from "./fourthsection/Fourth";
 import OurProjecSec from "./ourProjecSec/OurProjecSec";
 import WorkProcessSec from "./workProcessSec/WorkProcessSec";
 import TestimonialsSec from "./testimonialsSec/TestimonialsSec";
+import OurTeamSec from "./ourTeamSection/OurTeamSec";
 
 function HomePage() {
   return (
@@ -17,6 +18,7 @@ function HomePage() {
       <OurProjecSec />
       <WorkProcessSec />
       <TestimonialsSec />
+      <OurTeamSec />
     </div>
   );
 }
