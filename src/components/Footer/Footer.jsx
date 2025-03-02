@@ -1,20 +1,15 @@
-import React, { useEffect, useState } from "react";
+
 import Sbutton from "../Utilize/Secbutton/Sbutton";
 import image from "../../Assests/Images/Logo.webp";
 import "./Footer.css";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Footer() {
-  const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
 
-  useEffect(() => {
-    setIsOpen(false);
-  }, [location]);
+
+
+
 
   return (
     <footer className="footer-container">

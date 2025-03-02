@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Sbutton from "../Utilize/Secbutton/Sbutton";
 import image from "../../Assests/Images/Logo.webp";
 import "./Navbar.css";
 import { NavLink, useLocation } from "react-router-dom";
