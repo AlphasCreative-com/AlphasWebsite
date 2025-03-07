@@ -1,0 +1,130 @@
+.news-card {
+  height: 100%;
+  box-sizing: border-box;
+  padding-top: 60px;
+  width: 100%;
+}
+
+.news-card-content {
+  padding: 0 20px 20px 20px;
+  border-radius: 12px;
+  border: 0.5px solid #ddd;
+}
+
+.news-card-img {
+  height: 326px;
+  border-radius: 12px;
+  margin-top: -60px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.news-card-img img {
+  height: 100%;
+  width: 100%;
+  transition: scale 0.8s ease-in-out;
+}
+
+.news-card:hover .news-card-img img {
+  scale: 1.1;
+}
+
+.news-card-date {
+  margin-top: 1rem;
+  font-weight: 400;
+  color: var(--color-light-black);
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.news-card-title {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 22px;
+  line-height: 1.4;
+  font-family: var(--bs-font-unbounded);
+  color: var(--color-black);
+  font-weight: 500;
+}
+
+.news-card-title a {
+  position: relative;
+  display: inline;
+  background-image: linear-gradient(
+    to right,
+    currentColor 0%,
+    currentColor 100%
+  );
+  background-size: 0px 2px;
+  background-position: 0px 95%;
+  transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+  padding: 0.1% 0px;
+  background-repeat: no-repeat;
+  color: inherit;
+}
+
+.news-card:hover .news-card-title a {
+  background-size: 100% 2px;
+}
+
+.news-card-tags {
+  display: flex;
+  gap: 10px;
+}
+
+.news-card-tag {
+  background-color: #f5f5f6;
+  border-radius: 25px;
+  padding: 11px 21px;
+
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-light-black);
+  line-height: 1.5;
+}
+
+@media (min-width: 640px) {
+}
+
+@media (min-width: 768px) {
+  .news-card {
+    width: 47%;
+  }
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1280px) {
+  .news-card {
+    width: 32%;
+  }
+}
+
+@media (min-width: 1536px) {
+}
+
+@media (min-width: 1786px) {
+  .news-card-content {
+    padding: 0 30px 30px 30px;
+    border-radius: 15px;
+  }
+
+  .news-card-img {
+    height: 450px;
+  }
+
+  .news-card-date {
+    font-size: 20px;
+  }
+
+  .news-card-title {
+    font-size: 26px;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .news-card-tag {
+    font-size: 19px;
+  }
+}

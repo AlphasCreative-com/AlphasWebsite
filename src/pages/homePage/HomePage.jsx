@@ -7,6 +7,7 @@ import WorkProcessSec from "./workProcessSec/WorkProcessSec";
 import TestimonialsSec from "./testimonialsSec/TestimonialsSec";
 import OurTeamSec from "./ourTeamSection/OurTeamSec";
 import ContactUsSec from "./contactUsSec/ContactUsSec";
+import NewsSection from "./newsSec/NewsSection";
 
 function HomePage() {
   return (
@@ -20,6 +21,7 @@ function HomePage() {
       <TestimonialsSec />
       <OurTeamSec />
       <ContactUsSec />
+      <NewsSection />
     </div>
   );
 }
