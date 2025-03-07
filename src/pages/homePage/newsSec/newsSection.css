@@ -1,0 +1,153 @@
+.news-sec {
+  box-sizing: border-box;
+  padding: 3rem 1rem 3rem 1rem;
+}
+
+.news-head h3 {
+  font-family: var(--bs-font-sans-serif);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 0;
+  text-align: center;
+}
+
+.news-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.news-title h2 {
+  font-family: var(--bs-font-unbounded);
+  font-size: 2.1rem;
+  font-weight: 500;
+  margin-top: 0;
+  text-align: center;
+}
+
+.news-title button {
+  margin: 0;
+}
+
+.news-cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem auto 2rem auto;
+  width: fit-content;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+/* Animation trigger when the class is added */
+.news-title.animate h2 {
+  animation: rollBack 2s ease-out forwards;
+}
+
+/* Animation trigger when the class is added */
+.news-title.animate button {
+  animation: slidefromtop 2s ease-in-out;
+}
+
+/* Animation keyframes */
+@keyframes rollBack {
+  0% {
+    transform-origin: 50% 0%;
+    transform: translate3d(0px, 49.2404px, -41.3176px) rotateX(-80deg);
+    opacity: 0;
+  }
+  100% {
+    transform-origin: 348px 22.225px;
+    transform: translate3d(0px, 0px, 0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slidefromtop {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  20% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(0px);
+  }
+  80% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 640px) {
+  .news-sec {
+    padding: 5rem 2rem 5rem 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+ 
+}
+
+@media (min-width: 1024px) {
+  .news-sec {
+    padding: 5rem 3rem 5rem 3rem;
+  }
+
+  .news-head h3 {
+    text-align: start;
+  }
+
+  .news-title {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .news-title h2 {
+    text-align: start;
+    font-size: 2.2rem;
+  }
+
+}
+
+@media (min-width: 1280px) {
+  .news-title h2 {
+    font-size: 2.5rem;
+  }
+
+  .news-cards {
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .news-sec {
+    padding: 5rem 6rem 5rem 6rem;
+  }
+
+  .news-title h2 {
+    font-size: 2.7rem;
+  }
+}
+
+@media (min-width: 1786px) {
+  .news-sec {
+    padding: 8rem;
+  }
+
+  .news-head h3 {
+    font-size: 1.5rem;
+  }
+
+  .news-title h2 {
+    font-size: 3.3rem;
+  }
+}
