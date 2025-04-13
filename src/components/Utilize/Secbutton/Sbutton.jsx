@@ -1,13 +1,14 @@
 import React from "react";
 import "./Sbutton.css";
+import { Link } from 'react-router-dom';
 
-function Button({ text, className }) {
+function Sbutton({ text, href, className, ...props }) {
   return (
-    <button className={`btn2 ${className}`}>
+    <Link to={href} className={`btn2 ${className}`} {...props}>
       <span className="primary-text">{text}</span>
       <span className="secondary-text">{text}</span>
-    </button>
+    </Link>
   );
 }
 
-export default Button;
+export default Sbutton;

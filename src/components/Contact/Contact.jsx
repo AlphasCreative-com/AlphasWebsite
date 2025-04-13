@@ -7,19 +7,22 @@ function Contact() {
     name: "",
     email: "",
     subject: "",
-    message: ""
+    phoneno: "",
+    message: "",
+    preferredContact: ""  // Added this for the radio buttons
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
     console.log(formData);
+    // You can send this data to a server or process it here
   };
 
   const handleChange = (e) => {
+    const { name, value } = e.target;
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: value
     });
   };
 
@@ -27,7 +30,10 @@ function Contact() {
     <div className="contact-container">
       <div className="contact-header">
         <h1>Get in Touch</h1>
-        <p>We'd love to hear from you! Please fill out the form below.</p>
+        <p>
+          Whether you're starting a new brand, building a website, or refreshing
+          your visuals — we’re here to help bring your ideas to life.
+        </p>
       </div>
 
       <div className="contact-content">
@@ -43,7 +49,17 @@ function Contact() {
               required
             />
           </div>
-
+          <div className="form-group">
+            <label htmlFor="phoneno">Phone Number</label>
+            <input
+              type="phoneno"
+              id="phoneno"
+              name="phoneno"
+              value={formData.phoneno}
+              onChange={handleChange}
+              required
+            />
+          </div>
           <div className="form-group">
             <label htmlFor="email">Email</label>
             <input
@@ -80,6 +96,34 @@ function Contact() {
             ></textarea>
           </div>
 
+          <div className="form-group">
+            <label>Preferred mode of contact:</label>
+            <div>
+              <label>
+                <input
+                  type="radio"
+                  name="preferredContact"
+                  value="Phone"
+                  checked={formData.preferredContact === "Phone"}
+                  onChange={handleChange}
+                />
+                Phone Call
+              </label>
+            </div>
+            <div>
+              <label>
+                <input
+                  type="radio"
+                  name="preferredContact"
+                  value="Email"
+                  checked={formData.preferredContact === "Email"}
+                  onChange={handleChange}
+                />
+                E-mail
+              </label>
+            </div>
+          </div>
+
           <div className="form-submit">
             <Sbutton type="submit" text="Send Message" />
           </div>
@@ -88,20 +132,13 @@ function Contact() {
         <div className="contact-info">
           <div className="info-section">
             <h3>Contact Information</h3>
-            <div className="info-item">
-              <i className="fas fa-map-marker-alt"></i>
-              <div>
-                <h4>Our Office</h4>
-                <p>785 18th Street, Office 778</p>
-                <p>New York, NY 10001</p>
-              </div>
-            </div>
+            
 
             <div className="info-item">
               <i className="fas fa-phone"></i>
               <div>
                 <h4>Phone</h4>
-                <p>+880.000.1111.111</p>
+                <p> +94 71 4907 110</p>
               </div>
             </div>
 
@@ -109,7 +146,7 @@ function Contact() {
               <i className="fas fa-envelope"></i>
               <div>
                 <h4>Email</h4>
-                <p>contact@cxole.com</p>
+                <p> info@alphascreative.com</p>
               </div>
             </div>
           </div>
@@ -124,10 +161,16 @@ function Contact() {
           <div className="social-media">
             <h3>Follow Us</h3>
             <div className="social-icons">
-              <a href="/"><i className="fab fa-facebook-f"></i></a>
-              <a href="/"><i className="fab fa-twitter"></i></a>
-              <a href="/"><i className="fab fa-linkedin-in"></i></a>
-              <a href="/"><i className="fab fa-instagram"></i></a>
+              <a href=" https://www.facebook.com/share/18qG334BCz/?mibextid=wwXIfr">
+                <i className="fab fa-facebook-f"></i>
+              </a>
+          
+              <a href="https://www.linkedin.com/company/alphas-creative/">
+                <i className="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://www.instagram.com/invites/contact/?igsh=1bg7qg53mkypv&utm_content=npr5b8a">
+                <i className="fab fa-instagram"></i>
+              </a>
             </div>
           </div>
         </div>

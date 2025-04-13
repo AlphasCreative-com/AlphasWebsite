@@ -1,12 +1,13 @@
 import React from "react";
 import "./Button.css";
+import { Link } from 'react-router-dom';
 
-function Button({ text, className }) {
+function Button({ text, href, className, ...props }) {
   return (
-    <button className={`btn ${className}`}>
+    <Link to={href} className={`btn ${className}`} {...props}>
       <span className="primary-text">{text}</span>
       <span className="secondary-text">{text}</span>
-    </button>
+    </Link>
   );
 }
 

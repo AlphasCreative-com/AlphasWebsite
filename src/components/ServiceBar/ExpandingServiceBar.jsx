@@ -5,8 +5,8 @@ const ExpandingServiceBar = ({ title, description }) => {
 
   return (
     <div
-      className={`transition-all duration-300 ease-in-out cursor-pointer w-full bg-white text-black text-left  flex items-center overflow-hidden shadow-md ${
-        expanded ? "h-60" : "h-48"
+      className={`transition-all duration-1000 ease-in-out cursor-pointer w-full bg-white text-black text-left  flex items-center overflow-hidden shadow-md ${
+        expanded ? "h-72" : "h-48"
       }`}
 
     onMouseEnter={() => setExpanded(true)}

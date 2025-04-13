@@ -15,11 +15,10 @@ function Hero() {
       {/* Hero Text */}
       <div className="relative z-10 flex flex-col items-start text-start gap-4 max-w-3xl px-4">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-unbounded">
-          About
+        Who We Are ?
         </h1>
         <h4 className="text-lg sm:text-xl md:text-2xl font-light">
-          Our professional team is dedicated to helping you achieve your digital
-          goals. From website design and development to branding.
+        At Alphas Creative, we’re a passionate team of designers and developers committed to bringing ideas to life. Since 2020, we’ve been helping businesses stand out with custom websites, bold visual identities, and strategic digital design. We believe great design goes beyond aesthetics—it’s about creating meaningful experiences that connect with your audience and grow your brand.
         </h4>
       </div>
 

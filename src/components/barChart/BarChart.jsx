@@ -7,6 +7,7 @@ function BarChart() {
     { name: "UI/UX Design", value: 90 },
     { name: "Web Development", value: 95 },
     { name: "Digital Marketing", value: 85 },
+    { name: "Branding", value: 96 },
   ];
 
   return (
