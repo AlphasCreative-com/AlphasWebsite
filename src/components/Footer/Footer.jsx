@@ -1,30 +1,34 @@
-
 import Sbutton from "../Utilize/Secbutton/Sbutton";
 import image from "../../Assests/Images/Logo.webp";
 import "./Footer.css";
 import { NavLink } from "react-router-dom";
 
 function Footer() {
-
-
-
-
-
-
   return (
     <footer className="footer-container">
       <div className="footer-content">
-        <div className="footer-logo">
-          <img src={image} alt="Company Logo" />
+        <div className="footer-header-container">
+          <div className="footer-logo">
+            <img src={image} alt="Company Logo" />
+          </div>
+          
         </div>
 
         <div className="footer-grid">
-          {/* Address Section */}
+          {/* Newsletter Section */}
           <div className="footer-section">
-            <h3 className="footer-heading">Address</h3>
-            <p className="footer-text">New York — 785 18h Street, Office 778</p>
-            <p className="footer-text">Berlin, De 81226</p>
-            <p className="footer-text">+880.000.1111.111</p>
+            <h3 className="footer-heading">Newsletter</h3>
+            <p className="newsletter-description">
+              Join us today, get updated everyday
+            </p>
+            <form className="newsletter-form">
+              <input
+                type="email"
+                placeholder="Type Your Email"
+                className="newsletter-input"
+              />
+              <Sbutton text="Subscribe" type="submit" />
+            </form>
           </div>
 
           {/* Company Links */}
@@ -47,21 +51,6 @@ function Footer() {
               <li><NavLink to="/privacy" className="footer-link">Privacy Policy</NavLink></li>
               <li><NavLink to="/help" className="footer-link">Help Centre</NavLink></li>
             </ul>
-          </div>
-
-          {/* Newsletter Section */}
-          <div className="footer-section">
-            <h3 className="footer-heading">Newsletter</h3>
-            <form className="newsletter-form">
-              <input
-                type="email"
-                placeholder="Type Your Email"
-                className="newsletter-input"
-              />
-              <div className="newsletter-button">
-                <Sbutton text="Subscribe" type="submit" />
-              </div>
-            </form>
           </div>
         </div>
 

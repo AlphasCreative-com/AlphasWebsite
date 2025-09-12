@@ -95,8 +95,8 @@
   border-radius: 10px;
   background: linear-gradient(
     rgba(255, 255, 255, 0) -6.43%,
-    rgba(115, 96, 223, 0.27) 79.94%,
-    rgb(115, 96, 223) 117.62%
+    rgba(24, 2, 149, 0.27) 79.94%,
+    rgb(81, 142, 241) 117.62%
   );
   transform: scale(0.5) skewX(20deg);
   opacity: 0;

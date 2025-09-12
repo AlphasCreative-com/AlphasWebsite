@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import "./Third.css";
-import Sbutton from "../../../components/Utilize/Secbutton/Sbutton";
 import { GrReactjs } from "react-icons/gr";
 import useIntersectionObserver from "../../../hooks/useIntersectionObserver";
 import SpecializeCard from "./specializeCard/SpecializeCard";
@@ -36,7 +35,6 @@ function Third() {
         <h3>OUR SPECIALIZE</h3>
         <div ref={ref} className="specialize-title">
           <h2>Our core services</h2>
-          <Sbutton text="See Services" />
         </div>
       </div>
       <div className="specialize-cards">

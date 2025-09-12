@@ -6,10 +6,9 @@ function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    subject: "",
-    phoneno: "",
+    requiredService: "",
+    preferred: "",
     message: "",
-    preferredContact: ""  // Added this for the radio buttons
   });
 
   const handleSubmit = (e) => {
@@ -22,167 +21,102 @@ function Contact() {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value
+      [name]: value,
     });
   };
 
   return (
-    <div className="contact-container">
-      <div className="contact-header">
-        <h1>Get in Touch</h1>
-        <p>
-          Whether you're starting a new brand, building a website, or refreshing
-          your visuals — we’re here to help bring your ideas to life.
-        </p>
-      </div>
-
-      <div className="contact-content">
-        <form className="contact-form" onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label htmlFor="name">Full Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="phoneno">Phone Number</label>
-            <input
-              type="phoneno"
-              id="phoneno"
-              name="phoneno"
-              value={formData.phoneno}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="subject">Subject</label>
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              value={formData.subject}
-              onChange={handleChange}
-              required
-            />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              rows="5"
-              required
-            ></textarea>
-          </div>
-
-          <div className="form-group">
-            <label>Preferred mode of contact:</label>
-            <div>
-              <label>
-                <input
-                  type="radio"
-                  name="preferredContact"
-                  value="Phone"
-                  checked={formData.preferredContact === "Phone"}
-                  onChange={handleChange}
-                />
-                Phone Call
-              </label>
-            </div>
-            <div>
-              <label>
-                <input
-                  type="radio"
-                  name="preferredContact"
-                  value="Email"
-                  checked={formData.preferredContact === "Email"}
-                  onChange={handleChange}
-                />
-                E-mail
-              </label>
-            </div>
-          </div>
-
-          <div className="form-submit">
-            <Sbutton type="submit" text="Send Message" />
-          </div>
-        </form>
-
+    <div className="contact-page-container">
+      <div className="contact-content-wrapper">
         <div className="contact-info">
-          <div className="info-section">
-            <h3>Contact Information</h3>
-            
-
-            <div className="info-item">
-              <i className="fas fa-phone"></i>
-              <div>
-                <h4>Phone</h4>
-                <p> +94 71 4907 110</p>
-              </div>
-            </div>
-
-            <div className="info-item">
-              <i className="fas fa-envelope"></i>
-              <div>
-                <h4>Email</h4>
-                <p> info@alphascreative.com</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="business-hours">
-            <h3>Business Hours</h3>
-            <p>Monday - Friday: 9am - 6pm</p>
-            <p>Saturday: 10am - 4pm</p>
-            <p>Sunday: Closed</p>
-          </div>
-
+          <h4>Let's connect</h4>
+          <h2>Let's work together</h2>
+          <p className="contact-intro-text">
+            People know what an FAQ is, so make that your page title. Don't overcomplicate thing have calling it's good to know or more info.
+          </p>
+          <p className="contact-detail-text">example@feuxgmail.com</p>
+          <p className="contact-detail-text">+1 287-366-566</p>
           <div className="social-media">
-            <h3>Follow Us</h3>
+            <h3>Follow us:</h3>
             <div className="social-icons">
-              <a href=" https://www.facebook.com/share/18qG334BCz/?mibextid=wwXIfr">
+              <a href="https://www.facebook.com/">
                 <i className="fab fa-facebook-f"></i>
               </a>
-          
-              <a href="https://www.linkedin.com/company/alphas-creative/">
+              <a href="https://www.instagram.com/">
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/">
                 <i className="fab fa-linkedin-in"></i>
               </a>
-              <a href="https://www.instagram.com/invites/contact/?igsh=1bg7qg53mkypv&utm_content=npr5b8a">
-                <i className="fab fa-instagram"></i>
+              <a href="https://twitter.com/">
+                <i className="fab fa-twitter"></i>
               </a>
             </div>
           </div>
         </div>
-      </div>
 
-      <div className="contact-map">
-        <iframe
-          title="office-location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.617539955866!2d-73.98542828459394!3d40.74844097932786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1623436789016!5m2!1sen!2sus"
-          allowFullScreen=""
-          loading="lazy"
-        ></iframe>
+        <div className="contact-form">
+          <form onSubmit={handleSubmit}>
+            <div className="form-group">
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="What's your name?"
+                required
+              />
+            </div>
+            <div className="form-group">
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="What's your e-mail?"
+                required
+              />
+            </div>
+            <div className="form-group">
+              <input
+                type="text"
+                name="requiredService"
+                value={formData.requiredService}
+                onChange={handleChange}
+                placeholder="Required service"
+                required
+              />
+            </div>
+            <div className="form-group">
+              <input
+                type="text"
+                name="preferred"
+                value={formData.preferred}
+                onChange={handleChange}
+                placeholder="Preferred"
+                required
+              />
+            </div>
+            <div className="form-group">
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Have any message?"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <div className="form-submit">
+              <Sbutton type="submit" text="Contact Us" />
+            </div>
+          </form>
+        </div>
+      </div>
+      <div className="back-to-top">
+        <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+          <i className="fas fa-arrow-up"></i>
+        </button>
       </div>
     </div>
   );

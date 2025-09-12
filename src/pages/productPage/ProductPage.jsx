@@ -7,9 +7,9 @@ import Hero from "../../components/Producthero/Hero";
 
 function ProductPage() {
   return (
-    <div className=" mx-auto ">
+    <div className="mx-auto">
       {/* Hero Section */}
-      <Hero/>
+      <Hero />
 
       {/* Solutions Overview */}
       <section className="py-16 text-center bg-gray-100">
@@ -20,34 +20,43 @@ function ProductPage() {
       </section>
 
       {/* Solution Cards */}
-      <section className="py-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div className="bg-white rounded-lg p-8 text-center shadow-lg">
-          <img src={productImg1} alt="Product 1" className="w-full max-w-xs mx-auto mb-4" />
-          <h3 className="text-xl font-semibold text-gray-800 mb-2">Enterprise Resource Planning (ERP) System</h3>
-          <p className="text-gray-600 mb-4">
-            Streamline and automate core business processes with our powerful, customizable ERP solutions.
-          </p>
-          <Sbutton text="Learn More" />
-        </div>
-
-        <div className="bg-white rounded-lg p-8 text-center shadow-lg">
-          <img src={productImg2} alt="Product 2" className="w-full max-w-xs mx-auto mb-4" />
-          <h3 className="text-xl font-semibold text-gray-800 mb-2">E-Commerce Platforms</h3>
-          <p className="text-gray-600 mb-4">
-            Elevate your online presence with user-friendly and scalable e-commerce websites and mobile apps.
-          </p>
-          <Sbutton text="Learn More" />
-        </div>
-
-        <div className="bg-white rounded-lg p-8 text-center shadow-lg">
-          <img src={productImg3} alt="Product 3" className="w-full max-w-xs mx-auto mb-4" />
-          <h3 className="text-xl font-semibold text-gray-800 mb-2">Custom Mobile Applications</h3>
-          <p className="text-gray-600 mb-4">
-            Deliver exceptional user experiences through innovative, cross-platform mobile applications.
-          </p>
-          <Sbutton text="Learn More" />
-        </div>
-      </section>
+      <div className="container mx-auto">
+        <section className="py-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          {/* Card 1 */}
+          <div className="portfolio-card">
+            <img src={productImg1} alt="Product 1" className="portfolio-img" />
+            <div className="portfolio-content">
+              <h3 className="portfolio-heading">Enterprise Resource Planning (ERP) System</h3>
+              <p className="portfolio-text">
+                Streamline and automate core business processes with our powerful, customizable ERP solutions.
+              </p>
+            </div>
+          </div>
+          
+          {/* Card 2 */}
+          <div className="portfolio-card">
+            <img src={productImg2} alt="Product 2" className="portfolio-img" />
+            <div className="portfolio-content">
+              <h3 className="portfolio-heading">E-Commerce Platforms</h3>
+              <p className="portfolio-text">
+                Elevate your online presence with user-friendly and scalable e-commerce websites and mobile apps.
+              </p>
+            </div>
+          </div>
+          
+          {/* Card 3 */}
+          <div className="portfolio-card">
+            <img src={productImg3} alt="Product 3" className="portfolio-img" />
+            <div className="portfolio-content">
+              <h3 className="portfolio-heading">Custom Mobile Applications</h3>
+              <p className="portfolio-text">
+                Deliver exceptional user experiences through innovative, cross-platform mobile applications.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
 
       {/* CTA Section */}
       <section className="py-16 bg-gray-800 text-white text-center">

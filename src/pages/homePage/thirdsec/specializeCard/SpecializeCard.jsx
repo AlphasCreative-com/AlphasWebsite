@@ -1,10 +1,10 @@
 import React from "react";
 import "./specializeCard.css";
 import useIntersectionObserver from "../../../../hooks/useIntersectionObserver";
-import ArrowButton from "../../../../components/Utilize/arrowButton/ArrowButton";
 
 function SpecializeCard({ card }) {
-  useIntersectionObserver(".specialize-card");
+  useIntersectionObserver(".specialize-card"); // observe the card
+
   return (
     <div className="specialize-card">
       <div className="specialize-card-icn">{card.icon}</div>
@@ -13,7 +13,8 @@ function SpecializeCard({ card }) {
       <p>{card.description}</p>
 
       <div className="specialize-card-btn">
-        <ArrowButton text="Read More" />
+        <span className="arrow-button-text">Read More</span>
+        <button className="arrow-button" aria-label="Read More"></button>
       </div>
     </div>
   );
