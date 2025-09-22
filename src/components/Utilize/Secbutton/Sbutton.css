@@ -6,12 +6,18 @@
   width: 7rem;
   height: 3rem;
   background-color: rgb(255, 255, 255);
-  color: var(--Maincolor);
-  border: 1.5px solid var(--Maincolor);
+  color: #2563eb;
+  border: 1.5px solid #2563eb;
   border-radius: 120px;
   margin: auto;
   position: relative;
   overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn2:hover {
+  background-color: #2563eb;
+  color: white;
 }
 
 .btn2 span {

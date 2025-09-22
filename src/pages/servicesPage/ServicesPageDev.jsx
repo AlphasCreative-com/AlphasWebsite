@@ -13,8 +13,7 @@ const ServicesPageDev = () => {
     },
     {
       title: "web Development",
-      description: "Our web development company specializes in creating responsive and user-friendly websites that effectively represent your brand online. From front-end design to back-end development, we ensure seamless functionality and an engaging user experience. Leverage our web development services to establish a strong digital presence and reach your target audience effectively."
-
+      description: "We provide professional software engineering services, delivering high-quality, scalable, and innovative solutions for businesses of all sizes. Our experienced software engineers specialize in custom software development, cloud-based solutions, and enterprise applications, ensuring efficiency, security, and seamless integration. Whether you need full-stack development, API integration, or AI-driven solutions, we turn complex ideas into powerful, functional software products. Partner with us to build cutting-edge software that drives your business forward."
     },
     {
       title: "System Development",

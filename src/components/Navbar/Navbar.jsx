@@ -49,14 +49,14 @@ function Navbar() {
           </li>
           
  <li className="nav-item dropdown">
-  <NavLink className="nav-link" to="/ServicesPage">
+  <NavLink className="nav-link" to="/services">
     Services
   </NavLink>
   <span className="arrow" onClick={toggleDropdown}></span>
   <ul className={`dropdown-menu ${dropdownOpen ? "show" : ""}`}>
-    <li><span className="dropdown-link">Development</span></li>
-    <li><span className="dropdown-link">Graphic Design</span></li>
-    <li><span className="dropdown-link">Digital Marketing</span></li>
+    <li><NavLink className="dropdown-link" to="/servicepagedev">Development</NavLink></li>
+    <li><NavLink className="dropdown-link" to="/servicepagedes">Design</NavLink></li>
+    <li><NavLink className="dropdown-link" to="/services">All Services</NavLink></li>
   </ul>
 </li>
 
@@ -79,7 +79,7 @@ function Navbar() {
             </NavLink>
           </li>
           <li>
-            <NavLink className="nav-link" to="/projects">
+            <NavLink className="nav-link" to="/portfolio">
               Projects
             </NavLink>
           </li>

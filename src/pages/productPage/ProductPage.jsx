@@ -20,39 +20,65 @@ function ProductPage() {
       </section>
 
       {/* Solution Cards */}
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         <section className="py-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-          
           {/* Card 1 */}
-          <div className="portfolio-card">
-            <img src={productImg1} alt="Product 1" className="portfolio-img" />
-            <div className="portfolio-content">
-              <h3 className="portfolio-heading">Enterprise Resource Planning (ERP) System</h3>
-              <p className="portfolio-text">
-                Streamline and automate core business processes with our powerful, customizable ERP solutions.
-              </p>
+          <div className="group relative bg-white p-6 rounded-lg transition-all duration-300 hover:shadow-xl">
+            <div className="w-full aspect-square mb-6 overflow-hidden rounded-lg bg-blue-50">
+              <img 
+                src={productImg1} 
+                alt="Streamline and automate core business processes with our powerful, customizable ERP solutions." 
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <div className="mb-4">
+              <span className="text-sm text-gray-500">Streamline and automate core business processes with our powerful, customizable ERP solutions.</span>
+            </div>
+            <div className="flex items-center justify-between mb-2">
+              <h3 className="text-2xl font-semibold">Enterprise Resource Planning (ERP) System</h3>
+              <button className="w-8 h-8 flex items-center justify-center bg-black text-white rounded-full hover:bg-gray-800 transition-colors duration-300 ml-4">
+                <span className="transform -translate-x-px">→</span>
+              </button>
             </div>
           </div>
-          
+
           {/* Card 2 */}
-          <div className="portfolio-card">
-            <img src={productImg2} alt="Product 2" className="portfolio-img" />
-            <div className="portfolio-content">
-              <h3 className="portfolio-heading">E-Commerce Platforms</h3>
-              <p className="portfolio-text">
-                Elevate your online presence with user-friendly and scalable e-commerce websites and mobile apps.
-              </p>
+          <div className="group relative bg-white p-6 rounded-lg transition-all duration-300 hover:shadow-xl">
+            <div className="w-full aspect-square mb-6 overflow-hidden rounded-lg bg-blue-50">
+              <img 
+                src={productImg2} 
+                alt="Elevate your online presence with user-friendly and scalable e-commerce websites and mobile apps." 
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <div className="mb-4">
+              <span className="text-sm text-gray-500">Elevate your online presence with user-friendly and scalable e-commerce websites and mobile apps.</span>
+            </div>
+            <div className="flex items-center justify-between mb-2">
+              <h3 className="text-2xl font-semibold">E-Commerce Platforms</h3>
+              <button className="w-8 h-8 flex items-center justify-center bg-black text-white rounded-full hover:bg-gray-800 transition-colors duration-300 ml-4">
+                <span className="transform -translate-x-px">→</span>
+              </button>
             </div>
           </div>
-          
+
           {/* Card 3 */}
-          <div className="portfolio-card">
-            <img src={productImg3} alt="Product 3" className="portfolio-img" />
-            <div className="portfolio-content">
-              <h3 className="portfolio-heading">Custom Mobile Applications</h3>
-              <p className="portfolio-text">
-                Deliver exceptional user experiences through innovative, cross-platform mobile applications.
-              </p>
+          <div className="group relative bg-white p-6 rounded-lg transition-all duration-300 hover:shadow-xl">
+            <div className="w-full aspect-square mb-6 overflow-hidden rounded-lg bg-blue-50">
+              <img 
+                src={productImg3} 
+                alt="Deliver exceptional user experiences through innovative, cross-platform mobile applications." 
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <div className="mb-4">
+              <span className="text-sm text-gray-500">Deliver exceptional user experiences through innovative, cross-platform mobile applications.</span>
+            </div>
+            <div className="flex items-center justify-between mb-2">
+              <h3 className="text-2xl font-semibold">Custom Mobile Applications</h3>
+              <button className="w-8 h-8 flex items-center justify-center bg-black text-white rounded-full hover:bg-gray-800 transition-colors duration-300 ml-4">
+                <span className="transform -translate-x-px">→</span>
+              </button>
             </div>
           </div>
         </section>

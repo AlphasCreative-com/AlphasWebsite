@@ -8,6 +8,7 @@ import TestimonialsSec from "./testimonialsSec/TestimonialsSec";
 import OurTeamSec from "./ourTeamSection/OurTeamSec";
 import ContactUsSec from "./contactUsSec/ContactUsSec";
 import NewsSection from "./newsSec/NewsSection";
+import ServicesPage from "../servicesPage/ServicesPage";
 
 function HomePage() {
   return (
@@ -22,6 +23,7 @@ function HomePage() {
       <OurTeamSec />
       <ContactUsSec />
       <NewsSection />
+      <ServicesPage/>
     </div>
   );
 }

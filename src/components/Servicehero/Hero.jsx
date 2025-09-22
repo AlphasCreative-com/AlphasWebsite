@@ -26,13 +26,13 @@ function Hero() {
       <div className="relative z-10 flex flex-wrap gap-6">
         <Button 
           className="px-6 py-3 md:px-8 md:py-4 text-white border border-white rounded-lg transition duration-300 hover:bg-white hover:text-black" 
-          text={"Graphic Design"} 
+          text={"Call Us"} 
           href="/servicepagedes"
           aria-label="Go to Graphic Design services"
         />
         <Sbutton 
           className="px-6 py-3 md:px-8 md:py-4 text-white border border-white rounded-lg transition duration-300 hover:bg-white hover:text-black" 
-          text={"Development"} 
+          text={"Expore Projects"} 
           href="/servicepagedev"
           aria-label="Explore Development services"
         />
