@@ -15,33 +15,50 @@ const WorkProcessSec = () => {
   const cards = [
     {
       id: "01",
-      title: "Planning An Idea",
+      title: "Strategic Planning & Solution",
       description:
-        "Interact with stakeholders to understand basic functional and non-functional requirements of the software.",
+        "Send us questions and questionnaires to gather key information.",
       icon: <MdOutlineDraw />,
+      step: "Step 01",
     },
     {
       id: "02",
-      title: "Design & Development",
+      title: "Monitoring & Optimization",
       description:
-        "Interact with stakeholders to understand basic functional and non-functional requirements of the software.",
+        "Send us questions and questionnaires to gather key information.",
       icon: <MdOutlineSettingsSuggest />,
+      step: "Step 02",
     },
     {
       id: "03",
-      title: "Release & Support",
+      title: "Training & Knowledge Transfer",
       description:
-        "Interact with stakeholders to understand basic functional and non-functional requirements of the software.",
+        "Send us questions and questionnaires to gather key information.",
       icon: <MdSupportAgent />,
+      step: "Step 03",
+    },
+    {
+      id: "04",
+      title: "Final Documentation",
+      description:
+        "Send us questions and questionnaires to gather key information.",
+      icon: <MdSupportAgent />,
+      step: "Step 04",
     },
   ];
 
   return (
     <section ref={ref} className="workprocess-sec">
       <div className="workprocess-head">
-        <h3>WORK PROCESS</h3>
         <div className="workprocess-title">
-          <h2>How we innovate</h2>
+          <h2>How to Solve the Problems.</h2>
+          <div className="progress-indicator">
+            <div className="progress-bar">
+              <div className="progress" style={{ width: '100%' }}>
+                <span>Client Satisfaction of Our First Priority</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div className="workprocess-cards">

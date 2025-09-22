@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "./contactUsSec.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 function ContactUsSec() {
@@ -25,10 +26,13 @@ function ContactUsSec() {
       <div ref={ref} className="home-contact-us-content">
         <h3>Have Any Project in Mind?</h3>
         <p>Subscribe Our Newsletter & Start The Project</p>
-        <form className="home-contact-us-content-input">
-          <input placeholder="Enter Your Email" type="text" />
-          <button>Subscribe</button>
-        </form>
+        <div className="home-contact-us-actions">
+          <form className="home-contact-us-content-input">
+            <input placeholder="Enter Your Email" type="text" />
+            <button type="submit">Subscribe</button>
+          </form>
+          <Link to="/contact" className="contact-us-button">Contact Us</Link>
+        </div>
       </div>
     </div>
   );

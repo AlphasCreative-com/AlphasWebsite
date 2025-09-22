@@ -136,6 +136,16 @@
 }
 
 .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  z-index: 50;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+}
+
+.dropdown-menu {
   position: relative;
   background: rgba(0, 0, 0, 0.2);
   list-style: none;

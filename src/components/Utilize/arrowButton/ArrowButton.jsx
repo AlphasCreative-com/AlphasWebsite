@@ -8,7 +8,6 @@ function ArrowButton({ text, hover = false }) {
       <span>{text}</span>
       <div>
         <MdArrowOutward />
-        <MdArrowOutward />
       </div>
     </button>
   );

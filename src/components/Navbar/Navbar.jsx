@@ -47,22 +47,28 @@ function Navbar() {
               Home
             </NavLink>
           </li>
-          
- <li className="nav-item dropdown">
-  <NavLink className="nav-link" to="/services">
-    Services
-  </NavLink>
-  <span className="arrow" onClick={toggleDropdown}></span>
-  <ul className={`dropdown-menu ${dropdownOpen ? "show" : ""}`}>
-    <li><NavLink className="dropdown-link" to="/servicepagedev">Development</NavLink></li>
-    <li><NavLink className="dropdown-link" to="/servicepagedes">Design</NavLink></li>
-    <li><NavLink className="dropdown-link" to="/services">All Services</NavLink></li>
-  </ul>
-</li>
-
-
-
-
+          <li className="nav-item dropdown">
+            <div className="flex items-center gap-1">
+              <NavLink className="nav-link" to="/services">Services</NavLink>
+              <span 
+                className="cursor-pointer text-sm transition-transform duration-200"
+                onClick={toggleDropdown}
+                style={{ transform: dropdownOpen ? 'rotate(180deg)' : 'rotate(0)' }}
+              >
+                \/
+              </span>
+            </div>
+            <ul className={`dropdown-menu absolute bg-white shadow-lg mt-2 py-2 ${dropdownOpen ? "block" : "hidden"}`}>
+              <li><NavLink className="block px-4 py-2 hover:bg-gray-100" to="/servicepagedev">Development</NavLink></li>
+              <li><NavLink className="block px-4 py-2 hover:bg-gray-100" to="/servicepagedes">Design</NavLink></li>
+              <li><NavLink className="block px-4 py-2 hover:bg-gray-100" to="/services">All Services</NavLink></li>
+            </ul>
+            <ul className={`dropdown-menu ${dropdownOpen ? "show" : ""}`}>
+              <li><NavLink className="dropdown-link" to="/servicepagedev">Development</NavLink></li>
+              <li><NavLink className="dropdown-link" to="/servicepagedes">Design</NavLink></li>
+              <li><NavLink className="dropdown-link" to="/services">All Services</NavLink></li>
+            </ul>
+          </li>
           <li>
             <NavLink className="nav-link" to="/product">
               Product

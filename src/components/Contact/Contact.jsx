@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import Sbutton from "../Utilize/Secbutton/Sbutton";
+import { useNavigate } from "react-router-dom";
 import "./Contact.css";
 
 function Contact() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -27,6 +29,9 @@ function Contact() {
 
   return (
     <div className="contact-page-container">
+      <button onClick={() => navigate(-1)} className="back-button">
+        ← Back
+      </button>
       <div className="contact-content-wrapper">
         <div className="contact-info">
           <h4>Let's connect</h4>

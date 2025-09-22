@@ -1,33 +1,59 @@
 .workprocess-sec {
   box-sizing: border-box;
-  padding: 3rem 1rem 3rem 1rem;
-}
-
-.workprocess-head h3 {
-  font-family: var(--bs-font-sans-serif);
-  font-size: 1rem;
-  font-weight: 500;
-  margin-top: 0;
-  text-align: center;
+  padding: 5rem 1rem;
+  background-color: #f8f9fa;
 }
 
 .workprocess-title {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2.5rem;
+  max-width: 800px;
+  margin: 0 auto 4rem auto;
 }
 
 .workprocess-title h2 {
   font-family: var(--bs-font-unbounded);
-  font-size: 2.1rem;
-  font-weight: 500;
-  margin-top: 0;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
   text-align: center;
+  color: #1a1a1a;
+}
+
+.progress-indicator {
+  margin-top: 2rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background-color: rgba(0, 122, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #007AFF;
+  border-radius: 2px;
+  position: relative;
+  transition: width 0.6s ease;
+  box-shadow: 0 0 10px rgba(0, 122, 255, 0.3);
+}
+
+.progress span {
+  position: absolute;
+  right: 0;
+  top: -2rem;
+  font-size: 0.9rem;
+  color: #007AFF;
+  font-weight: 500;
+  white-space: nowrap;
 }
 
 .workprocess-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   margin: 1rem auto 1rem auto;

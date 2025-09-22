@@ -1,81 +1,70 @@
 .arrow-btn {
   display: flex;
   background-color: white;
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.2);
   align-items: center;
+  justify-content: space-between;
   border-radius: 3rem;
-  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
-  gap: 2rem;
+  padding: 0.7rem 0.7rem 0.7rem 1.5rem;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .arrow-btn span {
   color: var(--color-light-black);
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .arrow-btn:hover {
   background-color: var(--color-primary-blue);
   border: 1px solid var(--color-primary-blue);
-  transition: all 0.5s ease;
 }
 
 .arrow-btn.hover {
   background-color: var(--color-primary-blue);
   border: 1px solid var(--color-primary-blue);
-  transition: all 0.5s ease;
 }
 
 .arrow-btn:hover span {
   color: white;
-  transition: all 0.5s ease;
 }
 
 .arrow-btn.hover span {
   color: white;
-  transition: all 0.5s ease;
-}
-
-.arrow-btn:hover div {
-  border: 1px solid var(--color-primary-blue);
-  transition: all 0.5s ease;
-}
-
-.arrow-btn.hover div {
-  border: 1px solid var(--color-primary-blue);
-  transition: all 0.5s ease;
 }
 
 .arrow-btn div {
   display: flex;
-  justify-items: center;
-  width: 1rem;
-  height: 1rem;
+  align-items: center;
+  justify-content: center;
   background-color: white;
-  border: 1px solid black;
-  padding: 0.5rem;
-  border-radius: 100%;
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
   position: relative;
   overflow: hidden;
+  border: none;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
 }
 
 .arrow-btn div svg {
-  position: absolute;
-  width: 1rem;
-  height: 1rem;
-  transition: transform 0.5s ease;
+  width: 1.2rem;
+  height: 1.2rem;
+  color: var(--color-light-black);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.arrow-btn div svg:nth-child(1) {
-  transform: translate(-1.5rem, 1.5rem);
+.arrow-btn:hover div svg,
+.arrow-btn.hover div svg {
+  color: var(--color-primary-blue);
+  transform: rotate(45deg);
 }
 
-.arrow-btn:hover div svg:nth-child(1) {
-  transform: translate(0, 0);
-}
-
-.arrow-btn:hover div svg:nth-child(2) {
-  transform: translate(1.5rem, -1.5rem);
+.arrow-btn:hover div,
+.arrow-btn.hover div {
+  box-shadow: 0 0 0 1px var(--color-primary-blue);
 }
 
 @media (min-width: 640px) {

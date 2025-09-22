@@ -1,32 +1,71 @@
 .workpro-crd {
-  padding: 1.8rem;
-  border: 1px solid var(--bg-light-gray);
-  border-radius: 15px;
-  transition: 0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(0, 122, 255, 0.1);
 }
 
 .workpro-crd:hover {
-  border: 1px solid var(--color-primary-blue);
-  transform: translateX(0) translateY(-5px) !important;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 122, 255, 0.15);
+  border-color: #007AFF;
 }
 
-.workpro-crd-id {
-  width: fit-content;
-  padding: 0.2rem 0.8rem;
-  border-radius: 15px;
-  border: 1px solid var(--bg-light-gray);
-  margin-left: auto;
+.workpro-crd:hover .workpro-crd-icn {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 122, 255, 0.3);
 }
 
-.workpro-crd-id p {
-  font-size: 2.5rem;
-  color: white;
-  -webkit-text-stroke: 1px black;
-  margin: 0;
+.workpro-crd-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.step-label {
+  font-size: 0.9rem;
+  color: #007AFF;
+  font-weight: 600;
+  background-color: rgba(0, 122, 255, 0.1);
+  padding: 4px 12px;
+  border-radius: 20px;
 }
 
 .workpro-crd-icn {
-  font-size: 4rem;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #007AFF;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 122, 255, 0.2);
+}
+
+.workpro-crd-id {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 80px;
+  height: 80px;
+  opacity: 0.1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.workpro-crd-id p {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--color-primary-blue);
+  margin: 0;
 }
 
 .workpro-crd-title {

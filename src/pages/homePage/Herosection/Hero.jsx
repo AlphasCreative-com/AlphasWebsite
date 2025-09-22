@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Button from "../../../components/Utilize/Button/Button";
 import Sbutton from "../../../components/Utilize/Secbutton/Sbutton";
+import { useNavigate } from "react-router-dom";
 import "./Hero.css";
 
 function Hero() {
+  const navigate = useNavigate();
   const fullText = "Digital Solutions";
   const [displayedText, setDisplayedText] = useState("");
   const [index, setIndex] = useState(0);
@@ -37,7 +39,11 @@ function Hero() {
         </h4>
       </div>
       <div className="hero-btn">
-        <Button className="btn01" text={"Contact Us"} />
+        <Button 
+          className="btn01" 
+          text={"Contact Us"} 
+          onClick={() => navigate('/contact')}
+        />
         <Sbutton className="btn02" text={"Explore Projects"} />
       </div>
     </div>
