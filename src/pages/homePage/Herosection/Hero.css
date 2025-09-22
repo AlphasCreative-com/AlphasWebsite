@@ -7,42 +7,108 @@
   width: 100%;
   gap: 2rem;
 
-  /* Blue gradient background */
-  background: linear-gradient(135deg, #FFFFFF, #484646, #FFFFFF);
-  color: #fff; /* Text visible on gradient */
+  /* Clean white background with subtle blue gradient */
+  background: linear-gradient(135deg, #ffffff 0%, #f8f7ff 50%, #ffffff 100%);
+  color: #000;
   position: relative;
   overflow: hidden;
 }
 
+/* Animated background elements */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(131, 111, 255, 0.05) 0%, transparent 50%);
+  animation: float 6s ease-in-out infinite;
+  z-index: 0;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  right: -30%;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(circle, rgba(131, 111, 255, 0.03) 0%, transparent 70%);
+  animation: float 8s ease-in-out infinite reverse;
+  z-index: 0;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-20px, -30px) scale(1.1);
+  }
+}
+
 .hero-text {
-  color: #000000;
+  color: #1a1a1a;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-text h3 {
-  color: black;
+  color: var(--color-primary-blue);
   font-size: 1.5rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 630;
   margin: 0;
+  animation: fadeInUp 1s ease-out 0.2s both;
 }
 
 .hero-text h1 {
-  color: black;
+  color: #1a1a1a;
   font-size: 2.9rem;
   text-align: center;
   font-family: "Unbounded", sans-serif;
   font-weight: 500;
   margin: 0;
+  animation: fadeInUp 1s ease-out 0.4s both;
 }
 
 .hero-text h1.glow-text {
-  color: #000000;
+  color: #1a1a1a;
   text-align: center;
+  position: relative;
+}
 
+.hero-text h1.glow-text::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--color-primary-blue), transparent);
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { opacity: 0.3; width: 60%; }
+  50% { opacity: 0.8; width: 80%; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-text h4 {
@@ -51,20 +117,105 @@
   font-size: 1.4rem;
   font-weight: 400;
   margin: 0;
+  color: var(--color-light-black);
+  animation: fadeInUp 1s ease-out 0.6s both;
 }
 
 .hero-btn {
   display: flex;
   gap: 1.5rem;
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 1s ease-out 0.8s both;
 }
 
-.hero-btn button, .hero-btn span {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Override button styles for hero section */
+.hero-btn .btn,
+.hero-btn .btn2 {
+  width: 180px;
+  height: 50px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.hero-btn button:hover, .hero-btn span:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+/* Primary button (Contact Us) - Dark style */
+.hero-btn .btn01 {
+  background-color: #1a1a1a;
+  color: white;
+  box-shadow: 0 4px 15px rgba(26, 26, 26, 0.2);
+}
+
+.hero-btn .btn01:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(26, 26, 26, 0.3);
+}
+
+/* Secondary button (Explore Projects) - Blue outline style */
+.hero-btn .btn02 {
+  background-color: transparent;
+  color: var(--color-primary-blue);
+  border: 2px solid var(--color-primary-blue) !important;
+}
+
+.hero-btn .btn02:hover {
+  background-color: var(--color-primary-blue);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(131, 111, 255, 0.3);
+}
+
+/* Fix the span positioning for both buttons */
+.hero-btn .btn span,
+.hero-btn .btn2 span {
+  position: relative;
+  top: 0 !important;
+  transition: none;
+  width: auto;
+  height: auto;
+}
+
+.hero-btn .btn .secondary-text,
+.hero-btn .btn2 .secondary-text {
+  display: none;
+}
+
+/* Remove hover animations for cleaner look */
+.hero-btn .btn:hover .primary-text,
+.hero-btn .btn2:hover .primary-text {
+  top: 0 !important;
+}
+
+/* Ripple effect for buttons */
+.hero-btn .btn::before,
+.hero-btn .btn2::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.hero-btn .btn:hover::before,
+.hero-btn .btn2:hover::before {
+  width: 300%;
+  height: 300%;
 }
 
 /* Responsive styles */
@@ -78,18 +229,20 @@
     font-size: 5rem;
   }
 
-  .hero-btn button, .hero-btn span {
-    height: 3.5rem;
-    width: 10rem;
+  .hero-btn .btn,
+  .hero-btn .btn2 {
+    width: 200px;
+    height: 55px;
+    font-size: 18px;
   }
 
-  .hero-btn .secondary-text {
-    top: 3rem;
+  /* Enhanced floating animation for larger screens */
+  .hero::before {
+    animation-duration: 8s;
   }
-
-  .hero-btn .btn01:hover .primary-text,
-  .hero-btn .btn02:hover .primary-text {
-    top: -3rem;
+  
+  .hero::after {
+    animation-duration: 10s;
   }
 }
 
@@ -126,17 +279,10 @@
     gap: 3rem;
   }
 
-  .hero-btn button, .hero-btn span {
-    height: 4rem;
-    width: 12rem;
-  }
-
-  .hero-btn .secondary-text {
-    top: 3rem;
-  }
-
-  .hero-btn .btn01:hover .primary-text,
-  .hero-btn .btn02:hover .primary-text {
-    top: -3rem;
+  .hero-btn .btn,
+  .hero-btn .btn2 {
+    width: 220px;
+    height: 60px;
+    font-size: 20px;
   }
 }
