@@ -1,6 +1,8 @@
 .circular-arrow-button {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
   border-radius: 50%;
   background-color: #000000;
   border: none;
@@ -11,6 +13,7 @@
   transition: all 0.3s ease;
   padding: 0;
   color: white;
+  flex-shrink: 0;
 }
 
 .circular-arrow-button:hover {
@@ -19,6 +22,7 @@
 }
 
 .circular-arrow-button svg {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
+  margin-left: 1px;
 }

@@ -12,10 +12,10 @@ const ExpandingServiceBar = ({ title, description, hasButton, buttonText }) => {
     onMouseEnter={() => setExpanded(true)}
     onMouseLeave={() => setExpanded(false)}
     >
-      <div className="w-full pl-12 pr-12">
-        <div className="max-w-3xl border-b border-gray-300 pb-4">
+      <div className="w-full max-w-5xl mx-auto px-8 md:px-12 lg:px-16">
+        <div className="border-b border-gray-300 pb-4">
           <div className="flex justify-between items-center">
-            <h3 className="text-3xl mt-8 mb-4 font-semibold">{title}</h3>
+            <h3 className="text-[1.8rem] mt-8 mb-4 font-medium font-unbounded">{title}</h3>
             <svg 
               width="24" 
               height="24" 

@@ -14,7 +14,7 @@ function ProductPage() {
 
       {/* Solutions Overview */}
       <section className="py-16 text-center bg-gray-100">
-        <h2 className="text-3xl font-bold mb-4">Tailored Digital Solutions</h2>
+        <h2 className="text-[2.1rem] font-medium font-unbounded mb-4 md:text-[2.2rem] lg:text-[2.5rem] xl:text-[2.7rem] 2xl:text-[3.3rem]">Tailored Digital Solutions</h2>
         <p className="max-w-3xl mx-auto text-lg text-gray-700 leading-relaxed">
           Our expert team crafts top-tier software products, mobile apps, systems, and websites to address unique business challenges and drive growth.
         </p>
@@ -36,7 +36,7 @@ function ProductPage() {
               <span className="text-sm text-gray-500">Streamline and automate core business processes with our powerful, customizable ERP solutions.</span>
             </div>
             <div className="flex items-center justify-between mb-2">
-              <h3 className="text-2xl font-semibold">Enterprise Resource Planning System</h3>
+              <h3 className="text-[1.5rem] font-medium font-unbounded">Enterprise Resource Planning (ERP) System</h3>
               <CircularArrows />
             </div>
           </div>
@@ -44,7 +44,7 @@ function ProductPage() {
           {/* Card 2 */}
           <div className="group relative bg-white p-6 rounded-lg transition-all duration-300 hover:shadow-xl">
             <div className="w-full aspect-square mb-6 overflow-hidden rounded-lg bg-blue-50">
-              <img 
+              <img
                 src={productImg2} 
                 alt="Elevate your online presence with user-friendly and scalable e-commerce websites and mobile apps." 
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -54,7 +54,7 @@ function ProductPage() {
               <span className="text-sm text-gray-500">Elevate your online presence with user-friendly and scalable e-commerce websites and mobile apps.</span>
             </div>
             <div className="flex items-center justify-between mb-2">
-              <h3 className="text-2xl font-semibold">E-Commerce Platforms</h3>
+              <h3 className="text-[1.5rem] font-medium font-unbounded">E-Commerce Platforms</h3>
               <CircularArrows />
             </div>
           </div>
@@ -72,7 +72,7 @@ function ProductPage() {
               <span className="text-sm text-gray-500">Deliver exceptional user experiences through innovative, cross-platform mobile applications.</span>
             </div>
             <div className="flex items-center justify-between mb-2">
-              <h3 className="text-2xl font-semibold">Custom Mobile Applications</h3>
+              <h3 className="text-[1.5rem] font-medium font-unbounded">Custom Mobile Applications</h3>
               <CircularArrows />
             </div>
           </div>
