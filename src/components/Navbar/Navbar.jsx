@@ -50,13 +50,19 @@ function Navbar() {
           <li className="nav-item dropdown">
             <div className="flex items-center gap-1">
               <NavLink className="nav-link" to="/services">Services</NavLink>
-              <span 
-                className="cursor-pointer text-sm transition-transform duration-200"
+              <svg 
+                className="cursor-pointer w-4 h-4 transition-transform duration-200 inline-block ml-1"
                 onClick={toggleDropdown}
                 style={{ transform: dropdownOpen ? 'rotate(180deg)' : 'rotate(0)' }}
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
-                \/
-              </span>
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
             </div>
             <ul className={`dropdown-menu absolute bg-white shadow-lg mt-2 py-2 ${dropdownOpen ? "block" : "hidden"}`}>
               <li><NavLink className="block px-4 py-2 hover:bg-gray-100" to="/servicepagedev">Development</NavLink></li>
