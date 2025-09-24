@@ -6,25 +6,40 @@ const ExpandingServiceBar = ({ title, description, hasButton, buttonText }) => {
 
   return (
     <div
-      className={`transition-all duration-1000 ease-in-out cursor-pointer w-full bg-white text-black text-left flex items-center overflow-hidden border-b border-gray-300 ${
-        expanded ? "h-auto min-h-[18rem] pb-8" : "h-48"
+      className={`transition-all duration-500 ease-in-out cursor-pointer w-full bg-white text-black text-left flex items-center overflow-hidden ${
+        expanded ? "h-auto min-h-[12rem] pb-6" : "h-32"
       }`}
-
     onMouseEnter={() => setExpanded(true)}
     onMouseLeave={() => setExpanded(false)}
     >
-      <div className="w-full">
-        <h3 className="text-5xl m-12 font-semibold">{title}</h3>
-        {expanded && (
-          <div className="flex flex-col gap-4">
-            <p className="text-gray-500 mx-12 text-sm">{description}</p>
-            {hasButton && (
-              <div className="mx-12 mt-4">
-                <Sbutton text={buttonText || "Inquire Now"} />
-              </div>
-            )}
+      <div className="w-full pl-12 pr-12">
+        <div className="max-w-3xl border-b border-gray-300 pb-4">
+          <div className="flex justify-between items-center">
+            <h3 className="text-3xl mt-8 mb-4 font-semibold">{title}</h3>
+            <svg 
+              width="24" 
+              height="24" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="2" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+              className="transform -rotate-45"
+            >
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
           </div>
-        )}
+          {expanded && (
+            <div className="flex flex-col gap-4">
+              <p className="text-gray-600 text-base leading-relaxed text-justify">{description}</p>
+              <div className="mt-2 text-left">
+                <Sbutton text="Inquire Now" className="service-btn" />
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
