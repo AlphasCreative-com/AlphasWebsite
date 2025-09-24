@@ -44,7 +44,7 @@ function Hero() {
           text={"Contact Us"} 
           onClick={() => navigate('/contact')}
         />
-        <Sbutton className="btn02" text={"Explore Projects"} />
+        <Sbutton className="btn02 white-variant" text={"Explore Projects"} />
       </div>
     </div>
   );

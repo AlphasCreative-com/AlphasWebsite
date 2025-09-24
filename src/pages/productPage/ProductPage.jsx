@@ -1,5 +1,6 @@
 import React from "react";
 import Sbutton from "../../components/Utilize/Secbutton/Sbutton";
+import CircularArrows from "../../components/Utilize/CircularArrows/CircularArrows";
 import productImg1 from "../../Assests/Images/skill.png";
 import productImg2 from "../../Assests/Images/skill.png";
 import productImg3 from "../../Assests/Images/skill.png";
@@ -35,10 +36,8 @@ function ProductPage() {
               <span className="text-sm text-gray-500">Streamline and automate core business processes with our powerful, customizable ERP solutions.</span>
             </div>
             <div className="flex items-center justify-between mb-2">
-              <h3 className="text-2xl font-semibold">Enterprise Resource Planning (ERP) System</h3>
-              <button className="w-8 h-8 flex items-center justify-center bg-black text-white rounded-full hover:bg-gray-800 transition-colors duration-300 ml-4">
-                <span className="transform -translate-x-px">→</span>
-              </button>
+              <h3 className="text-2xl font-semibold">Enterprise Resource Planning System</h3>
+              <CircularArrows />
             </div>
           </div>
 
@@ -56,9 +55,7 @@ function ProductPage() {
             </div>
             <div className="flex items-center justify-between mb-2">
               <h3 className="text-2xl font-semibold">E-Commerce Platforms</h3>
-              <button className="w-8 h-8 flex items-center justify-center bg-black text-white rounded-full hover:bg-gray-800 transition-colors duration-300 ml-4">
-                <span className="transform -translate-x-px">→</span>
-              </button>
+              <CircularArrows />
             </div>
           </div>
 
@@ -76,9 +73,7 @@ function ProductPage() {
             </div>
             <div className="flex items-center justify-between mb-2">
               <h3 className="text-2xl font-semibold">Custom Mobile Applications</h3>
-              <button className="w-8 h-8 flex items-center justify-center bg-black text-white rounded-full hover:bg-gray-800 transition-colors duration-300 ml-4">
-                <span className="transform -translate-x-px">→</span>
-              </button>
+              <CircularArrows />
             </div>
           </div>
         </section>

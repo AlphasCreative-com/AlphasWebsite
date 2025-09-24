@@ -26,7 +26,7 @@ function Hero() {
       {/* Buttons */}
       <div className="relative z-10 flex flex-wrap gap-6">
         <Button className="px-6 py-3 md:px-8 md:py-4 text-white border border-white rounded-lg transition duration-300 hover:bg-white hover:text-black" text={"Get Started"} />
-        <Sbutton className="px-6 py-3 md:px-8 md:py-4 text-white border border-white rounded-lg transition duration-300 hover:bg-white hover:text-black" text={"See Features"} />
+        <Sbutton className="btn02 white-variant" text={"See Features"} />
       </div>
     </div>
   );

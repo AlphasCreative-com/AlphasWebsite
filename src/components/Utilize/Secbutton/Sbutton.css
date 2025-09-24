@@ -5,19 +5,36 @@
   justify-content: center;
   width: 7rem;
   height: 3rem;
-  background-color: rgb(255, 255, 255);
-  color: #2563eb;
-  border: 1.5px solid #2563eb;
+  background-color: #007AFF;
+  color: white;
+  border: none;
   border-radius: 120px;
-  margin: auto;
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
+  margin: 0 auto;
+}
+
+.btn2.white-variant {
+  background-color: white;
+  color: #007AFF;
+  border: 2px solid white;
 }
 
 .btn2:hover {
-  background-color: #2563eb;
+  background-color: #0056b3;
   color: white;
+  transform: translateY(-1px);
+}
+
+.btn2.white-variant:hover {
+  background-color: transparent;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.btn2.service-btn {
+  margin: 0;  /* Override center alignment for service buttons */
 }
 
 .btn2 span {

@@ -31,8 +31,8 @@ function Hero() {
           aria-label="Go to Graphic Design services"
         />
         <Sbutton 
-          className="px-6 py-3 md:px-8 md:py-4 text-white border border-white rounded-lg transition duration-300 hover:bg-white hover:text-black" 
-          text={"Expore Projects"} 
+          className="btn02 white-variant" 
+          text={"Explore Projects"} 
           href="/servicepagedev"
           aria-label="Explore Development services"
         />
