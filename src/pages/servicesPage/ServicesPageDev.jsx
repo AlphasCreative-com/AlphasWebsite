@@ -39,15 +39,17 @@ const ServicesPageDev = () => {
       <Hero />
 
       {/* Expanding Service Bars */}
-      <section className="py-16 space-y-4">
-        {services.map((service, index) => (
-          <ExpandingServiceBar 
-            key={index} 
-            title={service.title} 
-            description={service.description}
-            hasButton={true}
-          />
-        ))}
+      <section className="py-16 px-4 max-w-7xl mx-auto">
+        <div className="space-y-6">
+          {services.map((service, index) => (
+            <ExpandingServiceBar 
+              key={index} 
+              title={service.title} 
+              description={service.description}
+              hasButton={true}
+            />
+          ))}
+        </div>
       </section>
 
       {/* CTA Section */}
