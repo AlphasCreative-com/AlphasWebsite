@@ -1,169 +1,322 @@
-/* About.css */
 .about-container {
-    max-width: 1900px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-  }
-  
-  /* Hero Section */
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Hero Section */
+.about-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../../Assests/Images/skill.png") center/cover;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-bottom: 4rem;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-description {
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #e2e8f0;
+}
+
+/* Counter Section */
+.counter-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 4rem 6rem;
+  text-align: center;
+}
+
+.counter-box {
+  background: #007BFF;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  color: white;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.counter-section.in-view .counter-box {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.values-section p {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #4a5568;
+}
+
+.counter-box h2 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: white;
+}
+
+.counter-box p {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  color: #e2e8f0;
+}
+
+/* Why Choose Us */
+.values-section {
+  padding: 4rem 0;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.values-section h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.value-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.value-card i {
+  font-size: 2.5rem;
+  color: #007BFF;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.value-card h3 {
+  font-size: 1.2rem;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.value-card p {
+  font-size: 1rem;
+  color: #4a5568;
+  margin: 0;
+}
+.process-image {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.process-image img {
+  width: 90%;        
+  max-width: 1400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+}
+
+/* Vision & Mission */
+.vision-mission {
+  padding: 4rem 0;
+  background-color: #f8f9fa;
+}
+
+.vm-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem; 
+}
+
+.vm-left {
+  flex: 1;
+  min-width: 280px;
+  max-width: 600px;
+  text-align: left;
+}
+
+.vm-left h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #2d3748;
+}
+
+.vm-left h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #007BFF;
+}
+
+.vm-left p {
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.vm-right {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.vm-card {
+  background: white;
+  width: 420px;
+  height: 120px;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical centering */
+  align-items: center;     /* horizontal centering */
+  text-align: center;
+  margin: 0 auto;
+}
+
+.vm-card h3 {
+  font-size: 1.3rem;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.vm-card p {
+  font-size: 1rem;
+  color: #4a5568;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   .about-hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-      url("../../Assests/Images/skill.png") center/cover;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    margin-bottom: 4rem;
+    height: 40vh;
   }
-  
+
   .hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-  
-  .hero-content p {
-    font-size: 1.25rem;
-  }
-  
-  /* Mission Section */
-  .mission-section {
-    padding: 4rem 0;
-    text-align: center;
-    background-color: #f8f9fa;
-  }
-  
-  .mission-content h2 {
     font-size: 2rem;
-    margin-bottom: 1.5rem;
   }
-  
-  .mission-statement {
-    max-width: 800px;
-    margin: 0 auto 2rem;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #4a5568;
-  }
-  
-  /* History Section */
-  .history-section {
-    padding: 4rem 0;
-  }
-  
-  .history-timeline {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    text-align: center;
-  }
-  
-  .timeline-item {
-    padding: 2rem;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .timeline-item h3 {
-    color: #2d3748;
-    margin-bottom: 0.5rem;
-  }
-  
-  /* Team Section */
-  .team-section {
-    padding: 4rem 0;
-    text-align: center;
-  }
-  
-  .team-section h2 {
+
+  .counter-box h2 {
     font-size: 2rem;
-    margin-bottom: 3rem;
   }
-  
-  .team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+
+  .values-grid,
+  .timeline,
+  .vm-grid {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .team-member img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
+
+  .approach-grid {
+    flex-direction: column;
   }
-  
-  .team-member h4 {
-    color: #2d3748;
-    margin-bottom: 0.5rem;
+
+  .approach-left h2 {
+    font-size: 1.5rem;
   }
-  
-  /* Values Section */
-  .values-section {
-    padding: 4rem 0;
-    background-color: #f8f9fa;
+
+  .vm-wrapper {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .values-section h2 {
+
+  .vm-left {
     text-align: center;
-    font-size: 2rem;
-    margin-bottom: 3rem;
   }
-  
-  .values-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .value-card {
+
+  .vm-left h2,
+  .vm-left h4 {
     text-align: center;
-    padding: 2rem;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
-  
-  .value-card i {
-    font-size: 2.5rem;
-    color: #4a5568;
-    margin-bottom: 1rem;
-  }
-  
-  .value-card h3 {
-    color: #2d3748;
-    margin-bottom: 0.75rem;
-  }
-  
-  /* CTA Section */
-  .about-cta {
-    padding: 4rem 0;
-    text-align: center;
-    background-color: #2d3748;
-    color: white;
-  }
-  
-  .about-cta h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  @media (max-width: 768px) {
-    .about-hero {
-      height: 40vh;
-    }
-    
-    .hero-content h1 {
-      font-size: 2rem;
-    }
-  
-    .team-member img {
-      width: 150px;
-      height: 150px;
-    }
-  }
+}
+
+/* Company Approach Section */
+.approach-section {
+  padding: 4rem 0;
+  background-color: #ffffff;
+}
+
+.approach-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  padding: 0 6rem; 
+}
+
+.approach-left {
+  flex: 0.9;
+  max-width: 500px;
+}
+
+.approach-right {
+  flex: 1.1;
+  max-width: 700px;
+}
+
+.approach-left h2 {
+  font-size: 1.8rem;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.approach-left p {
+  font-size: 1.1rem;
+  color: #4a5568;
+}
+
+.approach-right p {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.approach-left p,
+.approach-right p,
+.vm-card p {
+  text-align: justify;
+}
+
+.counter-box {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.counter-section.in-view .counter-box {
+  opacity: 1;
+  transform: translateY(0);
+}
