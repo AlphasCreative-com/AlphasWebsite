@@ -1,5 +1,4 @@
-import Sbutton from "../Utilize/Secbutton/Sbutton";
-import image from "../../Assests/Images/Logo.webp";
+
 import "./Footer.css";
 import { NavLink } from "react-router-dom";
 
