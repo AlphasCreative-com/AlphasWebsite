@@ -2,7 +2,7 @@ import React from "react";
 import "./About.css";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
-
+import TestimonialsSec from "../../pages/homePage/testimonialsSec/TestimonialsSec";
 
 function AboutPage() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
