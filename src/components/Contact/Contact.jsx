@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import Sbutton from "../Utilize/Secbutton/Sbutton";
-import { useNavigate } from "react-router-dom";
 import "./Contact.css";
 
 function Contact() {
-  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -29,9 +27,6 @@ function Contact() {
 
   return (
     <div className="contact-page-container">
-      <button onClick={() => navigate(-1)} className="back-button">
-        ← Back
-      </button>
       <div className="contact-content-wrapper">
         <div className="contact-info">
           <h4>Let's connect</h4>
@@ -39,22 +34,19 @@ function Contact() {
           <p className="contact-intro-text">
             People know what an FAQ is, so make that your page title. Don't overcomplicate thing have calling it's good to know or more info.
           </p>
-          <p className="contact-detail-text">example@feuxgmail.com</p>
-          <p className="contact-detail-text">+1 287-366-566</p>
+          <p className="contact-detail-text">info@alphascreative.com</p>
+          <p className="contact-detail-text">+94 71 490 7110</p>
           <div className="social-media">
             <h3>Follow us:</h3>
             <div className="social-icons">
-              <a href="https://www.facebook.com/">
+              <a href="https://www.facebook.com/share/1GVrChiC3K/?mibextid=wwXIfr/">
                 <i className="fab fa-facebook-f"></i>
               </a>
               <a href="https://www.instagram.com/">
                 <i className="fab fa-instagram"></i>
               </a>
-              <a href="https://www.linkedin.com/">
+              <a href="https://www.linkedin.com/company/alphas-creative//">
                 <i className="fab fa-linkedin-in"></i>
-              </a>
-              <a href="https://twitter.com/">
-                <i className="fab fa-twitter"></i>
               </a>
             </div>
           </div>
