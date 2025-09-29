@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import Sbutton from "../../components/Utilize/Secbutton/Sbutton";
+import React from "react";
 import servicesImage from "../../Assests/Images/services.jpg";
 import heroBg from "../../Assests/Images/second bg.jpg";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
@@ -8,25 +7,15 @@ import "./ServicesPage.css";
 
 const ServicesPage = () => {
   const servicesRef = React.useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
   
   const { ref: heroRef, inView: heroInView } = useInView({ 
     triggerOnce: true, 
     threshold: 0.1 
   });
-  
-  const { ref: statsRef, inView: statsInView } = useInView({ 
-    triggerOnce: true, 
-    threshold: 0.3 
-  });
 
   const scrollToServices = () => {
     servicesRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
 
   const services = [
     {

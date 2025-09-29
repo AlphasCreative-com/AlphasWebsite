@@ -29,15 +29,6 @@ function Navbar() {
     setActiveDropdown(null);
   }, [location]);
 
-  // Services dropdown items
-  const servicesDropdown = [
-    { name: "AI & Automations", submenu: ["Workflow Automation", "Jumora AI", "AI Augmented Development"] },
-    { name: "Web Development", path: "/services" },
-    { name: "Mobile Development", path: "/services" },
-    { name: "UI/UX Design", path: "/services" },
-    { name: "Digital Marketing", path: "/services" }
-  ];
-
   return (
     <nav className="modern-navbar">
       <div className="navbar-container">
