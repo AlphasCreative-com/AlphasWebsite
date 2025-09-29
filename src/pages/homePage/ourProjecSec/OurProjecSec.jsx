@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import "./ourProjectSec.css";
-import Sbutton from "../../../components/Utilize/Secbutton/Sbutton";
 import useIntersectionObserver from "../../../hooks/useIntersectionObserver";
 import ArrowButton from "../../../components/Utilize/arrowButton/ArrowButton";
 
@@ -41,7 +40,6 @@ const OurProjecSec = () => {
       <div className="ourProject-head">
         <div ref={ref} className="ourProject-title">
           <h2>Our recent projects</h2>
-          <Sbutton text="See All Projects" />
         </div>
       </div>
       <div className="ourProject-content">

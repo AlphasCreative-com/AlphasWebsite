@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "./contactUsSec.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { Link } from "react-router-dom";
+
 
 gsap.registerPlugin(ScrollTrigger);
 function ContactUsSec() {
@@ -31,7 +31,7 @@ function ContactUsSec() {
             <input placeholder="Enter Your Email" type="text" />
             <button type="submit">Subscribe</button>
           </form>
-          <Link to="/contact" className="contact-us-button">Contact Us</Link>
+      
         </div>
       </div>
     </div>
