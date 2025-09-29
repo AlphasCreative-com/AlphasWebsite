@@ -20,13 +20,13 @@ body {
 }
 
 :root {
-  --Maincolor: #1a1a1a;
-  --Secondarycolor: #836fff;
-  --bg-light-blue: #f8f7ff;
-  --bg-drak-blue: #0c1923;
-  --bg-light-gray: #ddd;
-  --color-light-black: #555567;
-  --color-primary-blue: #836fff;
+  --Maincolor: #4e6dec;
+  --Secondarycolor: #4e6dec;
+  --bg-light-blue: #ffffff;
+  --bg-drak-blue: #000000;
+  --bg-light-gray: #ffffff;
+  --color-light-black: #000000;
+  --color-primary-blue: #4e6dec;
 
   /* fonts */
 

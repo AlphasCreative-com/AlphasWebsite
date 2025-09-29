@@ -14,10 +14,10 @@ function Hero() {
 
       {/* Hero Text */}
       <div className="relative z-10 flex flex-col items-start text-start gap-4 max-w-3xl px-4">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-unbounded">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-unbounded text-white">
           Services
         </h1>
-        <h2 className="text-lg sm:text-xl md:text-2xl font-light">
+        <h2 className="text-lg sm:text-xl md:text-2xl font-light text-white">
           Our professional team is dedicated to helping you achieve your digital goals with high-quality solutions tailored to your business needs. We specialize in Graphic Design and Development, ensuring a seamless and visually engaging digital presence.
         </h2>
       </div>
