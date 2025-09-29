@@ -2,17 +2,28 @@
   padding: 2rem;
   background: white;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
   border: 1px solid rgba(0, 122, 255, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.workpro-crd:focus,
+.workpro-crd:active {
+  outline: none;
+  border-color: transparent;
 }
 
 .workpro-crd:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 24px rgba(0, 122, 255, 0.15);
-  border-color: #007AFF;
+  border-color: #fbfbfb;
 }
 
 .workpro-crd:hover .workpro-crd-icn {
@@ -29,7 +40,7 @@
 
 .step-label {
   font-size: 0.9rem;
-  color: #007AFF;
+  color: #000000;
   font-weight: 600;
   background-color: rgba(0, 122, 255, 0.1);
   padding: 4px 12px;
@@ -42,20 +53,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #007AFF;
+  background-color: #ffffff;
   border-radius: 50%;
   font-size: 1.5rem;
-  color: white;
-  box-shadow: 0 4px 12px rgba(0, 122, 255, 0.2);
+  color: rgb(0, 0, 0);
+  box-shadow: 0 4px 12px rgba(237, 237, 237, 0.2);
 }
 
 .workpro-crd-id {
   position: absolute;
-  bottom: -20px;
-  right: -20px;
+  bottom: 10px;
+  right: 10px;
   width: 80px;
   height: 80px;
-  opacity: 0.1;
+  opacity: 0.3;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,8 +75,17 @@
 .workpro-crd-id p {
   font-size: 3rem;
   font-weight: bold;
-  color: var(--color-primary-blue);
+  color: #bdb2b2;
   margin: 0;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.workpro-crd-id p:focus,
+.workpro-crd-id p:active {
+  color: inherit;
+  outline: none;
+  text-shadow: none;
+  -webkit-text-stroke: none;
 }
 
 .workpro-crd-title {
@@ -81,6 +101,7 @@
 
 .workpro-crd:hover .workpro-crd-id {
   border: 1px solid var(--color-primary-blue);
+  opacity: 0.5;
 }
 
 .workpro-crd:hover .workpro-crd-id p {
@@ -90,6 +111,9 @@
 
 .workpro-crd-box {
   opacity: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .workpro-crd-box.animate {
@@ -107,9 +131,7 @@
   }
 }
 
-@media (min-width: 640px) {
-}
-
+/* Responsive tweaks */
 @media (min-width: 768px) {
   .workpro-crd-box {
     min-width: 17.1rem;
@@ -127,15 +149,12 @@
 @media (min-width: 1280px) {
   .workpro-crd-icn {
     font-size: 6rem;
-    margin: 1rem 0 1rem 0;
+    margin: 1rem 0;
   }
 
   .workpro-crd-title {
     font-size: 1.6rem;
   }
-}
-
-@media (min-width: 1536px) {
 }
 
 @media (min-width: 1786px) {
@@ -146,12 +165,12 @@
 
   .workpro-crd-icn {
     font-size: 8rem;
-    margin: 2rem 0 2rem 0;
+    margin: 2rem 0;
   }
 
   .workpro-crd-title {
     font-size: 1.8rem;
-    margin: 2rem 0 2rem 0;
+    margin: 2rem 0;
   }
 
   .workpro-crd-disc {

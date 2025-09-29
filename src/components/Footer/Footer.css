@@ -18,7 +18,7 @@
 }
 
 .newsletter-section .footer-heading {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1rem;
   line-height: 1.2;
@@ -33,8 +33,21 @@
 
 @media (min-width: 768px) {
   .footer-grid {
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* Left links and Right newsletter */
     gap: 2rem;
+    align-items: flex-start;
+  }
+
+  .footer-links-container {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+  }
+
+  .footer-logo img {
+    max-width: 120px; /* adjust logo size */
+    height: auto;
+    margin-right: 2rem;
   }
 }
 
@@ -58,15 +71,16 @@
 .newsletter-input {
   flex: 1;
   padding: 0.75rem 1rem;
-  border: 1px solid #e0e0e0;
-  border-radius: 4px;
+  border: 1px solid #000000;
+  border-radius: 999px; 
   font-size: 1rem;
+  background-color: transparent;
+  color: #000000;
   outline: none;
-  transition: border-color 0.2s;
 }
 
-.newsletter-input:focus {
-  border-color: #007AFF;
+.newsletter-input::placeholder {
+  color: #000000;
 }
 
 .subscribe-button {
@@ -74,29 +88,17 @@
   background-color: #007AFF;
   color: #ffffff;
   border: none;
-  border-radius: 4px;
+  border-radius: 999px; 
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s;
 }
 
+
 .subscribe-button:hover {
-  background-color: #0056b3;
+  background-color: #1A6AFF;
 }
 
-.newsletter-input {
-  flex-grow: 1;
-  padding: 1rem;
-  border-radius: 0.25rem;
-  background-color: transparent;
-  border: 1px solid #000000;
-  color: #000000;
-  font-size: 1rem;
-}
-
-.newsletter-input::placeholder {
-  color: #000000;
-}
 
 .footer-links {
   list-style: none;
@@ -130,8 +132,19 @@
   color: #000000;
 }
 
-.Sbutton {
-  background-color: #007bff;
-  color: #fff;
-  font-weight: bold;
+.social-links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem; /* spacing between icons */
+}
+
+.social-link {
+  color: #000;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #007AFF;
 }

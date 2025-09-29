@@ -87,6 +87,7 @@
   cursor: pointer;
   font-family: inherit;
   font-size: inherit;
+  border-radius: 999px;
 }
 
 .call-button:hover {
@@ -130,55 +131,51 @@
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Dropdown styles */
-.nav-item.dropdown {
-  position: relative;
-}
-
+/* Dropdown container */
 .dropdown-menu {
   position: absolute;
   top: 100%;
   left: 0;
+  background-color: #860000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   min-width: 200px;
-  z-index: 50;
-  border-radius: 4px;
-  margin-top: 0.5rem;
-}
-
-.dropdown-menu {
-  position: relative;
-  background: rgba(0, 0, 0, 0.2);
-  list-style: none;
-  padding: 0;
-  margin: 0.5rem 0 0 0;
-  min-width: 180px;
   max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
   border-radius: 4px;
+  z-index: 1000;
+  overflow: hidden;
 }
 
+/* When dropdown is open */
 .dropdown-menu.show {
   max-height: 300px;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
+/* Dropdown items */
 .dropdown-menu li {
   margin: 0;
   padding: 0;
 }
 
+/* Dropdown links */
 .dropdown-link {
   display: block;
   padding: 0.75rem 1rem;
-  color: white;
+  color: #ffffff; 
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
 
+/* Hover effect */
 .dropdown-link:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
-
 /* Desktop styles */
 @media (min-width: 1024px) {
   .navbar {

@@ -286,3 +286,39 @@
     font-size: 20px;
   }
 }
+
+/* Primary Button (btn01) */
+.btn01 {
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 666px;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn01:hover {
+  background-color: #000000;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.btn02.white-variant {
+  background-color: #4e6dec;
+  color: #000000;
+  border: 2px solid #4e6dec;
+  border-radius: 999px !important;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn02.white-variant:hover {
+  background-color: #4e6dec;
+  box-shadow: 0 8px 20px rgba(78, 109, 236, 0.2);
+  transform: translateY(-5px);
+  color: #000000;
+}

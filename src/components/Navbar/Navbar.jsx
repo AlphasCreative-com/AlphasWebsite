@@ -13,7 +13,7 @@ function Navbar() {
   };
 
   const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
+    setDropdownOpen(prev => !prev);
   };
 
   const handleCallButtonClick = () => {
@@ -43,57 +43,37 @@ function Navbar() {
       <div className={`navbar-actions ${isOpen ? "open" : ""}`}>
         <ul className="navbar-links">
           <li>
-            <NavLink className="nav-link" to="/">
-              Home
-            </NavLink>
+            <NavLink className="nav-link" to="/">Home</NavLink>
           </li>
-          <li className="nav-item dropdown">
-            <div className="flex items-center gap-1">
-              <NavLink className="nav-link" to="/services">Services</NavLink>
-              <svg 
-                className="cursor-pointer w-4 h-4 transition-transform duration-200 inline-block ml-1"
-                onClick={toggleDropdown}
-                style={{ transform: dropdownOpen ? 'rotate(180deg)' : 'rotate(0)' }}
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
+
+          <li className={`nav-item dropdown ${dropdownOpen ? "open" : ""}`}>
+            <div className="flex items-center gap-1 cursor-pointer" onClick={toggleDropdown}>
+              <span className="nav-link">Services</span>
+              <span className="arrow"></span>
             </div>
-            <ul className={`dropdown-menu absolute bg-white shadow-lg mt-2 py-2 ${dropdownOpen ? "block" : "hidden"}`}>
-              <li><NavLink className="block px-4 py-2 hover:bg-gray-100" to="/servicepagedev">Development</NavLink></li>
-              <li><NavLink className="block px-4 py-2 hover:bg-gray-100" to="/servicepagedes">Design</NavLink></li>
-              <li><NavLink className="block px-4 py-2 hover:bg-gray-100" to="/services">All Services</NavLink></li>
-            </ul>
+
             <ul className={`dropdown-menu ${dropdownOpen ? "show" : ""}`}>
-              <li><NavLink className="dropdown-link" to="/servicepagedev">Development</NavLink></li>
-              <li><NavLink className="dropdown-link" to="/servicepagedes">Design</NavLink></li>
-              <li><NavLink className="dropdown-link" to="/services">All Services</NavLink></li>
+              <li>
+                <NavLink className="dropdown-link" to="/servicepagedev">Development</NavLink>
+              </li>
+              <li>
+                <NavLink className="dropdown-link" to="/servicepagedes">Design</NavLink>
+              </li>
+        
             </ul>
           </li>
+
           <li>
-            <NavLink className="nav-link" to="/product">
-              Product
-            </NavLink>
+            <NavLink className="nav-link" to="/product">Product</NavLink>
           </li>
           <li>
-            <NavLink className="nav-link" to="/about">
-              About
-            </NavLink>
+            <NavLink className="nav-link" to="/about">About</NavLink>
           </li>
           <li>
-            <NavLink className="nav-link" to="/contact">
-              Contact
-            </NavLink>
+            <NavLink className="nav-link" to="/contact">Contact</NavLink>
           </li>
           <li>
-            <NavLink className="nav-link" to="/portfolio">
-              Projects
-            </NavLink>
+            <NavLink className="nav-link" to="/portfolio">Projects</NavLink>
           </li>
         </ul>
 

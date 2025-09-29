@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import "./newsSection.css";
 import useIntersectionObserver from "../../../hooks/useIntersectionObserver";
-import Sbutton from "../../../components/Utilize/Secbutton/Sbutton";
+
 import NewsCard from "./newsCard/NewsCard";
 
 function NewsSection() {
@@ -40,7 +40,7 @@ function NewsSection() {
         <h3>OUR BLOG & NEWS</h3>
         <div ref={ref} className="news-title">
           <h2>Our Latest News</h2>
-          <Sbutton text="See Services" />
+          
         </div>
       </div>
       <div className="news-cards">
