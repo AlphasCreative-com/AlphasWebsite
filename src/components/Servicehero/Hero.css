@@ -1,0 +1,48 @@
+/* Services Hero Animated Lines */
+.services-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(60deg, transparent 48%, rgba(26, 106, 255, 0.15) 49%, rgba(26, 106, 255, 0.15) 51%, transparent 52%),
+    linear-gradient(-30deg, transparent 48%, rgba(26, 106, 255, 0.1) 49%, rgba(26, 106, 255, 0.1) 51%, transparent 52%);
+  background-size: 80px 80px, 120px 120px;
+  background-position: 0 0, 40px 40px;
+  animation: servicesLineMove 18s linear infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.services-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(120deg, transparent 46%, rgba(255, 255, 255, 0.1) 47%, rgba(255, 255, 255, 0.1) 53%, transparent 54%);
+  background-size: 150px 150px;
+  background-position: 0 0;
+  animation: servicesLineMove2 22s linear infinite reverse;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@keyframes servicesLineMove {
+  0% { background-position: 0 0, 40px 40px; }
+  100% { background-position: 80px 80px, 120px 120px; }
+}
+
+@keyframes servicesLineMove2 {
+  0% { background-position: 0 0; }
+  100% { background-position: 150px 150px; }
+}
+
+/* Ensure content stays above animated lines */
+.services-hero > .relative {
+  z-index: 10;
+}

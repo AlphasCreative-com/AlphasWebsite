@@ -1,8 +1,9 @@
 /* Modern Services Page Styles */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Unbounded:wght@200..900&display=swap");
 
 .services-page-modern {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--bs-font-sans-serif);
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -10,19 +11,56 @@
 /* Modern Hero Section */
 .modern-hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 70vh; /* Reduced from 100vh to make it smaller */
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, #f8faff 0%, #ffffff 30%, #f1f5ff 100%);
   overflow: hidden;
 }
 
+/* Circular gradient overlay for opacity control */
+.modern-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.6) 0%,      /* Reduced opacity in center - background more visible */
+    rgba(255, 255, 255, 0.5) 25%,     /* Medium opacity */
+    rgba(255, 255, 255, 0.4) 50%,     /* Lower opacity */
+    rgba(255, 255, 255, 0.25) 75%,    /* Even lower opacity towards edges */
+    rgba(255, 255, 255, 0.1) 100%     /* Very low opacity at edges - background clearly visible */
+  );
+  z-index: 1;
+}
+
+/* Alternative with darker overlay in center - uncomment if you prefer darker effect */
+/* .modern-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.3) 30%,
+    rgba(0, 0, 0, 0.2) 60%,
+    rgba(0, 0, 0, 0.1) 80%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+  z-index: 2;
+} */
+
 .hero-content-modern {
   position: relative;
-  z-index: 2;
+  z-index: 3; /* Increased to be above both overlay and background */
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 2rem;
   text-align: center;
 }
 
@@ -446,128 +484,154 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* CTA Section */
-.cta-section-modern {
+/* Transform Business Card Section */
+.transform-business-section {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #f8faff 0%, #ffffff 50%, #f0f4ff 100%);
+}
+
+.transform-business-card {
+  background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+  border-radius: 24px;
+  padding: 4rem 3rem;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.1),
+    0 8px 20px rgba(0, 0, 0, 0.08);
   position: relative;
-  padding: 8rem 2rem;
-  background: black;
   overflow: hidden;
 }
 
-.cta-section-modern::before {
+.transform-business-card::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-position: 0 0, 30px 30px;
-  background-size: 60px 60px, 40px 40px;
+  background: linear-gradient(135deg, rgba(26, 106, 255, 0.05) 0%, transparent 50%);
+  border-radius: 24px;
   pointer-events: none;
 }
 
-
-
-.cta-background-pattern {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, transparent 40%, rgba(255, 255, 255, 0.05) 50%, transparent 60%);
-  pointer-events: none;
-}
-
-
-
-.cta-content-modern {
+.transform-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
   position: relative;
   z-index: 2;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
 }
 
-.cta-title-modern {
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 700;
+.transform-text {
   color: white;
+}
+
+.transform-title {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
   margin-bottom: 1.5rem;
-  line-height: 1.2;
+  background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.cta-description-modern {
-  font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 2.5rem;
+.transform-description {
+  font-size: 1.125rem;
   line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 2.5rem;
 }
 
-.cta-buttons-modern {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.btn-white-modern {
-  background: white;
-  color: #1A6AFF;
+.transform-button {
+  background: linear-gradient(135deg, #1A6AFF 0%, #0052CC 100%);
+  color: white;
   border: none;
-  padding: 1.25rem 2.5rem;
-  border-radius: 12px;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 
-    0 4px 20px rgba(255, 255, 255, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    0 8px 25px rgba(26, 106, 255, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
   position: relative;
   overflow: hidden;
 }
 
-.btn-white-modern::before {
+.transform-button::before {
   content: '';
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(78, 109, 236, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transition: left 0.5s ease;
 }
 
-.btn-white-modern:hover {
-  background: rgba(255, 255, 255, 0.95);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 40px rgba(255, 255, 255, 0.4);
+.transform-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(26, 106, 255, 0.4);
 }
 
-.btn-white-modern:hover::before {
+.transform-button:hover::before {
   left: 100%;
 }
 
-.btn-outline-modern {
-  background: transparent;
-  color: white;
-  border: 2px solid rgba(255, 255, 255, 0.7);
-  padding: 1.25rem 2.5rem;
-  border-radius: 12px;
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
+.transform-visual {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  position: relative;
+  height: 100%;
+  min-height: 300px;
 }
 
-.btn-outline-modern:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-  border-color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+.cta-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.cta-background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(26, 106, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.cta-background-image:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .transform-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+  
+  .transform-business-card {
+    padding: 3rem 2rem;
+    margin: 0 1rem;
+  }
+  
+  .cta-image-wrapper {
+    min-height: 250px;
+  }
+  
+  .transform-visual {
+    min-height: 250px;
+  }
 }
 
 /* Floating Animations */

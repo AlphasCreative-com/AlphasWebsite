@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Sbutton from "../../components/Utilize/Secbutton/Sbutton";
 import servicesImage from "../../Assests/Images/services.jpg";
+import heroBg from "../../Assests/Images/second bg.jpg";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
 import { useInView } from "react-intersection-observer";
 import "./ServicesPage.css";
@@ -105,7 +106,16 @@ const ServicesPage = () => {
   return (
     <div className="services-page-modern" style={{ backgroundColor: '#ffffff' }}>
       {/* Modern Hero Section */}
-      <section className="modern-hero" ref={heroRef}>
+      <section 
+        className="modern-hero" 
+        ref={heroRef}
+        style={{
+          backgroundImage: `url(${heroBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
         <div className="hero-content-modern">
           <div className="hero-animation-wrapper">
             <div className={`hero-badge ${heroInView ? 'animate-in' : ''}`}>
@@ -234,24 +244,33 @@ const ServicesPage = () => {
       </section>
 
 
-      {/* Modern CTA Section */}
-      <section className="cta-section-modern">
-        <div className="cta-background-pattern"></div>
-        <div className="cta-content-modern">
-          <h2 className="cta-title-modern">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="cta-description-modern">
-            Let's discuss how our expert team can help you achieve your digital goals 
-            and drive sustainable growth with innovative solutions.
-          </p>
-          <div className="cta-buttons-modern">
-            <button className="btn-white-modern">
-              Get Started Today
-            </button>
-            <button className="btn-outline-modern">
-              Schedule Consultation
-            </button>
+      {/* Transform Your Business Card Section */}
+      <section className="transform-business-section">
+        <div className="container-modern">
+          <div className="transform-business-card">
+            <div className="transform-content">
+              <div className="transform-text">
+                <h2 className="transform-title">
+                  Transform Your Business Today.
+                </h2>
+                <p className="transform-description">
+                  Unlock your potential with our cutting-edge AI and development 
+                  solutions. Let's create your competitive advantage.
+                </p>
+                <button className="transform-button">
+                  Get Started
+                </button>
+              </div>
+              <div className="transform-visual">
+                <div className="cta-image-wrapper">
+                  <img 
+                    src={require("../../Assests/Images/bg-cta.webp")} 
+                    alt="Transform Your Business" 
+                    className="cta-background-image"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

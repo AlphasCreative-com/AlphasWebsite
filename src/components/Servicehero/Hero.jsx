@@ -2,11 +2,12 @@ import React from "react";
 import Button from "../Utilize/Button/Button";
 import Sbutton from "../Utilize/Secbutton/Sbutton";
 import productImg3 from "../../Assests/Images/skill.png"; // Background image for the Hero section
+import "./Hero.css"; // Add CSS file for animations
 
 function Hero() {
   return (
     <div
-      className="relative flex flex-col items-start justify-center w-full gap-8 px-6 sm:px-12 md:px-20 lg:px-28 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 bg-cover bg-center text-white"
+      className="services-hero relative flex flex-col items-start justify-center w-full gap-8 px-6 sm:px-12 md:px-20 lg:px-28 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 bg-cover bg-center text-white"
       style={{ backgroundImage: `url(${productImg3})` }}
     >
       {/* Dark Overlay and Blur */}

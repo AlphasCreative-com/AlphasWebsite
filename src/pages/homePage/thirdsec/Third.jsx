@@ -1,47 +1,117 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import "./Third.css";
-import { GrReactjs } from "react-icons/gr";
-import useIntersectionObserver from "../../../hooks/useIntersectionObserver";
-import SpecializeCard from "./specializeCard/SpecializeCard";
+import { useInView } from "react-intersection-observer";
 
 function Third() {
-  const ref = useRef();
-  useIntersectionObserver(ref);
+  const { ref, inView } = useInView({ 
+    triggerOnce: true, 
+    threshold: 0.1 
+  });
 
-  const cards = [
+  const services = [
     {
-      icon: <GrReactjs />,
-      title: "Web Developments",
-      description:
-        "Our expert team of web developers, designers, and strategists are dedicated to crafting cutting-edge websites.",
+      id: 1,
+      title: "Web Development",
+      category: "WEB",
+      icon: "fas fa-code",
+      description: "Building responsive and modern websites that drive business growth. Our expert developers create scalable, secure, and performance-optimized web solutions tailored to your specific needs.",
+      gradient: "linear-gradient(135deg, rgba(26, 106, 255, 0.03) 0%, rgba(26, 106, 255, 0.015) 100%)"
     },
     {
-      icon: <GrReactjs />,
+      id: 2,
+      title: "Mobile Apps",
+      category: "APP", 
+      icon: "fas fa-mobile-alt",
+      description: "Creating intuitive mobile applications for iOS and Android platforms. We develop feature-rich, user-friendly apps that provide seamless experiences across all devices and operating systems.",
+      gradient: "linear-gradient(135deg, rgba(26, 106, 255, 0.035) 0%, rgba(26, 106, 255, 0.018) 100%)"
+    },
+    {
+      id: 3,
       title: "UI/UX Design",
-      description:
-        "Our expert team of web developers, designers, and strategists are dedicated to crafting cutting-edge websites.",
+      category: "DESIGN",
+      icon: "fas fa-paint-brush",
+      description: "Designing user-centered experiences that engage and convert. Our design team combines creativity with data-driven insights to create interfaces that are both beautiful and highly functional.",
+      gradient: "linear-gradient(135deg, rgba(26, 106, 255, 0.032) 0%, rgba(26, 106, 255, 0.016) 100%)"
     },
     {
-      icon: <GrReactjs />,
+      id: 4,
       title: "Digital Marketing",
-      description:
-        "Our expert team of web developers, designers, and strategists are dedicated to crafting cutting-edge websites.",
+      category: "MARKETING",
+      icon: "fas fa-bullhorn",
+      description: "Strategic marketing campaigns that boost your online presence. We leverage cutting-edge digital marketing techniques to increase brand awareness, drive traffic, and maximize conversions.",
+      gradient: "linear-gradient(135deg, rgba(26, 106, 255, 0.038) 0%, rgba(26, 106, 255, 0.019) 100%)"
     },
+    {
+      id: 5,
+      title: "Brand Identity",
+      category: "BRANDING",
+      icon: "fas fa-palette",
+      description: "Creating memorable brand identities that resonate with your audience. From logos to complete visual systems, we develop cohesive brand experiences that tell your unique story effectively.",
+      gradient: "linear-gradient(135deg, rgba(26, 106, 255, 0.028) 0%, rgba(26, 106, 255, 0.014) 100%)"
+    },
+    {
+      id: 6,
+      title: "SEO Services",
+      category: "SEO",
+      icon: "fas fa-search",
+      description: "Optimizing your website to rank higher in search results. Our comprehensive SEO strategies improve your visibility, drive organic traffic, and help you dominate your market online.",
+      gradient: "linear-gradient(135deg, rgba(26, 106, 255, 0.04) 0%, rgba(26, 106, 255, 0.02) 100%)"
+    }
   ];
 
   return (
-    <section className="specialize-sec">
-      <div className="specialize-head">
-        <h3>OUR SPECIALIZE</h3>
-        <div ref={ref} className="specialize-title">
-          <h2>Our core services</h2>
+    <section className="modern-services-section">
+      <div className="services-header-modern" ref={ref}>
+        <div className={`services-badge ${inView ? 'animate-in' : ''}`}>
+          <span>● OUR SPECIALIZE</span>
+        </div>
+        <h2 className={`services-main-title ${inView ? 'animate-in' : ''}`}>
+          Our core services
+        </h2>
+      </div>
+      
+      <div className={`horizontal-scroll-container ${inView ? 'animate-in' : ''}`}>
+        <div className="services-scroll-track">
+          {/* First set of cards */}
+          {services.map((service, index) => (
+            <div 
+              key={`first-${service.id}`} 
+              className="service-card-modern"
+              style={{ 
+                animationDelay: `${index * 0.1}s`
+              }}
+            >
+              <div className="service-card-content">
+                <div className="service-icon">
+                  <i className={service.icon}></i>
+                </div>
+                <h3 className="service-title">{service.title}</h3>
+                <p className="service-description">{service.description}</p>
+              </div>
+            </div>
+          ))}
+          {/* Duplicate set for seamless loop */}
+          {services.map((service, index) => (
+            <div 
+              key={`second-${service.id}`} 
+              className="service-card-modern"
+              style={{ 
+                animationDelay: `${index * 0.1}s`
+              }}
+            >
+              <div className="service-card-content">
+                <div className="service-icon">
+                  <i className={service.icon}></i>
+                </div>
+                <h3 className="service-title">{service.title}</h3>
+                <p className="service-description">{service.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-      <div className="specialize-cards">
-        {cards.map((card, index) => (
-          <SpecializeCard card={card} />
-        ))}
-      </div>
+      
+
     </section>
   );
 }
