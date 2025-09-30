@@ -14,7 +14,7 @@ function NewsSection() {
       date: "FEBRUARY 6, 2024",
       tags: ["Design", "User Experience"],
       img: "https://themeforest.wprealizer.com/axole-html-template/axole-html/assets/images/blog/blog-1.png",
-      path: "/",
+      path: "/blog/design-chronicles-crafting-user-experiences",
     },
 
     {
@@ -22,7 +22,7 @@ function NewsSection() {
       date: "FEBRUARY 6, 2024",
       tags: ["Design", "User Experience"],
       img: "https://themeforest.wprealizer.com/axole-html-template/axole-html/assets/images/blog/blog-2.png",
-      path: "/",
+      path: "/blog/behind-the-pixels-stories-of-success",
     },
 
     {
@@ -30,7 +30,7 @@ function NewsSection() {
       date: "FEBRUARY 6, 2024",
       tags: ["Design", "User Experience"],
       img: "https://themeforest.wprealizer.com/axole-html-template/axole-html/assets/images/blog/blog-3.png",
-      path: "/",
+      path: "/blog/web-wonders-exploring-digital-frontiers",
     },
   ];
 

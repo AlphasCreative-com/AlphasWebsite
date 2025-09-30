@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./newsCard.css";
 
 function NewsCard({card}) {
@@ -12,7 +13,7 @@ function NewsCard({card}) {
         <p className="news-card-date">{card.date}</p>
 
         <h3 className="news-card-title">
-          <a href={card.path}>{card.title}</a>
+          <Link to={card.path}>{card.title}</Link>
         </h3>
 
         <div className="news-card-tags">

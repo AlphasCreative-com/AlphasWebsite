@@ -2,6 +2,14 @@ import React from "react";
 import "./Third.css";
 import { useInView } from "react-intersection-observer";
 
+// Import service images
+import webDevelopmentImg from "../../../Assests/Images/web development.png";
+import appDevelopmentImg from "../../../Assests/Images/app development.png";
+import uiUxDesignImg from "../../../Assests/Images/ui ux design.png";
+import digitalMarketingImg from "../../../Assests/Images/digital marketing.png";
+import brandIdentityImg from "../../../Assests/Images/brand identity.png";
+import seoServicesImg from "../../../Assests/Images/seo services.png";
+
 function Third() {
   const { ref, inView } = useInView({ 
     triggerOnce: true, 
@@ -13,7 +21,7 @@ function Third() {
       id: 1,
       title: "Web Development",
       category: "WEB",
-      icon: "fas fa-code",
+      image: webDevelopmentImg,
       description: "Building responsive and modern websites that drive business growth. Our expert developers create scalable, secure, and performance-optimized web solutions tailored to your specific needs.",
       gradient: "linear-gradient(135deg, rgba(26, 106, 255, 0.03) 0%, rgba(26, 106, 255, 0.015) 100%)"
     },
@@ -21,7 +29,7 @@ function Third() {
       id: 2,
       title: "Mobile Apps",
       category: "APP", 
-      icon: "fas fa-mobile-alt",
+      image: appDevelopmentImg,
       description: "Creating intuitive mobile applications for iOS and Android platforms. We develop feature-rich, user-friendly apps that provide seamless experiences across all devices and operating systems.",
       gradient: "linear-gradient(135deg, rgba(26, 106, 255, 0.035) 0%, rgba(26, 106, 255, 0.018) 100%)"
     },
@@ -29,7 +37,7 @@ function Third() {
       id: 3,
       title: "UI/UX Design",
       category: "DESIGN",
-      icon: "fas fa-paint-brush",
+      image: uiUxDesignImg,
       description: "Designing user-centered experiences that engage and convert. Our design team combines creativity with data-driven insights to create interfaces that are both beautiful and highly functional.",
       gradient: "linear-gradient(135deg, rgba(26, 106, 255, 0.032) 0%, rgba(26, 106, 255, 0.016) 100%)"
     },
@@ -37,7 +45,7 @@ function Third() {
       id: 4,
       title: "Digital Marketing",
       category: "MARKETING",
-      icon: "fas fa-bullhorn",
+      image: digitalMarketingImg,
       description: "Strategic marketing campaigns that boost your online presence. We leverage cutting-edge digital marketing techniques to increase brand awareness, drive traffic, and maximize conversions.",
       gradient: "linear-gradient(135deg, rgba(26, 106, 255, 0.038) 0%, rgba(26, 106, 255, 0.019) 100%)"
     },
@@ -45,7 +53,7 @@ function Third() {
       id: 5,
       title: "Brand Identity",
       category: "BRANDING",
-      icon: "fas fa-palette",
+      image: brandIdentityImg,
       description: "Creating memorable brand identities that resonate with your audience. From logos to complete visual systems, we develop cohesive brand experiences that tell your unique story effectively.",
       gradient: "linear-gradient(135deg, rgba(26, 106, 255, 0.028) 0%, rgba(26, 106, 255, 0.014) 100%)"
     },
@@ -53,7 +61,7 @@ function Third() {
       id: 6,
       title: "SEO Services",
       category: "SEO",
-      icon: "fas fa-search",
+      image: seoServicesImg,
       description: "Optimizing your website to rank higher in search results. Our comprehensive SEO strategies improve your visibility, drive organic traffic, and help you dominate your market online.",
       gradient: "linear-gradient(135deg, rgba(26, 106, 255, 0.04) 0%, rgba(26, 106, 255, 0.02) 100%)"
     }
@@ -82,8 +90,8 @@ function Third() {
               }}
             >
               <div className="service-card-content">
-                <div className="service-icon">
-                  <i className={service.icon}></i>
+                <div className="service-image">
+                  <img src={service.image} alt={service.title} />
                 </div>
                 <h3 className="service-title">{service.title}</h3>
                 <p className="service-description">{service.description}</p>
@@ -100,8 +108,8 @@ function Third() {
               }}
             >
               <div className="service-card-content">
-                <div className="service-icon">
-                  <i className={service.icon}></i>
+                <div className="service-image">
+                  <img src={service.image} alt={service.title} />
                 </div>
                 <h3 className="service-title">{service.title}</h3>
                 <p className="service-description">{service.description}</p>

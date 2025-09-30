@@ -48,11 +48,14 @@ function Navbar() {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/products" className="nav-link" onClick={closeDropdowns}>
+                <NavLink to="/product" className="nav-link" onClick={closeDropdowns}>
             Products
                 </NavLink>
               </li>
-            <li className={`nav-item dropdown ${activeDropdown === 'services' ? 'active' : ''}`}>
+            <li 
+              className={`nav-item dropdown ${activeDropdown === 'services' ? 'active' : ''}`}
+              onMouseLeave={() => setActiveDropdown(null)}
+            >
               <button 
                 className="nav-link dropdown-toggle" 
                 onClick={() => toggleDropdown('services')}
@@ -63,7 +66,11 @@ function Navbar() {
                   <path d="M6 8L2 4h8L6 8z" fill="currentColor"/>
                 </svg>
               </button>
-              <div className={`dropdown-menu ${activeDropdown === 'services' ? 'show' : ''}`}>
+              <div 
+                className={`dropdown-menu ${activeDropdown === 'services' ? 'show' : ''}`}
+                onMouseEnter={() => setActiveDropdown('services')}
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
                 <NavLink to="/services" className="dropdown-item">Web Development</NavLink>
                 <NavLink to="/services" className="dropdown-item">Mobile Development</NavLink>
                 <NavLink to="/services" className="dropdown-item">UI/UX Design</NavLink>
@@ -86,7 +93,7 @@ function Navbar() {
 
 
             <li className="nav-item">
-              <NavLink to="/blog" className="nav-link" onClick={closeDropdowns}>
+              <NavLink to="/blogs" className="nav-link" onClick={closeDropdowns}>
                 Blog
               </NavLink>
             </li>
