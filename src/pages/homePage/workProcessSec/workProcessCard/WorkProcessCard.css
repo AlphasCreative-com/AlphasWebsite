@@ -14,6 +14,7 @@
   cursor: pointer;
 }
 
+
 .workpro-crd:focus,
 .workpro-crd:active {
   outline: none;
@@ -31,6 +32,8 @@
   box-shadow: 0 6px 16px rgba(0, 122, 255, 0.3);
 }
 
+
+
 .workpro-crd-header {
   display: flex;
   justify-content: space-between;
@@ -46,6 +49,7 @@
   padding: 4px 12px;
   border-radius: 20px;
 }
+
 
 .workpro-crd-icn {
   width: 48px;
@@ -72,6 +76,7 @@
   justify-content: center;
 }
 
+
 .workpro-crd-id p {
   font-size: 3rem;
   font-weight: bold;
@@ -79,6 +84,7 @@
   margin: 0;
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
+
 
 .workpro-crd-id p:focus,
 .workpro-crd-id p:active {
@@ -88,6 +94,7 @@
   -webkit-text-stroke: none;
 }
 
+
 .workpro-crd-title {
   font-family: var(--bs-font-unbounded);
   font-size: 1.4rem;
@@ -95,18 +102,15 @@
   margin: 1rem 0 0.5rem 0;
 }
 
+
 .workpro-crd-disc {
   color: var(--color-light-black);
 }
 
-.workpro-crd:hover .workpro-crd-id {
-  border: 1px solid var(--color-primary-blue);
-  opacity: 0.5;
-}
 
 .workpro-crd:hover .workpro-crd-id p {
-  color: var(--color-primary-blue);
-  -webkit-text-stroke: 1px var(--color-primary-blue);
+  color: var(--color-primary-black);
+  -webkit-text-stroke: 1px var(--color-primary-black);
 }
 
 .workpro-crd-box {
@@ -119,6 +123,7 @@
 .workpro-crd-box.animate {
   animation: slideBack 2s ease-out forwards;
 }
+
 
 @keyframes slideBack {
   0% {

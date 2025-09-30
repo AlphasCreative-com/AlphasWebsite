@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import "./workProcessSec.css";
 import {
+  MdDescription,
   MdOutlineDraw,
   MdOutlineSettingsSuggest,
   MdSupportAgent,
@@ -42,7 +43,7 @@ const WorkProcessSec = () => {
       title: "Final Documentation",
       description:
         "Send us questions and questionnaires to gather key information.",
-      icon: <MdSupportAgent />,
+      icon: <MdDescription />,
       step: "Step 04",
     },
   ];

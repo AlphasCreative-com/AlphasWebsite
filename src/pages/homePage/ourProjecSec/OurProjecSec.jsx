@@ -13,25 +13,25 @@ const OurProjecSec = () => {
       id: 1,
       type: "Web Developments",
       title: "Artisan Marketplace",
-      img: "https://themeforest.wprealizer.com/axole-html-template/axole-html/assets/images/project/project-1.png",
+      img: "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       id: 2,
       type: "UI/UX Design",
       title: "Bliss Rebranding",
-      img: "https://themeforest.wprealizer.com/axole-html-template/axole-html/assets/images/project/project-2.png",
+      img: "https://images.unsplash.com/photo-1648109941110-d30f859426ea?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       id: 3,
       type: "Digital Marketing",
       title: "E-Commerce Shopping",
-      img: "https://themeforest.wprealizer.com/axole-html-template/axole-html/assets/images/project/project-4.png",
+      img: "https://plus.unsplash.com/premium_photo-1684785618727-378a3a5e91c5?q=80&w=784&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       id: 4,
       type: "Digital Marketing",
       title: "Eco-Vision Branding",
-      img: "https://themeforest.wprealizer.com/axole-html-template/axole-html/assets/images/project/project-3.png",
+      img: "https://images.unsplash.com/photo-1611586963544-edea7af076a8?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
   ];
 
