@@ -6,6 +6,9 @@
   box-sizing: border-box;
   gap: 2rem;
   padding: 3rem 1rem 3rem 1rem;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 
 .home-aboutus-info {
@@ -52,6 +55,9 @@
   border-top: 1.5px solid rgba(12, 12, 37, 0.1);
   margin-top: 3rem;
   padding-top: 2rem;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 
 .home-aboutus-info-wrap div {
