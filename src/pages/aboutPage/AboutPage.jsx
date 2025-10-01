@@ -7,9 +7,8 @@ import usePageTitle from "../../hooks/usePageTitle";
 function AboutPage() {
   usePageTitle("About");
   const { ref: counterRef, inView: counterInView } = useInView({ triggerOnce: true, threshold: 0.3 });
-  const { ref: heroRef, inView: heroInView } = useInView({ triggerOnce: true, threshold: 0.1 });
   const { ref: valuesRef, inView: valuesInView } = useInView({ triggerOnce: true, threshold: 0.2 });
-  const { ref: testimonialsRef, inView: testimonialsInView } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const { ref: testimonialsRef } = useInView({ triggerOnce: true, threshold: 0.2 });
   
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   
