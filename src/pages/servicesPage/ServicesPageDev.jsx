@@ -1,10 +1,11 @@
 import React from "react";
 import Sbutton from "../../components/Utilize/Secbutton/Sbutton";
-
 import Hero from "../../components/Servicehero/Hero";
 import ExpandingServiceBar from "../../components/ServiceBar/ExpandingServiceBar";
+import usePageTitle from "../../hooks/usePageTitle";
 
 const ServicesPageDev = () => {
+  usePageTitle("Development Services");
   const services = [
     {
       title: "Software Development",

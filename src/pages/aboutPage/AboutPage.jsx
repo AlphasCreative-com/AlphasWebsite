@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import "./About.css";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
+import usePageTitle from "../../hooks/usePageTitle";
 
 function AboutPage() {
+  usePageTitle("About");
   const { ref: counterRef, inView: counterInView } = useInView({ triggerOnce: true, threshold: 0.3 });
   const { ref: heroRef, inView: heroInView } = useInView({ triggerOnce: true, threshold: 0.1 });
   const { ref: valuesRef, inView: valuesInView } = useInView({ triggerOnce: true, threshold: 0.2 });
@@ -91,7 +93,7 @@ function AboutPage() {
               <p>Successfully Completed Projects</p>
             </div>
             <div>
-              <span>5+</span>
+              <span>3+</span>
               <p>Years of Experience</p>
             </div>
           </div>
@@ -181,8 +183,8 @@ function AboutPage() {
             <span>● WHY CHOOSE US</span>
           </div>
           <h2 className="services-main-title">
-            Smart Solutions to Build 
-            <span className="text-gradient"> Outstanding Performance</span>
+            Smart Solutions to Build<br />
+            <span className="text-gradient">Outstanding Performance</span>
           </h2>
           <p className="services-subtitle">
             We combine expertise, innovation, and dedication to deliver exceptional results that exceed expectations.
@@ -320,8 +322,7 @@ function AboutPage() {
               <span>● OUR PROCESS</span>
             </div>
             <h2 className="process-title">
-              How We Turn Ideas Into 
-              <span className="text-gradient"> Digital Success</span>
+              How We Turn Ideas Into <span className="text-gradient">Digital Success</span>
             </h2>
             <p className="process-subtitle">
               Our proven three-step methodology ensures every project is delivered with precision, 

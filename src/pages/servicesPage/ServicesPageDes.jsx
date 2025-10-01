@@ -1,10 +1,11 @@
 import React from "react";
 import Sbutton from "../../components/Utilize/Secbutton/Sbutton";
-
 import Hero from "../../components/Servicehero/Hero";
 import ExpandingServiceBar from "../../components/ServiceBar/ExpandingServiceBar";
+import usePageTitle from "../../hooks/usePageTitle";
 
 const ServicesPageDes = () => {
+  usePageTitle("Design Services");
   const services = [
     {
       title: "Brand Identity",

@@ -4,8 +4,10 @@ import heroBg from "../../Assests/Images/second bg.jpg";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
 import { useInView } from "react-intersection-observer";
 import "./ServicesPage.css";
+import usePageTitle from "../../hooks/usePageTitle";
 
-const ServicesPage = () => {
+function ServicesPage() {
+  usePageTitle("Services");
   const servicesRef = React.useRef(null);
   
   const { ref: heroRef, inView: heroInView } = useInView({ 

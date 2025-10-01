@@ -5,8 +5,10 @@ import productImg1 from "../../Assests/Images/skill.png";
 import productImg2 from "../../Assests/Images/skill.png";
 import productImg3 from "../../Assests/Images/skill.png";
 import Hero from "../../components/Producthero/Hero";
+import usePageTitle from "../../hooks/usePageTitle";
 
 function ProductPage() {
+  usePageTitle("Products");
   return (
     <div className="mx-auto">
       {/* Hero Section */}

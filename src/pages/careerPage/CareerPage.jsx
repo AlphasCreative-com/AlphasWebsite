@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import Hero from "../../components/Careerhero/Hero";
+import usePageTitle from "../../hooks/usePageTitle";
 
-const CareerPage = () => {
+function CareerPage() {
+  usePageTitle("Career");
   const [formData, setFormData] = useState({
     name: "",
     email: "",

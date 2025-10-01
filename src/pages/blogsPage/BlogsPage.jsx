@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import Hero from "../../components/Bloghero/Hero";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
+import usePageTitle from "../../hooks/usePageTitle";
 import "./BlogsPage.css";
 
 const BlogCard = ({ post }) => {
@@ -35,6 +36,7 @@ const BlogCard = ({ post }) => {
 };
 
 const BlogsPage = () => {
+  usePageTitle("Blogs");
   const ref = useRef();
   useIntersectionObserver(ref);
 

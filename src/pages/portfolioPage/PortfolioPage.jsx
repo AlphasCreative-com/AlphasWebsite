@@ -5,8 +5,10 @@ import Sbutton from "../../components/Utilize/Secbutton/Sbutton";
 // import portfolio3 from "../../Assests/Images/portfolio3.png";
 import "./Portfolio.css";
 import Hero from "../../components/Abouthero/Hero";
+import usePageTitle from "../../hooks/usePageTitle";
 
 function PortfolioPage() {
+  usePageTitle("Portfolio");
   return (
     <div>
       {/* Hero Section */}

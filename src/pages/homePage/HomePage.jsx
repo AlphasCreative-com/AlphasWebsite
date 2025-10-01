@@ -7,8 +7,10 @@ import TestimonialsSec from "./testimonialsSec/TestimonialsSec";
 import OurTeamSec from "./ourTeamSection/OurTeamSec";
 import ContactUsSec from "./contactUsSec/ContactUsSec";
 import NewsSection from "./newsSec/NewsSection";
+import usePageTitle from "../../hooks/usePageTitle";
 
 function HomePage() {
+  usePageTitle("Home");
   // Team section is temporarily hidden but code is preserved
   const showTeamSection = false;
 
