@@ -1,48 +1,147 @@
-/* Services Hero Animated Lines */
-.services-hero::before {
+/* Service Hero Styles */
+.service-hero {
+  min-height: 80vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-attachment: fixed;
+}
+
+.service-hero::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    linear-gradient(60deg, transparent 48%, rgba(26, 106, 255, 0.15) 49%, rgba(26, 106, 255, 0.15) 51%, transparent 52%),
-    linear-gradient(-30deg, transparent 48%, rgba(26, 106, 255, 0.1) 49%, rgba(26, 106, 255, 0.1) 51%, transparent 52%);
-  background-size: 80px 80px, 120px 120px;
-  background-position: 0 0, 40px 40px;
-  animation: servicesLineMove 18s linear infinite;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
   z-index: 1;
-  pointer-events: none;
 }
 
-.services-hero::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    linear-gradient(120deg, transparent 46%, rgba(255, 255, 255, 0.1) 47%, rgba(255, 255, 255, 0.1) 53%, transparent 54%);
-  background-size: 150px 150px;
-  background-position: 0 0;
-  animation: servicesLineMove2 22s linear infinite reverse;
-  z-index: 1;
-  pointer-events: none;
-}
-
-@keyframes servicesLineMove {
-  0% { background-position: 0 0, 40px 40px; }
-  100% { background-position: 80px 80px, 120px 120px; }
-}
-
-@keyframes servicesLineMove2 {
-  0% { background-position: 0 0; }
-  100% { background-position: 150px 150px; }
-}
-
-/* Ensure content stays above animated lines */
-.services-hero > .relative {
+.service-hero > div {
+  position: relative;
   z-index: 10;
+}
+
+.service-hero h1 {
+  background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  line-height: 1.1;
+}
+
+.service-hero h4 {
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.6;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+}
+
+/* Button Styles */
+.service-hero .btn02 {
+  background: transparent;
+  border: 2px solid #1A6AFF;
+  color: #1A6AFF;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.service-hero .btn02:hover {
+  background: #1A6AFF;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(26, 106, 255, 0.3);
+}
+
+.service-hero .white-variant {
+  border-color: white;
+  color: white;
+}
+
+.service-hero .white-variant:hover {
+  background: white;
+  color: #1A6AFF;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .service-hero {
+    padding: 2rem 1.5rem;
+    min-height: 70vh;
+  }
+
+  .service-hero h1 {
+    font-size: 3rem;
+  }
+
+  .service-hero h4 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-hero {
+    padding: 1.5rem 1rem;
+    min-height: 60vh;
+    text-align: center;
+  }
+
+  .service-hero .max-w-4xl {
+    max-width: 100%;
+  }
+
+  .service-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .service-hero h4 {
+    font-size: 1.125rem;
+  }
+
+  .service-hero .flex-wrap {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-hero {
+    padding: 1rem 0.75rem;
+    min-height: 50vh;
+  }
+
+  .service-hero h1 {
+    font-size: 2rem;
+  }
+
+  .service-hero h4 {
+    font-size: 1rem;
+  }
+
+  .service-hero .gap-6 {
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Animation Effects */
+.service-hero .relative {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

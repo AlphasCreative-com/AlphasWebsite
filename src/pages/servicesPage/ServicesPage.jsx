@@ -1,37 +1,17 @@
 import React from "react";
 import servicesImage from "../../Assests/Images/services.jpg";
-import heroBg from "../../Assests/Images/second bg.jpg";
+import Hero from "../../components/Servicehero/Hero";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
-import { useInView } from "react-intersection-observer";
+
+
 import "./ServicesPage.css";
 import usePageTitle from "../../hooks/usePageTitle";
 
 function ServicesPage() {
   usePageTitle("Services");
   const servicesRef = React.useRef(null);
-  
-  const { ref: heroRef, inView: heroInView } = useInView({ 
-    triggerOnce: true, 
-    threshold: 0.1 
-  });
-
-  const scrollToServices = () => {
-    servicesRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   const services = [
-    {
-      title: "Software Development",
-      description: "Build custom software solutions that streamline your business operations and drive digital transformation.",
-      icon: "fas fa-code",
-      features: [
-        "Custom Software Solutions",
-        "Enterprise Applications",
-        "API Development & Integration"
-      ],
-      hasButton: true,
-      buttonText: "Learn More"
-    },
     {
       title: "Web Development",
       description: "Create stunning, responsive websites and web applications that engage users and deliver exceptional experiences.",
@@ -42,7 +22,8 @@ function ServicesPage() {
         "CMS Development"
       ],
       hasButton: true,
-      buttonText: "Get Started"
+      buttonText: "Learn More",
+      href: "/services/web-development"
     },
     {
       title: "Mobile Development",
@@ -54,102 +35,67 @@ function ServicesPage() {
         "App Store Optimization"
       ],
       hasButton: true,
-      buttonText: "Build App"
+      buttonText: "Learn More",
+      href: "/services/mobile-development"
     },
     {
-      title: "Cloud Solutions",
-      description: "Leverage cloud technologies to scale your business with secure, reliable, and cost-effective solutions.",
-      icon: "fas fa-cloud",
+      title: "UI/UX Design",
+      description: "Design intuitive and engaging user interfaces that provide exceptional user experiences across all platforms.",
+      icon: "fas fa-paint-brush",
       features: [
-        "Cloud Migration",
-        "DevOps & CI/CD",
-        "Infrastructure Management"
+        "User Interface Design",
+        "User Experience Research",
+        "Prototyping & Wireframing"
       ],
       hasButton: true,
-      buttonText: "Explore Cloud"
+      buttonText: "Learn More",
+      href: "/services/ui-ux-design"
     },
     {
-      title: "AI & Machine Learning",
-      description: "Implement intelligent solutions that automate processes and provide valuable insights from your data.",
-      icon: "fas fa-brain",
+      title: "Digital Marketing",
+      description: "Boost your online presence with strategic digital marketing campaigns that drive traffic and conversions.",
+      icon: "fas fa-bullhorn",
       features: [
-        "Predictive Analytics",
-        "Natural Language Processing",
-        "Computer Vision Solutions"
+        "Social Media Marketing",
+        "Content Marketing",
+        "PPC Advertising"
       ],
       hasButton: true,
-      buttonText: "Discover AI"
+      buttonText: "Learn More",
+      href: "/services/digital-marketing"
     },
     {
-      title: "Digital Transformation",
-      description: "Transform your business processes with modern technology solutions that improve efficiency and growth.",
-      icon: "fas fa-rocket",
+      title: "SEO Services",
+      description: "Improve your search engine rankings and organic visibility with our comprehensive SEO strategies.",
+      icon: "fas fa-search",
       features: [
-        "Process Automation",
-        "Digital Strategy Consulting",
-        "Technology Integration"
+        "On-Page SEO",
+        "Technical SEO",
+        "Link Building"
       ],
       hasButton: true,
-      buttonText: "Transform Now"
+      buttonText: "Learn More",
+      href: "/services/seo-services"
+    },
+    {
+      title: "Brand Identity",
+      description: "Build a strong brand identity that resonates with your audience and sets you apart from competitors.",
+      icon: "fas fa-palette",
+      features: [
+        "Logo Design",
+        "Brand Guidelines",
+        "Visual Identity System"
+      ],
+      hasButton: true,
+      buttonText: "Learn More",
+      href: "/services/brand-identity"
     }
   ];
 
   return (
     <div className="services-page-modern" style={{ backgroundColor: '#ffffff' }}>
-      {/* Modern Hero Section */}
-      <section 
-        className="modern-hero" 
-        ref={heroRef}
-        style={{
-          backgroundImage: `url(${heroBg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        <div className="hero-content-modern">
-          <div className="hero-animation-wrapper">
-            <div className={`hero-badge ${heroInView ? 'animate-in' : ''}`}>
-              <span style={{ color: '#1A6AFF' }}>● PROFESSIONAL SERVICES</span>
-            </div>
-            <h1 className={`hero-title-modern ${heroInView ? 'animate-in' : ''}`}>
-              Transform Your Business with
-              <span className="text-gradient"> Expert Solutions</span>
-            </h1>
-            <p className={`hero-subtitle-modern ${heroInView ? 'animate-in' : ''}`}>
-              We deliver cutting-edge digital solutions that drive growth, enhance efficiency, 
-              and create lasting impact for businesses worldwide.
-            </p>
-            <div className={`hero-stats ${heroInView ? 'animate-in' : ''}`}>
-              <div className="stat-item">
-                <span className="stat-number">500+</span>
-                <span className="stat-label">Projects Delivered</span>
-              </div>
-              <div className="stat-item">
-                <span className="stat-number">98%</span>
-                <span className="stat-label">Client Satisfaction</span>
-              </div>
-              <div className="stat-item">
-                <span className="stat-number">24/7</span>
-                <span className="stat-label">Expert Support</span>
-              </div>
-            </div>
-            <div className={`hero-buttons ${heroInView ? 'animate-in' : ''}`}>
-              <button 
-                className="btn-primary-modern"
-                onClick={scrollToServices}
-              >
-                Explore Services
-                <i className="fas fa-arrow-right"></i>
-              </button>
-              <button className="btn-secondary-modern">
-                <i className="fas fa-play"></i>
-                Watch Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Hero Section */}
+      <Hero />
 
       {/* Value Proposition Section */}
       <section className="value-section-modern">
@@ -206,8 +152,8 @@ function ServicesPage() {
         </div>
       </section>
 
-      {/* Modern Services Cards Grid */}
-      <section ref={servicesRef} className="services-cards-modern">
+      {/* Services Cards Grid */}
+      <section id="services-section" ref={servicesRef} className="services-cards-modern">
         <div className="container-modern">
           <div className="services-header-modern">
             <div className="section-badge">
@@ -225,7 +171,7 @@ function ServicesPage() {
           <div className="services-grid-modern">
             {services.map((service, index) => (
               <ServiceCard 
-                key={index} 
+                key={index}
                 service={service}
                 index={index}
               />

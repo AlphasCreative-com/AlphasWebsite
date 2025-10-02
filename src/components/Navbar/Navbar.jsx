@@ -71,10 +71,12 @@ function Navbar() {
                 onMouseEnter={() => setActiveDropdown('services')}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
-                <NavLink to="/services" className="dropdown-item">Web Development</NavLink>
-                <NavLink to="/services" className="dropdown-item">Mobile Development</NavLink>
-                <NavLink to="/services" className="dropdown-item">UI/UX Design</NavLink>
-                <NavLink to="/services" className="dropdown-item">Digital Marketing</NavLink>
+                <NavLink to="/services/web-development" className="dropdown-item">Web Development</NavLink>
+                <NavLink to="/services/mobile-development" className="dropdown-item">Mobile Development</NavLink>
+                <NavLink to="/services/ui-ux-design" className="dropdown-item">UI/UX Design</NavLink>
+                <NavLink to="/services/digital-marketing" className="dropdown-item">Digital Marketing</NavLink>
+                <NavLink to="/services/seo-services" className="dropdown-item">SEO Services</NavLink>
+                <NavLink to="/services/brand-identity" className="dropdown-item">Brand Identity</NavLink>
               </div>
             </li>
 
@@ -155,10 +157,12 @@ function Navbar() {
                   </svg>
                 </button>
                 <ul className={`mobile-submenu ${activeDropdown === 'mobile-services' ? 'show' : ''}`}>
-                  <li><NavLink to="/services" onClick={() => setIsOpen(false)}>Web Development</NavLink></li>
-                  <li><NavLink to="/services" onClick={() => setIsOpen(false)}>Mobile Development</NavLink></li>
-                  <li><NavLink to="/services" onClick={() => setIsOpen(false)}>UI/UX Design</NavLink></li>
-                  <li><NavLink to="/services" onClick={() => setIsOpen(false)}>Digital Marketing</NavLink></li>
+                  <li><NavLink to="/services/web-development" onClick={() => setIsOpen(false)}>Web Development</NavLink></li>
+                  <li><NavLink to="/services/mobile-development" onClick={() => setIsOpen(false)}>Mobile Development</NavLink></li>
+                  <li><NavLink to="/services/ui-ux-design" onClick={() => setIsOpen(false)}>UI/UX Design</NavLink></li>
+                  <li><NavLink to="/services/digital-marketing" onClick={() => setIsOpen(false)}>Digital Marketing</NavLink></li>
+                  <li><NavLink to="/services/seo-services" onClick={() => setIsOpen(false)}>SEO Services</NavLink></li>
+                  <li><NavLink to="/services/brand-identity" onClick={() => setIsOpen(false)}>Brand Identity</NavLink></li>
                 </ul>
               </li>
 

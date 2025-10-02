@@ -41,7 +41,7 @@ const ServiceCard = ({ service, index }) => {
         {/* Button Section */}
         {service.hasButton && (
           <div className="service-button">
-            <Sbutton text={service.buttonText} />
+            <Sbutton text={service.buttonText} href={service.href} />
           </div>
         )}
         

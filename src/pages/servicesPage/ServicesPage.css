@@ -634,6 +634,14 @@
   }
 }
 
+/* Update services grid */
+.services-grid-modern {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
 /* Floating Animations */
 @keyframes float {
   0%, 100% { transform: translateY(0px) rotate(0deg); }

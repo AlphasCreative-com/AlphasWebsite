@@ -78,11 +78,11 @@
 }
 
 .nav-link:hover {
-  color: #2563eb;
+  color: #1A6AFF;
 }
 
 .nav-link.active {
-  color: #2563eb;
+  color: #1A6AFF;
   position: relative;
 }
 
@@ -93,7 +93,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: #2563eb;
+  background: #1A6AFF;
   border-radius: 1px;
 }
 
@@ -150,7 +150,7 @@
 
 .dropdown-item:hover {
   background: #f3f4f6;
-  color: #2563eb;
+  color: #1A6AFF;
 }
 
 /* CTA Button */
@@ -159,7 +159,7 @@
 }
 
 .cta-button {
-  background: #2563eb;
+  background: #1A6AFF;
   color: white;
   border: none;
   padding: 12px 24px;
@@ -172,9 +172,9 @@
 }
 
 .cta-button:hover {
-  background: #1d4ed8;
+  background: #0052CC;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 12px rgba(26, 106, 255, 0.3);
 }
 
 /* Mobile Menu Toggle */
@@ -286,13 +286,13 @@
 
 .mobile-nav > li > a:hover {
   background: #f3f4f6;
-  color: #2563eb;
+  color: #1A6AFF;
 }
 
 .mobile-nav > li > a.active {
-  color: #2563eb;
+  color: #1A6AFF;
   background: #eff6ff;
-  border-left: 3px solid #2563eb;
+  border-left: 3px solid #1A6AFF;
 }
 
 .mobile-dropdown > button {
@@ -343,7 +343,7 @@
 }
 
 .mobile-submenu a:hover {
-  color: #2563eb;
+  color: #1A6AFF;
 }
 
 .mobile-cta {
@@ -353,7 +353,7 @@
 
 .mobile-cta-button {
   width: 100%;
-  background: #2563eb;
+  background: #1A6AFF;
   color: white;
   border: none;
   padding: 12px;
@@ -364,7 +364,7 @@
 }
 
 .mobile-cta-button:hover {
-  background: #1d4ed8;
+  background: #0052CC;
 }
 /* Responsive Styles */
 
@@ -516,6 +516,6 @@ body {
 
 .cta-button:focus,
 .mobile-menu-toggle:focus {
-  outline: 2px solid #2563eb;
+  outline: 2px solid #1A6AFF;
   outline-offset: 2px;
 }
