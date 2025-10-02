@@ -43,12 +43,12 @@ function Navbar() {
           <div className="navbar-menu">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <NavLink to="/" className="nav-link" onClick={closeDropdowns}>
+                <NavLink to="/" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} onClick={closeDropdowns}>
             Home
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/product" className="nav-link" onClick={closeDropdowns}>
+                <NavLink to="/product" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} onClick={closeDropdowns}>
             Products
                 </NavLink>
               </li>
@@ -79,13 +79,13 @@ function Navbar() {
             </li>
 
             <li className="nav-item">
-              <NavLink to="/about" className="nav-link" onClick={closeDropdowns}>
+              <NavLink to="/about" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} onClick={closeDropdowns}>
                 Company
               </NavLink>
             </li>
 
             <li className="nav-item">
-              <NavLink to="/portfolio" className="nav-link" onClick={closeDropdowns}>
+              <NavLink to="/portfolio" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} onClick={closeDropdowns}>
                 Partners
               </NavLink>
             </li>
@@ -93,7 +93,7 @@ function Navbar() {
 
 
             <li className="nav-item">
-              <NavLink to="/blogs" className="nav-link" onClick={closeDropdowns}>
+              <NavLink to="/blogs" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} onClick={closeDropdowns}>
                 Blog
               </NavLink>
             </li>
