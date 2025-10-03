@@ -82,11 +82,17 @@ function ProductPage() {
       </div>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gray-800 text-white text-center">
-        <h2 className="text-3xl font-bold mb-4">Looking for Custom Solutions?</h2>
-        <p className="text-lg mb-6">Let us help you build and scale the solutions your business needs.</p>
-        <Sbutton text="Contact Us" />
-      </section>
+      {/* CTA Section */}
+<section className="py-16 bg-white text-black text-center">
+  <div className="max-w-3xl mx-auto bg-gray-900 text-white p-10 rounded-xl shadow-lg">
+    <h2 className="text-3xl font-bold mb-4">Looking for Custom Solutions?</h2>
+    <p className="text-lg mb-6">
+      Let us help you build and scale the solutions your business needs.
+    </p>
+      <Sbutton text="Contact Us" />
+    
+  </div>
+</section>
     </div>
   );
 }

@@ -110,44 +110,53 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* Vision & Mission Section */}
-      <section className="vision-mission">
-        <div className="vm-wrapper">
-          <div className="vm-left">
-            <div className="services-badge">
-              <span>● OUR FOUNDATION</span>
-            </div>
-            <h2>What is Alpha's Creative Purpose & Principle</h2>
-            <h4>Our purpose guides every solution we create.</h4>
-            <p>
-              At Alpha Creative, we believe digital excellence starts with alignment. Every project we take on is driven by creativity, strategy, and technology—all moving in a clear direction. We integrate mission-driven values and push boundaries with every solution we build.
-            </p>
-          </div>
-          <div className="vm-right">
-            <div className="vm-card">
-              <div className="vm-card-icon">
-                <i className="fas fa-eye"></i>
-              </div>
-              <h3>Our Vision</h3>
-              <p>Empowering businesses with cutting-edge digital solutions that drive growth and innovation.</p>
-            </div>
-            <div className="vm-card">
-              <div className="vm-card-icon">
-                <i className="fas fa-bullseye"></i>
-              </div>
-              <h3>Our Mission</h3>
-              <p>Turning ideas into impactful digital experiences with expert digital solutions and creative excellence.</p>
-            </div>
-            <div className="vm-card">
-              <div className="vm-card-icon">
-                <i className="fas fa-rocket"></i>
-              </div>
-              <h3>Our Motto</h3>
-              <p>Create. Innovate. Elevate.</p>
-            </div>
-          </div>
+     {/* Vision & Mission Section */}
+<section className="vision-mission">
+  <div className="vm-wrapper">
+    <div className="vm-left">
+      <div className="services-badge">
+        <span>● OUR FOUNDATION</span>
+      </div>
+      <h2>What is Alpha's Creative Purpose & Principle</h2>
+      <h4>Our purpose guides every solution we create.</h4>
+      <p>
+        At Alpha Creative, we believe digital excellence starts with alignment. Every project we take on is driven by creativity, strategy, and technology—all moving in a clear direction. We integrate mission-driven values and push boundaries with every solution we build.
+      </p>
+
+      {/* New Image Added */}
+      <div className="about-us-image">
+        <img 
+          src={require("../../Assests/Images/abt us.jpg")} 
+          alt="About Us" 
+        />
+      </div>
+    </div>
+    <div className="vm-right">
+      <div className="vm-card">
+        <div className="vm-card-icon">
+          <i className="fas fa-eye"></i>
         </div>
-      </section>
+        <h3>Our Vision</h3>
+        <p>Empowering businesses with cutting-edge digital solutions that drive growth and innovation.</p>
+      </div>
+      <div className="vm-card">
+        <div className="vm-card-icon">
+          <i className="fas fa-bullseye"></i>
+        </div>
+        <h3>Our Mission</h3>
+        <p>Turning ideas into impactful digital experiences with expert digital solutions and creative excellence.</p>
+      </div>
+      <div className="vm-card">
+        <div className="vm-card-icon">
+          <i className="fas fa-rocket"></i>
+        </div>
+        <h3>Our Motto</h3>
+        <p>Create. Innovate. Elevate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Counter Section - matching home page style */}
       <section className={`counter-section ${counterInView ? "in-view" : ""}`} ref={counterRef}>
@@ -182,9 +191,10 @@ function AboutPage() {
             <span>● WHY CHOOSE US</span>
           </div>
           <h2 className="services-main-title">
-            Smart Solutions to Build<br />
-            <span className="text-gradient">Outstanding Performance</span>
-          </h2>
+  Smart Solutions to Build
+  <span className="text-gradient"> Outstanding Performance</span>
+</h2>
+
           <p className="services-subtitle">
             We combine expertise, innovation, and dedication to deliver exceptional results that exceed expectations.
           </p>

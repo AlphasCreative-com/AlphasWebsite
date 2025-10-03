@@ -367,8 +367,8 @@
 }
 
 .share-btn.copy {
-  background: #6b7280;
-  color: white;
+  background: #05a031;
+  color: rgb(255, 255, 255);
 }
 
 .share-btn:hover {

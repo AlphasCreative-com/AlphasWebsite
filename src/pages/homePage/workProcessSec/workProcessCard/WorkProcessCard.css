@@ -1,19 +1,19 @@
 .workpro-crd {
   padding: 2rem;
-  background: white;
+  background: linear-gradient(135deg, #1e2a47, #0f1631);
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(0, 122, 255, 0.1);
+  border: 1px solid rgba(0, 122, 255, 0.2);
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
+  color: white; /* all text white */
 }
-
 
 .workpro-crd:focus,
 .workpro-crd:active {
@@ -23,16 +23,28 @@
 
 .workpro-crd:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0, 122, 255, 0.15);
-  border-color: #fbfbfb;
+  box-shadow: 0 12px 30px rgba(0, 122, 255, 0.5);
+  border-color: rgba(0, 122, 255, 0.3);
+}
+
+/* Icon without circle, white color */
+.workpro-crd-icn {
+  width: auto; /* fit icon size */
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent; /* remove circle */
+  border-radius: 0;        /* remove rounded background */
+  font-size: 2rem;
+  color: white;            /* icon color white */
+  box-shadow: none;        /* remove shadow */
+  transition: transform 0.3s ease;
 }
 
 .workpro-crd:hover .workpro-crd-icn {
-  transform: scale(1.1);
-  box-shadow: 0 6px 16px rgba(0, 122, 255, 0.3);
+  transform: scale(1.15);
 }
-
-
 
 .workpro-crd-header {
   display: flex;
@@ -43,25 +55,11 @@
 
 .step-label {
   font-size: 0.9rem;
-  color: #000000;
+  color: white; /* step label text white */
   font-weight: 600;
-  background-color: rgba(0, 122, 255, 0.1);
+  background-color: rgba(188, 169, 249, 0.1);
   padding: 4px 12px;
   border-radius: 20px;
-}
-
-
-.workpro-crd-icn {
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ffffff;
-  border-radius: 50%;
-  font-size: 1.5rem;
-  color: rgb(0, 0, 0);
-  box-shadow: 0 4px 12px rgba(237, 237, 237, 0.2);
 }
 
 .workpro-crd-id {
@@ -76,15 +74,13 @@
   justify-content: center;
 }
 
-
 .workpro-crd-id p {
   font-size: 3rem;
   font-weight: bold;
-  color: #bdb2b2;
+  color: white; /* ID text white */
   margin: 0;
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
-
 
 .workpro-crd-id p:focus,
 .workpro-crd-id p:active {
@@ -94,36 +90,22 @@
   -webkit-text-stroke: none;
 }
 
-
 .workpro-crd-title {
   font-family: var(--bs-font-unbounded);
   font-size: 1.4rem;
   font-weight: 500;
   margin: 1rem 0 0.5rem 0;
+  color: white; /* title white */
 }
-
 
 .workpro-crd-disc {
-  color: var(--color-light-black);
+  color: white; /* description white */
 }
-
 
 .workpro-crd:hover .workpro-crd-id p {
-  color: var(--color-primary-black);
-  -webkit-text-stroke: 1px var(--color-primary-black);
+  color: white; /* keep ID text white on hover */
+  -webkit-text-stroke: none;
 }
-
-.workpro-crd-box {
-  opacity: 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.workpro-crd-box.animate {
-  animation: slideBack 2s ease-out forwards;
-}
-
 
 @keyframes slideBack {
   0% {
@@ -151,10 +133,10 @@
   }
 }
 
+
 @media (min-width: 1280px) {
   .workpro-crd-icn {
-    font-size: 6rem;
-    margin: 1rem 0;
+    font-size: 2.5rem; /* smaller than 6rem */
   }
 
   .workpro-crd-title {
@@ -163,9 +145,8 @@
 }
 
 @media (min-width: 1786px) {
-  .workpro-crd {
-    padding: 3rem;
-    border-radius: 2rem;
+  .workpro-crd-icn {
+    font-size: 3rem; /* smaller than 8rem */
   }
 
   .workpro-crd-icn {
