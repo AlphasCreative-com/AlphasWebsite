@@ -1,6 +1,6 @@
 .workpro-crd {
   padding: 2rem;
-  background: linear-gradient(135deg, #1e2a47, #0f1631);
+  background: white;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
@@ -37,7 +37,7 @@
   background: transparent; /* remove circle */
   border-radius: 0;        /* remove rounded background */
   font-size: 2rem;
-  color: white;            /* icon color white */
+  color: #007AFF;            /* icon color white */
   box-shadow: none;        /* remove shadow */
   transition: transform 0.3s ease;
 }
@@ -55,7 +55,7 @@
 
 .step-label {
   font-size: 0.9rem;
-  color: white; /* step label text white */
+  color: rgb(0, 0, 0);
   font-weight: 600;
   background-color: rgba(188, 169, 249, 0.1);
   padding: 4px 12px;
@@ -77,7 +77,7 @@
 .workpro-crd-id p {
   font-size: 3rem;
   font-weight: bold;
-  color: white; /* ID text white */
+  color: rgb(0, 0, 0); 
   margin: 0;
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
@@ -95,16 +95,27 @@
   font-size: 1.4rem;
   font-weight: 500;
   margin: 1rem 0 0.5rem 0;
-  color: white; /* title white */
+  color: rgb(0, 0, 0); 
 }
 
 .workpro-crd-disc {
-  color: white; /* description white */
+  color: rgb(0, 0, 0); 
 }
 
 .workpro-crd:hover .workpro-crd-id p {
-  color: white; /* keep ID text white on hover */
+  color: white; 
   -webkit-text-stroke: none;
+}
+
+.workpro-crd:hover .workpro-crd-title {
+  color: #007AFF; 
+  transition: color 0.3s ease;
+}
+
+.workpro-crd:hover .workpro-crd-icn {
+  color: #007AFF; 
+  transform: scale(1.15);
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 @keyframes slideBack {
