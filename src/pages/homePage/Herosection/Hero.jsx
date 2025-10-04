@@ -39,17 +39,17 @@ function Hero() {
         </h4>
       </div>
       <div className="hero-btn">
-        <Button
-          className="btn01"
-          text={"Contact Us"}
-          onClick={() => navigate("/contact")}
-        />
-        <Sbutton
-          className="btn02 white-variant"
-          text={"Explore Services"}
-          onClick={() => navigate("/services")}
-          
-        />
+      <Button
+        className="btn01"
+        text={"Contact Us"}
+        onClick={() => navigate("/contact")}
+      />
+      <Sbutton
+        className="btn02 white-variant"
+        text={"Explore Services"}
+        onClick={() => navigate("/services")}
+      />
+
       </div>
     </div>
   );

@@ -16,7 +16,7 @@ function Hero() {
       </div>
       <div className="hero-btn">
         <Button className="btn01" text={"Get Started"} />
-        <Sbutton className="btn02" text={"See Features"} />
+        
       </div>
     </div>
   );

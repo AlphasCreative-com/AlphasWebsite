@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../Utilize/Button/Button";
-import Sbutton from "../Utilize/Secbutton/Sbutton";
+import { Link } from 'react-router-dom';
 import productImg3 from "../../Assests/Images/skill.png"; // Importing the image correctly
 
 function Hero() {
@@ -25,9 +25,14 @@ function Hero() {
 
       {/* Buttons */}
       <div className="relative z-10 flex flex-wrap gap-6">
-        <Button className="px-6 py-3 md:px-8 md:py-4 text-white border border-white rounded-lg transition duration-300 hover:bg-white hover:text-black" text={"Get Started"} />
-        <Sbutton className="btn02 white-variant" text={"See Features"} />
-      </div>
+  <Link to="/contact">
+    <Button
+      className="px-6 py-3 md:px-8 md:py-4 text-white border border-white rounded-lg transition duration-300 hover:bg-white hover:text-black"
+      text={"Get Started"}
+    />
+  </Link>
+</div>
+
     </div>
   );
 }
