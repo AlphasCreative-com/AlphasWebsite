@@ -1,6 +1,6 @@
 import React from "react";
 import usePageTitle from "../../hooks/usePageTitle";
-import mobileDevImg from "../../Assests/Images/app development.png";
+import mobileDevImg from "../../Assests/Images/mobile.avif";
 import "./IndividualService.css";
 
 function MobileDevelopmentPage() {

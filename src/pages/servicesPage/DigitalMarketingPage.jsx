@@ -1,6 +1,6 @@
 import React from "react";
 import usePageTitle from "../../hooks/usePageTitle";
-import digitalMarketingImg from "../../Assests/Images/digital marketing.png";
+import digitalMarketingImg from "../../Assests/Images/digital.webp";
 import "./IndividualService.css";
 
 function DigitalMarketingPage() {

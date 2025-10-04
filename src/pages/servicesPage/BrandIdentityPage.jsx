@@ -1,6 +1,6 @@
 import React from "react";
 import usePageTitle from "../../hooks/usePageTitle";
-import brandImg from "../../Assests/Images/brand identity.png";
+import brandImg from "../../Assests/Images/brand.jpg";
 import "./IndividualService.css";
 
 function BrandIdentityPage() {

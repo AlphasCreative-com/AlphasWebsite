@@ -1,6 +1,6 @@
 import React from "react";
 import usePageTitle from "../../hooks/usePageTitle";
-import webDevImg from "../../Assests/Images/web development.png";
+import webDevImg from "../../Assests/Images/web.jpg";
 import "./IndividualService.css";
 
 function WebDevelopmentPage() {

@@ -1,6 +1,6 @@
 import React from "react";
 import usePageTitle from "../../hooks/usePageTitle";
-import uiuxImg from "../../Assests/Images/ui ux design.png";
+import uiuxImg from "../../Assests/Images/UI.jpg";
 import "./IndividualService.css";
 
 function UIUXDesignPage() {

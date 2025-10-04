@@ -1,6 +1,6 @@
 import React from "react";
 import usePageTitle from "../../hooks/usePageTitle";
-import seoImg from "../../Assests/Images/seo services.png";
+import seoImg from "../../Assests/Images/SEO.webp";
 import "./IndividualService.css";
 
 function SEOServicesPage() {
