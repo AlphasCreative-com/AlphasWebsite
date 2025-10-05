@@ -274,7 +274,7 @@
 .service-icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #1A6AFF 0%, #4285F4 100%);
+  background: white;
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -1469,6 +1469,8 @@
     width: 100%;
     border-radius: 15px;
   }
+
+  
 }
 
 @media (max-width: 480px) {

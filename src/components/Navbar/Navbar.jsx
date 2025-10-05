@@ -135,20 +135,7 @@ function Navbar() {
             <ul className="mobile-nav">
               <li><NavLink to="/" onClick={() => setIsOpen(false)}>Home</NavLink></li>
               
-              <li className="mobile-dropdown">
-                <button onClick={() => toggleDropdown('mobile-ai')}>
-                  AI & Automations
-                  <svg className={`mobile-dropdown-icon ${activeDropdown === 'mobile-ai' ? 'active' : ''}`} width="12" height="12" viewBox="0 0 12 12">
-                    <path d="M6 8L2 4h8L6 8z" fill="currentColor"/>
-                  </svg>
-                </button>
-                <ul className={`mobile-submenu ${activeDropdown === 'mobile-ai' ? 'show' : ''}`}>
-                  <li><NavLink to="/services" onClick={() => setIsOpen(false)}>Workflow Automation</NavLink></li>
-                  <li><NavLink to="/services" onClick={() => setIsOpen(false)}>Jumora AI</NavLink></li>
-                  <li><NavLink to="/services" onClick={() => setIsOpen(false)}>AI Augmented Development</NavLink></li>
-                </ul>
-              </li>
-
+             
               <li className="mobile-dropdown">
                 <button onClick={() => toggleDropdown('mobile-services')}>
                   Services

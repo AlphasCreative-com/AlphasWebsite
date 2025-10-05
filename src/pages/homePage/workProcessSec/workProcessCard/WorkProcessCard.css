@@ -1,12 +1,16 @@
 .workpro-crd {
   padding: 2rem;
-  background: linear-gradient(135deg, white 0%, rgba(28, 42, 85, 0.8) 100%);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.1));
+  backdrop-filter: blur(20px);
   border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  box-shadow: 
+    0 15px 40px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(26, 106, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(0, 122, 255, 0.2);
+  border: 1px solid rgba(26, 106, 255, 0.4);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -23,8 +27,11 @@
 .workpro-crd:hover {
   transform: translateY(-5px);
   box-shadow: 
-    0 15px 40px rgba(78, 109, 236, 0.2);
-  border-color: rgba(0, 122, 255, 0.3);
+    0 25px 70px rgba(0, 0, 0, 0.6),
+    0 0 40px rgba(26, 106, 255, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.15));
+  border-color: rgba(26, 106, 255, 0.8);
 }
 
 /* Icon without circle, white color */
@@ -37,7 +44,7 @@
   background: transparent; /* remove circle */
   border-radius: 0;        /* remove rounded background */
   font-size: 2rem;
-  color: #041145;            /* icon color white */
+  color: #ffffff;            /* icon color white */
   box-shadow: none;        /* remove shadow */
   transition: transform 0.3s ease;
 }
@@ -55,11 +62,12 @@
 
 .step-label {
   font-size: 0.9rem;
-  color: rgb(0, 0, 0);
+  color: #ffffff;
   font-weight: 600;
-  background-color: rgba(188, 169, 249, 0.1);
+  background-color: rgba(26, 106, 255, 0.3);
   padding: 4px 12px;
   border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .workpro-crd-id {
@@ -77,9 +85,12 @@
 .workpro-crd-id p {
   font-size: 3rem;
   font-weight: bold;
-  color: rgb(0, 0, 0); 
+  color: #ffffff; 
   margin: 0;
   transition: color 0.3s ease, text-shadow 0.3s ease;
+  text-shadow: 
+    0 0 15px rgba(26, 106, 255, 0.6),
+    0 0 25px rgba(26, 106, 255, 0.3);
 }
 
 .workpro-crd-id p:focus,
@@ -95,25 +106,35 @@
   font-size: 1.4rem;
   font-weight: 500;
   margin: 1rem 0 0.5rem 0;
-  color: rgb(0, 0, 0); 
+  color: #ffffff; 
+  text-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.3),
+    0 0 8px rgba(255, 255, 255, 0.2);
 }
 
 .workpro-crd-disc {
-  color: rgb(0, 0, 0); 
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.3),
+    0 0 8px rgba(255, 255, 255, 0.2);
 }
 
 .workpro-crd:hover .workpro-crd-id p {
-  color: rgb(0, 0, 0); 
+  color: #ffffff; 
+  text-shadow: 
+    0 0 25px rgba(26, 106, 255, 1),
+    0 0 35px rgba(26, 106, 255, 0.6);
   -webkit-text-stroke: none;
 }
 
 .workpro-crd:hover .workpro-crd-title {
-  color: #041145; 
+  color: #ffffff; 
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
   transition: color 0.3s ease;
 }
 
 .workpro-crd:hover .workpro-crd-icn {
-  color: #041145; 
+  color: #ffffff; 
   transform: scale(1.15);
   transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -143,7 +164,6 @@
     flex: 1;
   }
 }
-
 
 @media (min-width: 1280px) {
   .workpro-crd-icn {

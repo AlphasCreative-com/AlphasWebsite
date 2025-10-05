@@ -290,6 +290,7 @@
     width: 35px;
     height: 35px;
   }
+
 }
 
 @media (max-width: 480px) {
@@ -300,6 +301,7 @@
   .blogs-title h1 {
     font-size: 1.8rem;
   }
+
 
   .blog-card-image {
     height: 200px;

@@ -15,14 +15,13 @@ function Hero() {
       const timer = setTimeout(() => {
         setDisplayedText((prev) => prev + fullText[index]);
         setIndex(index + 1);
-      }, 250); // slower typing speed
+      }, 250);
       return () => clearTimeout(timer);
     } else {
-      // Reset after 1.5 seconds
       const resetTimer = setTimeout(() => {
         setDisplayedText("");
         setIndex(0);
-      }, 1500); // wait before repeating
+      }, 1500);
       return () => clearTimeout(resetTimer);
     }
   }, [index]);
@@ -31,7 +30,6 @@ function Hero() {
     <div className="hero">
       <div className="hero-text">
         <h3>We Create</h3>
-        {/* Fixed layout + glowing text */}
         <h1 className="glow-text">{displayedText || "\u00A0"}</h1>
         <h4>
           Our professional team is dedicated to helping you achieve your digital
@@ -39,17 +37,16 @@ function Hero() {
         </h4>
       </div>
       <div className="hero-btn">
-      <Button
-        className="btn01"
-        text={"Contact Us"}
-        onClick={() => navigate("/contact")}
-      />
-      <Sbutton
-        className="btn02 white-variant"
-        text={"Explore Services"}
-        onClick={() => navigate("/services")}
-      />
-
+        <Button
+          className="btn01"
+          text={"Contact Us"}
+          onClick={() => navigate("/contact")}
+        />
+        <Sbutton
+          className="btn02 white-variant"
+          text={"Explore Services"}
+          onClick={() => navigate("/services")}
+        />
       </div>
     </div>
   );

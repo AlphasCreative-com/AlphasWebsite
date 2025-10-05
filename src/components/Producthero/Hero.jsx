@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../Utilize/Button/Button";
 import { Link } from 'react-router-dom';
-import productImg3 from "../../Assests/Images/skill.png"; // Importing the image correctly
+import productImg3 from "../../Assests/Images/skill.png"; 
 
 function Hero() {
   return (
