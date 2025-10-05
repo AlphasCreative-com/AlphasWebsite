@@ -17,7 +17,7 @@ function Navbar() {
   };
 
   const handleCallButtonClick = () => {
-    window.location.href = 'tel:+1234567890'; // Replace with your phone number
+    window.location.href = 'tel:+94 71 490 7110'; 
   };
 
   const closeDropdowns = () => {

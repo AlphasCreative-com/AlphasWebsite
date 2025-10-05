@@ -1,85 +1,133 @@
 /* Portfolio Section */
 .portfolio-section {
-    padding: 4rem 0;
-    text-align: center;
-    background-color: #f8f9fa;
-  }
-  
-  .portfolio-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .portfolio-description {
-    max-width: 800px;
-    margin: 0 auto 3rem;
-    color: #4a5568;
-  }
-  
-  .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .portfolio-item {
-    background: white;
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .portfolio-item img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-  }
-  
-  .portfolio-item h3 {
-    color: #2d3748;
-    margin-bottom: 0.5rem;
-  }
-  
-  /* Why Choose Us Section */
+  padding: 8rem 0;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.portfolio-section h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-family: var(--bs-font-unbounded);
+  font-weight: 600;
+  color: #000;
+}
+
+.portfolio-description {
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.portfolio-item {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border-color: rgba(26, 106, 255, 0.2);
+
+}
+
+
+.portfolio-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #1A6AFF 0%, #4285F4 100%);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem auto;
+  font-size: 2rem;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-icon {
+  transform: scale(1.1) rotateY(10deg);
+}
+
+.portfolio-item h3 {
+  font-family: var(--bs-font-unbounded);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000;
+  margin: 0 0 1rem 0;
+  transition: color 0.3s ease;
+}
+
+
+.portfolio-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.7);
+  margin: 0;
+  text-align: center;
+  max-width: 280px;
+}
+
+/* Why Choose Us Section */
   .why-choose-section {
     padding: 4rem 0;
     text-align: center;
-    background: #fff;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f1419 100%);
+    margin-bottom: 3rem;
   }
   
   .why-choose-section h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
+    color: white;
   }
   
   .why-choose-section p {
     max-width: 700px;
     margin: 0 auto 2rem;
-    color: #4a5568;
+    color: #ffffff;
   }
   
-  /* CTA Section */
-  .portfolio-cta {
+/* Responsive Design */
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .portfolio-section,
+  .why-choose-section {
     padding: 4rem 0;
-    text-align: center;
-    background-color: #2d3748;
-    color: white;
   }
   
-  .portfolio-cta h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+  .portfolio-section h2,
+  .why-choose-section h2 {
+    font-size: 2.2rem;
   }
   
-  @media (max-width: 768px) {
-    .portfolio-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    .portfolio-item img {
-      height: auto;
-    }
+  .portfolio-item {
+    padding: 2.5rem 2rem;
   }
-  
+}
