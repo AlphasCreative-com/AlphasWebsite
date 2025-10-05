@@ -1,4 +1,4 @@
-.blog-post-container {
+.blogs-post-container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0;
@@ -8,7 +8,7 @@
 }
 
 /* Hero Section */
-.blog-post-hero {
+.blogs-post-hero {
   background-image: url('../../Assests/Images/hero bg.jpg');
   background-size: cover;
   background-position: center;
@@ -19,7 +19,7 @@
   overflow: hidden;
 }
 
-.blog-post-hero::before {
+.blogs-post-hero::before {
   content: '';
   position: absolute;
   top: 0;
@@ -30,14 +30,14 @@
   z-index: 1;
 }
 
-.blog-post-hero-content {
+.blogs-post-hero-content {
   position: relative;
   z-index: 2;
   max-width: 800px;
   margin: 0 auto;
 }
 
-.blog-post-breadcrumb {
+.blogs-post-breadcrumb {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,21 +47,21 @@
   color: var(--color-light-black);
 }
 
-.blog-post-breadcrumb a {
+.blogs-post-breadcrumb a {
   color: var(--color-light-black);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.blog-post-breadcrumb a:hover {
+.blogs-post-breadcrumb a:hover {
   color: var(--color-primary, #3b82f6);
 }
 
-.blog-post-category {
+.blogs-post-category {
   margin-bottom: 1rem;
 }
 
-.blog-post-category span {
+.blogs-post-category span {
   background-color: #3b82f6;
   color: white;
   padding: 0.5rem 1rem;
@@ -72,7 +72,7 @@
   letter-spacing: 0.5px;
 }
 
-.blog-post-title {
+.blogs-post-title {
   font-family: var(--bs-font-unbounded);
   font-size: 3rem;
   font-weight: 600;
@@ -81,20 +81,20 @@
   color: var(--color-black);
 }
 
-.blog-post-title.animate-on-scroll {
+.blogs-post-title.animate-on-scroll {
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 1s ease-out forwards;
 }
 
-.blog-post-subtitle {
+.blogs-post-subtitle {
   font-size: 1.25rem;
   color: var(--color-light-black);
   margin-bottom: 2rem;
   font-weight: 400;
 }
 
-.blog-post-meta {
+.blogs-post-meta {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,13 +102,13 @@
   flex-wrap: wrap;
 }
 
-.blog-post-author {
+.blogs-post-author {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-.blog-post-author img {
+.blogs-post-author img {
   width: 50px;
   height: 50px;
   border-radius: 50%;

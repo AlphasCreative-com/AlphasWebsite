@@ -96,7 +96,7 @@ function Navbar() {
 
             <li className="nav-item">
               <NavLink to="/blogs" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} onClick={closeDropdowns}>
-                Blog
+                Blogs
               </NavLink>
             </li>
           </ul>
@@ -156,7 +156,7 @@ function Navbar() {
               <li><NavLink to="/company" onClick={() => setIsOpen(false)}>Company</NavLink></li>
               <li><NavLink to="/portfolio" onClick={() => setIsOpen(false)}>Partners</NavLink></li>
               <li><NavLink to="/careers" onClick={() => setIsOpen(false)}>Careers</NavLink></li>
-              <li><NavLink to="/blog" onClick={() => setIsOpen(false)}>Blog</NavLink></li>
+              <li><NavLink to="/blogs" onClick={() => setIsOpen(false)}>Blogs</NavLink></li>
             </ul>
 
             <div className="mobile-cta">

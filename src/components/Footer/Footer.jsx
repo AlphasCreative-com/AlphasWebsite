@@ -63,7 +63,7 @@ function Footer() {
                 <li><NavLink to="/about" className="footer-link">About Us</NavLink></li>
                 <li><NavLink to="/portfolio" className="footer-link">Our Work</NavLink></li>
                 <li><NavLink to="/careers" className="footer-link">Careers</NavLink></li>
-                <li><NavLink to="/blog" className="footer-link">Blog</NavLink></li>
+                <li><NavLink to="/blogs" className="footer-link">Blogs</NavLink></li>
                 <li><NavLink to="/contact" className="footer-link">Contact Us</NavLink></li>
               </ul>
             </div>
