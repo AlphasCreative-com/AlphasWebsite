@@ -73,10 +73,15 @@ h1.hero-title {
   color: rgba(255, 255, 255, 0.9);
 }
 
+/* Button Container - Align to Left */
 .hero-buttons {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  justify-content: flex-start; /* This aligns buttons to the left */
+  width: 100%;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 /* Button Styles */
@@ -271,7 +276,7 @@ section {
 
 /* CTA Section */
 .service-cta {
-  background: linear-gradient(135deg, #1A6AFF, #0052CC);
+  background:  linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f1419 100%);;
   color: white;
   text-align: center;
   margin: 2.3rem 0;
@@ -384,7 +389,7 @@ section {
 .btn-secondary {
   font-size: 1rem;
   width: 100%;
-  max-width: 250px;
+  max-width: px;
 }
 }
 

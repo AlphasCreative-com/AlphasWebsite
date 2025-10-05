@@ -7,7 +7,7 @@ function Hero() {
   return (
     <div
       className="relative flex flex-col items-start justify-center w-full gap-8 px-28 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 bg-cover bg-center text-white"
-      style={{ backgroundImage: `url(${productImg3})` }} // Corrected background image import
+      style={{ backgroundImage: `url(${productImg3})` }} 
     >
       {/* Dark Overlay and Blur */}
       <div className="absolute inset-0 bg-black/50 backdrop-blur-lg z-0"></div>

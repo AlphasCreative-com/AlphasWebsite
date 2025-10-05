@@ -41,11 +41,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: transparent; /* remove circle */
-  border-radius: 0;        /* remove rounded background */
+  background: transparent; 
+  border-radius: 0;       
   font-size: 2rem;
-  color: #ffffff;            /* icon color white */
-  box-shadow: none;        /* remove shadow */
+  color: #ffffff;           
+  box-shadow: none;        
   transition: transform 0.3s ease;
 }
 
@@ -74,8 +74,8 @@
   position: absolute;
   bottom: 10px;
   right: 10px;
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
   opacity: 0.3;
   display: flex;
   align-items: center;

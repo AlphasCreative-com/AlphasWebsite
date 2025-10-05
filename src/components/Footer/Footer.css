@@ -201,12 +201,14 @@
 .newsletter-input {
   flex: 1;
   background: transparent;
-  border: none;
+  border: 1px solid #6b7280; 
+  border-radius: 4px; 
   width: 250px;
-  padding:0 16px;
+  padding: 12px 16px;
   color: white;
   font-size: 14px;
   outline: none;
+  height: 40px; 
 }
 
 .newsletter-input::placeholder {
