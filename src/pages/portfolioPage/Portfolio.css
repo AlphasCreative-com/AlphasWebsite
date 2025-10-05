@@ -2,7 +2,7 @@
 .portfolio-section {
   padding: 8rem 0;
   text-align: center;
-  background-color: #ffffff;
+  background: linear-gradient(135deg, #f8faff 0%, #ffffff 50%, #f1f5ff 100%);
 }
 
 .portfolio-section h2 {
@@ -21,6 +21,7 @@
   line-height: 1.6;
 }
 
+/* Flip Card Grid */
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -28,87 +29,198 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+  perspective: 1000px;
 }
 
-.portfolio-item {
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 3rem 2rem;
+/* Flip Card Container */
+.flip-card {
+  background: transparent;
+  perspective: 1000px;
+  height: 400px;
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
   text-align: center;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-style: preserve-3d;
+  border-radius: 25px;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front and Back Styles */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 25px;
+  padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  height: 100%;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
-.portfolio-item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-  border-color: rgba(26, 106, 255, 0.2);
-
+/* Front Card */
+.flip-card-front {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
 }
 
+/* Back Card */
+.flip-card-back {
+  background: linear-gradient(135deg, #4146ec 15%, #16213e 0%, #18235a 100%);
+  color: white;
+  transform: rotateY(180deg);
+  text-align: center;
+}
 
+/* Portfolio Icon */
 .portfolio-icon {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   background: linear-gradient(135deg, #1A6AFF 0%, #4285F4 100%);
-  border-radius: 20px;
+  border-radius: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 2rem auto;
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: white;
+  box-shadow: 0 10px 30px rgba(26, 106, 255, 0.3);
   transition: all 0.3s ease;
 }
 
-.portfolio-item:hover .portfolio-icon {
-  transform: scale(1.1) rotateY(10deg);
+.flip-card-front .portfolio-icon {
+  background: linear-gradient(135deg, #1A6AFF 0%, #032c79 100%);
 }
 
-.portfolio-item h3 {
+.flip-card-back .portfolio-icon {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Text Styles */
+.flip-card h3 {
   font-family: var(--bs-font-unbounded);
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 600;
-  color: #000;
-  margin: 0 0 1rem 0;
+  margin: 0 0 1.5rem 0;
   transition: color 0.3s ease;
 }
 
+.flip-card-front h3 {
+  color: #000;
+}
 
-.portfolio-item p {
+.flip-card-back h3 {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.flip-card-front p {
   font-size: 1rem;
   line-height: 1.6;
   color: rgba(0, 0, 0, 0.7);
   margin: 0;
-  text-align: center;
-  max-width: 280px;
+}
+
+.flip-card-back p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+}
+
+/* Flip Hint */
+.flip-hint {
+  position: absolute;
+  bottom: 2rem;
+  font-size: 0.9rem;
+  color: #0c34e6;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.flip-card:hover .flip-hint {
+  opacity: 0;
+}
+
+/* Back Content */
+.flip-card-back ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  text-align: left;
+}
+
+.flip-card-back li {
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* CTA Button */
+.flip-cta {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.flip-cta:hover {
+  background: white;
+  color: #070732; 
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
 }
 
 /* Why Choose Us Section */
-  .why-choose-section {
-    padding: 4rem 0;
-    text-align: center;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f1419 100%);
-    margin-bottom: 3rem;
-  }
-  
-  .why-choose-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: white;
-  }
-  
-  .why-choose-section p {
-    max-width: 700px;
-    margin: 0 auto 2rem;
-    color: #ffffff;
-  }
-  
+.why-choose-section {
+  padding: 5rem 0;
+  text-align: center;
+  background: linear-gradient(135deg, #4146ec 0%, #16213e 0%, #091034 100%);
+  margin-bottom: 30px;
+}
+
+.why-choose-section h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: white;
+  font-family: var(--bs-font-unbounded);
+  font-weight: 600;
+}
+
+.why-choose-section p {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .portfolio-grid {
@@ -127,7 +239,24 @@
     font-size: 2.2rem;
   }
   
-  .portfolio-item {
-    padding: 2.5rem 2rem;
+  .flip-card {
+    height: 350px;
+  }
+  
+  .flip-card-front,
+  .flip-card-back {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .flip-card {
+    height: 380px;
+  }
+  
+  .portfolio-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 1.8rem;
   }
 }
