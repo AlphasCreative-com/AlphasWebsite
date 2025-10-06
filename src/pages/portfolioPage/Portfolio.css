@@ -242,8 +242,9 @@
 /* Success Stories Section */
 .success-stories-section {
   padding: 6rem 0;
-  background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
+  background: white;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .success-stories-section h2 {
@@ -264,11 +265,11 @@
 
 .stories-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-  gap: 2.5rem;
-  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3.5rem;
+  max-width: 1600px;
   margin: 0 auto 3rem;
-  padding: 0 2rem;
+  padding: 0 4rem;
 }
 
 .story-card {
@@ -360,8 +361,8 @@
 
 .see-more-btn {
   background: transparent;
-  border: 2px solid #1A6AFF;
-  color: #1A6AFF;
+  border: 2px solid #000000;
+  color: #000000;
   padding: 12px 30px;
   border-radius: 25px;
   font-weight: 600;
