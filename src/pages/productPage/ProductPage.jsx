@@ -81,6 +81,8 @@ function ProductPage() {
               <CircularArrows />
             </div>
           </div>
+
+          
         </section>
       </div>
 
@@ -88,7 +90,7 @@ function ProductPage() {
       {/* CTA Section */}
  <section className="py-10 bg-[#0b1221] text-white text-center mb-9">
   <div className="max-w-3xl mx-auto p-6">
-    <h2 className="text-3xl font-bold mb-4">Looking for Custom Solutions?</h2>
+    <h2 className="text-5xl font-bold mb-4">Looking for Custom Solutions?</h2>
     <p className="text-lg mb-6">
       Let us help you build and scale the solutions your business needs.
     </p>
