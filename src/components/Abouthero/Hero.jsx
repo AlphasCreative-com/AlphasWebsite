@@ -7,11 +7,9 @@ import "./Hero.css"; // Add CSS file for animations
 function Hero() {
   return (
     <div
-      className="about-hero relative flex flex-col items-start justify-center w-full gap-8 px-28 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 bg-cover bg-center text-white"
-      style={{ backgroundImage: `url(${productImg3})` }} // Corrected background image import
+      className="about-hero relative flex flex-col items-start justify-center w-full gap-8 px-28 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 bg-white text-black"
     >
-      {/* Dark Overlay and Blur */}
-      <div className="absolute inset-0 bg-black/50 backdrop-blur-lg z-0"></div>
+      {/* No overlay needed for white background */}
 
       {/* Hero Text */}
       <div className="relative z-10 flex flex-col items-start text-start gap-4 max-w-3xl px-4">
@@ -25,8 +23,8 @@ function Hero() {
 
       {/* Buttons */}
       <div className="relative z-10 flex flex-wrap gap-6">
-        <Button className="px-6 py-3 md:px-8 md:py-4 text-white border border-white rounded-lg transition duration-300 hover:bg-white hover:text-black" text={"Get Started"} />
-        <Sbutton className="btn02 white-variant" text={"See Features"} />
+        <Button className="px-6 py-3 md:px-8 md:py-4 text-white bg-blue-600 border border-blue-600 rounded-lg transition duration-300 hover:bg-blue-700 hover:border-blue-700" text={"Get Started"} />
+        <Sbutton className="btn02" text={"See Features"} />
       </div>
     </div>
   );

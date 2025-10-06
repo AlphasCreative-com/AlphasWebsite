@@ -45,7 +45,7 @@ function Hero() {
         <Sbutton
           className="btn02 white-variant"
           text={"Explore Services"}
-          onClick={() => navigate("/services")}
+          href="/services"
         />
       </div>
     </div>
