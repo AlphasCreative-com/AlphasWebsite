@@ -21,23 +21,65 @@
   line-height: 1.6;
 }
 
-/* Flip Card Grid */
+/* Carousel Container */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Portfolio Grid - Fixed to use Flex for carousel */
 .portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  display: flex;
   gap: 2rem;
+  overflow: hidden;
+  width: 80%;
+  justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
   perspective: 1000px;
 }
 
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #ffffff;
+  background: rgb(9, 18, 74);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0.5rem 0.8rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+.carousel-arrow:hover {
+  background: #1a0286;
+}
+
+.carousel-arrow.left {
+  left: 30px;
+}
+
+.carousel-arrow.right {
+  right: 30px;
+}
+
 /* Flip Card Container */
 .flip-card {
   background: transparent;
   perspective: 1000px;
-  height: 400px;
+  height: 450px;
   cursor: pointer;
+  min-width: 350px; 
+  flex-shrink: 0; 
 }
 
 .flip-card-inner {
@@ -80,7 +122,7 @@
 
 /* Back Card */
 .flip-card-back {
-  background: linear-gradient(135deg, #4146ec 15%, #16213e 0%, #18235a 100%);
+  background: linear-gradient(135deg, #4146ec 0%, #16213e 0%, #18235a 100%);
   color: white;
   transform: rotateY(180deg);
   text-align: center;
@@ -197,6 +239,187 @@
   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
 }
 
+/* Success Stories Section */
+.success-stories-section {
+  padding: 6rem 0;
+  background: white;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.success-stories-section h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  font-family: var(--bs-font-unbounded);
+  font-weight: 600;
+  color: #000;
+}
+
+.stories-description {
+  max-width: 700px;
+  margin: 0 auto 4rem;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3.5rem;
+  max-width: 1600px;
+  margin: 0 auto 3rem;
+  padding: 0 4rem;
+}
+
+.story-card {
+  background: white;
+  border-radius: 20px;
+  padding: 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.website-preview {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.website-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.story-card:hover .website-preview img {
+  transform: scale(1.05);
+}
+
+.story-content {
+  padding: 2rem;
+  text-align: left;
+}
+
+.testimonial-text p {
+  color: rgba(0, 0, 0, 0.8);
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+  font-size: 1rem;
+  font-style: italic;
+  border-left: 3px solid #1A6AFF;
+  padding-left: 1rem;
+}
+
+.client-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.client-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #1A6AFF;
+}
+
+.client-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.client-details h3 {
+  font-family: var(--bs-font-unbounded);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.2rem 0;
+  color: #000;
+}
+
+.client-details span {
+  color: #1A6AFF;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.see-more-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.see-more-btn {
+  background: transparent;
+  border: 2px solid #000000;
+  color: #000000;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-family: var(--bs-font-unbounded);
+}
+
+.see-more-btn:hover {
+  background: #1A6AFF;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design for Success Stories */
+@media (max-width: 768px) {
+  .stories-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .story-card {
+    margin: 0 auto;
+    max-width: 400px;
+  }
+  
+  .website-preview {
+    height: 180px;
+  }
+  
+  .story-content {
+    padding: 1.5rem;
+  }
+  
+  .client-info {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stories-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .story-card {
+    max-width: 100%;
+  }
+  
+  .website-preview {
+    height: 160px;
+  }
+}
+
 /* Why Choose Us Section */
 .why-choose-section {
   padding: 5rem 0;
@@ -209,7 +432,6 @@
   font-size: 3rem;
   margin-bottom: 2rem;
   color: white;
-  font-family: var(--bs-font-unbounded);
   font-weight: 600;
 }
 
@@ -224,39 +446,83 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .portfolio-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    width: 90%;
     padding: 0 1rem;
   }
   
   .portfolio-section,
-  .why-choose-section {
+  .why-choose-section,
+  .success-stories-section {
     padding: 4rem 0;
   }
   
   .portfolio-section h2,
-  .why-choose-section h2 {
+  .why-choose-section h2,
+  .success-stories-section h2 {
     font-size: 2.2rem;
   }
   
   .flip-card {
     height: 350px;
+    min-width: 300px;
   }
   
   .flip-card-front,
   .flip-card-back {
     padding: 2rem 1.5rem;
   }
+  
+  .carousel-arrow {
+    font-size: 1.5rem;
+    padding: 0.4rem 0.7rem;
+  }
+  
+  .carousel-arrow.left {
+    left: 15px;
+  }
+  
+  .carousel-arrow.right {
+    right: 15px;
+  }
+  
+  .stories-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .story-card {
+    padding: 2rem;
+  }
 }
 
 @media (max-width: 480px) {
   .flip-card {
     height: 380px;
+    min-width: 280px;
   }
   
   .portfolio-icon {
     width: 70px;
     height: 70px;
     font-size: 1.8rem;
+  }
+  
+  .portfolio-grid {
+    width: 95%;
+  }
+  
+  .story-card {
+    padding: 1.5rem;
+  }
+  
+  .story-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.8rem;
+  }
+  
+  .client-info h3 {
+    font-size: 1.2rem;
   }
 }

@@ -8,8 +8,6 @@ import Hero from "../../components/Producthero/Hero";
 import usePageTitle from "../../hooks/usePageTitle";
 import { Link } from "react-router-dom";
 
-
-
 function ProductPage() {
   usePageTitle("Products");
   return (
@@ -18,9 +16,11 @@ function ProductPage() {
       <Hero />
 
       {/* Solutions Overview */}
-      <section className="py-16 text-center bg-gray-100">
-        <h2 className="text-[2.1rem] font-medium font-unbounded mb-4 md:text-[2.2rem] lg:text-[2.5rem] xl:text-[2.7rem] 2xl:text-[3.3rem]">Tailored Digital Solutions</h2>
-        <p className="max-w-3xl mx-auto text-lg text-gray-700 leading-relaxed">
+      <section className="py-16 text-center">
+        <h2 className="text-[2.1rem] font-medium mb-4 md:text-[2.2rem] lg:text-[2.5rem] xl:text-[2.7rem] 2xl:text-[3.3rem]" style={{fontFamily: 'var(--bs-font-unbounded)'}}>
+          Tailored Digital Solutions
+        </h2>
+        <p className="max-w-3xl mx-auto text-lg text-gray-700 leading-relaxed" style={{fontFamily: 'var(--bs-font-sans-serif)'}}>
           Our expert team crafts top-tier software products, mobile apps, systems, and websites to address unique business challenges and drive growth.
         </p>
       </section>
@@ -38,10 +38,14 @@ function ProductPage() {
               />
             </div>
             <div className="mb-4">
-              <span className="text-sm text-gray-500">Streamline and automate core business processes with our powerful, customizable ERP solutions.</span>
+              <span className="text-sm text-gray-500" style={{fontFamily: 'var(--bs-font-sans-serif)'}}>
+                Streamline and automate core business processes with our powerful, customizable ERP solutions.
+              </span>
             </div>
             <div className="flex items-center justify-between mb-2">
-              <h3 className="text-[1.5rem] font-medium font-unbounded">Enterprise Resource Planning (ERP) System</h3>
+              <h3 className="text-[1.5rem] font-medium" style={{fontFamily: 'var(--bs-font-sans-serif)'}}>
+                Enterprise Resource Planning (ERP) System
+              </h3>
               <CircularArrows />
             </div>
           </div>
@@ -56,10 +60,14 @@ function ProductPage() {
               />
             </div>
             <div className="mb-4">
-              <span className="text-sm text-gray-500">Elevate your online presence with user-friendly and scalable e-commerce websites and mobile apps.</span>
+              <span className="text-sm text-gray-500" style={{fontFamily: 'var(--bs-font-sans-serif)'}}>
+                Elevate your online presence with user-friendly and scalable e-commerce websites and mobile apps.
+              </span>
             </div>
             <div className="flex items-center justify-between mb-2">
-              <h3 className="text-[1.5rem] font-medium font-unbounded">E-Commerce Platforms</h3>
+              <h3 className="text-[1.5rem] font-medium" style={{fontFamily: 'var(--bs-font-sans-serif)'}}>
+                E-Commerce Platforms
+              </h3>
               <CircularArrows />
             </div>
           </div>
@@ -74,10 +82,14 @@ function ProductPage() {
               />
             </div>
             <div className="mb-4">
-              <span className="text-sm text-gray-500">Deliver exceptional user experiences through innovative, cross-platform mobile applications.</span>
+              <span className="text-sm text-gray-500" style={{fontFamily: 'var(--bs-font-sans-serif)'}}>
+                Deliver exceptional user experiences through innovative, cross-platform mobile applications.
+              </span>
             </div>
             <div className="flex items-center justify-between mb-2">
-              <h3 className="text-[1.5rem] font-medium font-unbounded">Custom Mobile Applications</h3>
+              <h3 className="text-[1.5rem] font-medium" style={{fontFamily: 'var(--bs-font-sans-serif)'}}>
+                Custom Mobile Applications
+              </h3>
               <CircularArrows />
             </div>
           </div>
@@ -85,20 +97,19 @@ function ProductPage() {
       </div>
 
       {/* CTA Section */}
-      {/* CTA Section */}
- <section className="py-10 bg-[#0b1221] text-white text-center mb-9">
-  <div className="max-w-3xl mx-auto p-6">
-    <h2 className="text-3xl font-bold mb-4">Looking for Custom Solutions?</h2>
-    <p className="text-lg mb-6">
-      Let us help you build and scale the solutions your business needs.
-    </p>
-    <Link to="/contactus">
-      <Sbutton text="Contact Us" />
-    </Link>
-  </div>
-</section>
-
-
+      <section className="py-10 bg-[#0b1221] text-white text-center mb-9">
+        <div className="max-w-3xl mx-auto p-6">
+          <h2 className="text-5xl font-bold mb-4" style={{fontFamily: 'var(--bs-font-sans-serif)'}}>
+            Looking for Custom Solutions?
+          </h2>
+          <p className="text-lg mb-6" style={{fontFamily: 'var(--bs-font-sans-serif)'}}>
+            Let us help you build and scale the solutions your business needs.
+          </p>
+          <Link to="/contactus">
+            <Sbutton text="Contact Us" />
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }
