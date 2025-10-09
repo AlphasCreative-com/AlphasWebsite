@@ -39,45 +39,7 @@
   max-width: 800px;
 }
 
-/* Button Styles */
-.service-hero .btn02 {
-  background: transparent;
-  border: 2px solid #1A6AFF;
-  color: #1A6AFF;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-block;
-  text-align: center;
-}
 
-.service-hero .btn02:hover {
-  background: #1A6AFF;
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(26, 106, 255, 0.3);
-}
-
-.service-hero .white-variant {
-  border-color: white;
-  color: white;
-}
-
-.service-hero .white-variant:hover {
-  background: white;
-  color: #1A6AFF;
-}
-
-.service-hero .btn02 {
-  display: flex;             
-  justify-content: center;    
-  align-items: center;       
-  padding: 18px 34px;
-  height: 54px;              
-  line-height: 3;             
-}
 
 /* Responsive Design */
 @media (max-width: 1024px) {
