@@ -3,7 +3,7 @@ import React from "react";
 function Hero() {
   return (
     <div
-      className="relative flex flex-col items-start justify-center w-full gap-8 px-28 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 text-black"
+       className="relative flex flex-col items-start justify-center w-full gap-8 px-28 py-20 sm:py-24 md:py-28 lg:py-32 xl:py-40 text-black"
     >
       {/* Hero Text */}
       <div className="relative flex flex-col items-start text-start gap-4 max-w-3xl px-4">

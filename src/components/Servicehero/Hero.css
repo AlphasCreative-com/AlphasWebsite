@@ -3,7 +3,7 @@
   min-height: 80vh;
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: left;
   background-attachment: fixed;
 }
 
@@ -50,6 +50,7 @@
   text-decoration: none;
   transition: all 0.3s ease;
   display: inline-block;
+  text-align: center;
 }
 
 .service-hero .btn02:hover {
@@ -67,6 +68,15 @@
 .service-hero .white-variant:hover {
   background: white;
   color: #1A6AFF;
+}
+
+.service-hero .btn02 {
+  display: flex;             
+  justify-content: center;    
+  align-items: center;       
+  padding: 18px 34px;
+  height: 54px;              
+  line-height: 3;             
 }
 
 /* Responsive Design */

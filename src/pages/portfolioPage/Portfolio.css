@@ -76,11 +76,16 @@
 .flip-card {
   background: transparent;
   perspective: 1000px;
-  height: 450px;
+  height: 450px; /* Slightly reduced height */
   cursor: pointer;
-  min-width: 350px; 
-  flex-shrink: 0; 
+  min-width: 370px; /* Further reduced from 300px */
+  width: 22%; /* Reduced from 23% */
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 20px; /* Slightly smaller radius */
+  border: 1px solid #392a9e;
 }
+
 
 .flip-card-inner {
   position: relative;
@@ -89,7 +94,8 @@
   text-align: center;
   transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transform-style: preserve-3d;
-  border-radius: 25px;
+  /* Remove border-radius from inner */
+  border-radius: 0;
 }
 
 .flip-card:hover .flip-card-inner {
@@ -104,13 +110,16 @@
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  border-radius: 25px;
+  /* Remove individual border-radius */
+  border-radius: 0;
   padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  /* Ensure content stays within bounds */
+  overflow: hidden;
 }
 
 /* Front Card */
@@ -280,6 +289,7 @@
   transition: all 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.2);
   overflow: hidden;
+ 
 }
 
 .story-card:hover {

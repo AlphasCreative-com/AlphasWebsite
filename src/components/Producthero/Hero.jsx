@@ -1,10 +1,19 @@
 import React from "react";
 import Button from "../Utilize/Button/Button";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
-    <div className="relative flex flex-col items-start justify-center w-full gap-8 px-28 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 bg-white text-black">
+    <div
+      className="relative flex flex-col items-start justify-center w-full gap-8 px-28 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 text-black"
+      style={{
+        backgroundImage: "url('/Wave_Line(1).svg')", 
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundColor: "white",
+      }}
+    >
       {/* Hero Text */}
       <div className="relative z-10 flex flex-col items-start text-start gap-4 max-w-3xl px-4">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-unbounded">

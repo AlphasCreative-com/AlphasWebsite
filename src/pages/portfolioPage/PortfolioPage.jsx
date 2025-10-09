@@ -27,6 +27,7 @@ function PortfolioPage() {
       desc: "A modern, user-friendly interface designed for cross-platform compatibility and intuitive navigation.",
       features: ["Cross-platform", "User testing", "Performance optimized"],
     },
+    
     {
       icon: "fas fa-laptop-code",
       title: "Portfolio Website",
