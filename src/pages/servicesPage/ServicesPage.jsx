@@ -2,6 +2,8 @@ import React from "react";
 import servicesImage from "../../Assests/Images/services.jpg";
 import Hero from "../../components/Servicehero/Hero";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
+import { Link } from "react-router-dom";
+
 
 
 import "./ServicesPage.css";
@@ -182,35 +184,37 @@ function ServicesPage() {
 
 
       {/* Transform Your Business Card Section */}
-      <section className="transform-business-section">
-        <div className="container-modern">
-          <div className="transform-business-card">
-            <div className="transform-content">
-              <div className="transform-text">
-                <h2 className="transform-title">
-                  Transform Your Business Today.
-                </h2>
-                <p className="transform-description">
-                  Unlock your potential with our cutting-edge AI and development 
-                  solutions. Let's create your competitive advantage.
-                </p>
-                <button className="transform-button">
-                  Get Started
-                </button>
-              </div>
-              <div className="transform-visual">
-                <div className="cta-image-wrapper">
-                  <img 
-                    src={require("../../Assests/Images/bg-cta.webp")} 
-                    alt="Transform Your Business" 
-                    className="cta-background-image"
-                  />
-                </div>
-              </div>
-            </div>
+     <section className="transform-business-section">
+  <div className="container-modern">
+    <div className="transform-business-card">
+      <div className="transform-content">
+        <div className="transform-text">
+          <h2 className="transform-title">
+            Transform Your Business Today.
+          </h2>
+          <p className="transform-description">
+            Unlock your potential with our cutting-edge AI and development 
+            solutions. Let's create your competitive advantage.
+          </p>
+
+          <Link to="/contact" className="transform-button">
+            Get Started
+          </Link>
+        </div>
+
+        <div className="transform-visual">
+          <div className="cta-image-wrapper">
+            <img 
+              src={require("../../Assests/Images/bg-cta.webp")} 
+              alt="Transform Your Business" 
+              className="cta-background-image"
+            />
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
     </div>
   );
 };

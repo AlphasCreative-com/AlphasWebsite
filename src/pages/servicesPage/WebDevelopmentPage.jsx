@@ -2,6 +2,7 @@ import React from "react";
 import usePageTitle from "../../hooks/usePageTitle";
 import webDevImg from "../../Assests/Images/web.jpg";
 import "./IndividualService.css";
+import { Link } from "react-router-dom";
 
 function WebDevelopmentPage() {
   usePageTitle("Web Development - Services");
@@ -84,7 +85,10 @@ function WebDevelopmentPage() {
               <h1 className="hero-title">{ServiceHeroData.title}</h1>
               <p className="hero-subtitle">{ServiceHeroData.subtitle}</p>
               <div className="hero-buttons">
-                <button className="btn-primary">Get Started</button>
+               <Link to="/contact" className="transform-button">
+  Get Started
+</Link>
+
                 <button className="btn-secondary">View Portfolio</button>
               </div>
             </div>
@@ -160,8 +164,11 @@ function WebDevelopmentPage() {
             <h2>Ready to Build Your Website?</h2>
             <p>Let's create a stunning web presence that drives results for your business.</p>
             <div className="cta-buttons">
-              <button className="btn-primary">Start Your Project</button>
-              <button className="btn-secondary">Get Free Quote</button>
+              
+             <Link to="/contact" className="btn-secondary">
+  Get Free Quote
+</Link>
+
             </div>
           </div>
         </div>

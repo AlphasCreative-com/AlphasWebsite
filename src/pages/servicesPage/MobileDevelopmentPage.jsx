@@ -2,6 +2,7 @@ import React from "react";
 import usePageTitle from "../../hooks/usePageTitle";
 import mobileDevImg from "../../Assests/Images/mobile.avif";
 import "./IndividualService.css";
+import { Link } from "react-router-dom"; 
 
 function MobileDevelopmentPage() {
   usePageTitle("Mobile Development - Services");
@@ -84,7 +85,10 @@ function MobileDevelopmentPage() {
               <h1 className="hero-title">{ServiceHeroData.title}</h1>
               <p className="hero-subtitle">{ServiceHeroData.subtitle}</p>
               <div className="hero-buttons">
-                <button className="btn-primary">Get Started</button>
+                <Link to="/contact" className="transform-button">
+  Get Started
+</Link>
+
                 <button className="btn-secondary">View Apps</button>
               </div>
             </div>

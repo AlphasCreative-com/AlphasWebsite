@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Button from "../Utilize/Button/Button";
 import Sbutton from "../Utilize/Secbutton/Sbutton";
 import "./Hero.css";
@@ -28,13 +29,15 @@ function Hero() {
 
         {/* Buttons */}
         <div className="flex flex-wrap gap-6 mt-4">
-          <Button 
-            className="px-6 py-3 md:px-8 md:py-4 text-white bg-blue-600 border border-blue-600 rounded-lg transition duration-300 hover:bg-blue-700 hover:border-blue-700" 
-            text={"Get Started"} 
-          />
-          <Sbutton 
-            className="btn02" 
-            text={"See Features"} 
+          <Link to="/contact">
+            <Button
+              className="px-6 py-3 md:px-8 md:py-4 text-white bg-blue-600 border border-blue-600 rounded-lg transition duration-300 hover:bg-blue-700 hover:border-blue-700"
+              text={"Get Started"}
+            />
+          </Link>
+          <Sbutton
+            className="btn02"
+            text={"See Features"}
           />
         </div>
       </div>
